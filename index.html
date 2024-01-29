@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>SET08101 - Web Tech</title>
+    <script>
+        function darkMode(){
+            var body_color_mode = document.body;
+            body_color_mode.classList.toggle("dark-mode");
+
+            var dark_tip = document.getElementById("dark");
+            if (dark_tip.style.display === "none") {
+                dark_tip.style.display = "block";
+            } else {
+                dark_tip.style.display = "none";
+            }
+
+            var light_tip = document.getElementById("light");
+            if (light_tip.style.display === "block") {
+                light_tip.style.display = "none";
+            } else {
+                light_tip.style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="text">
+        <p>Pizza</p>
+    </div>
+
+    <div class="dark-mode-toggle">
+        <div class="icon">
+            <label>
+                <input type="checkbox" onclick="darkMode()" id="dark-mode">
+                <span class="check"></span>
+            </label> 
+            <div class="tip">
+                <span onclick="darkMode()" id="dark">Dark Mode</span>
+                <span id="light" style="display: none">Light Mode</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
