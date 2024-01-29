@@ -1,0 +1,125 @@
+/* #222831, #393e46, #00adb5, 00fff5 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: white; /*#222831*/
+    transition: ease-in 0.5s;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+.text{
+    height: 100vh;
+    width: 70px;
+    background: #00adb5;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.text p{
+    color: #393e46;
+    font-size: 20px;
+}
+
+.dark-mode-toggle{
+    display: inline-flex;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+}
+
+.dark-mode{
+    background-color: #393e46;
+    color: #222831;
+}
+
+input{
+    visibility: hidden;
+    display: none;
+}
+
+.check{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #393e46;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+
+input:checked + .check{
+    background: white;
+}
+
+.check::before{
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    background: #00adb5;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.check::after{
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    background: #393e46;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(-50px);
+}
+
+
+.dark-mode-toggle .icon{
+    margin: 0 5px;
+    cursor: pointer;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; */
+    z-index: 2;
+}
+
+.dark-mode-toggle .icon .tip{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #00adb5;
+    padding: 10px 10px;
+    font-size: 10px;
+    border-radius: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+.dark-mode-toggle .icon:hover .tip{
+    opacity: 1;
+    pointer-events: auto;
+    top: 30px;
+}
+
+.dark-mode-toggle .icon .tip::before{
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: #00adb5;
+    top: -4px;
+    left: 60%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -99;
+}
