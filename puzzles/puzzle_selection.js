@@ -69,14 +69,90 @@ const cardContainer = document.querySelector('.container')
 const functionCards = () => {
     arrayData.map((data) => {
         
-        cardContainer.innerHTML += '<div class="card" style="background: '+data.color+'">\
-                                        <div class="image">\
-                                            <img src="'+data.imageUrl+'"></img>\
+        cardContainer.innerHTML += '<div class="card" id="'+data.id+'" style="background: '+data.color+'">\
+                                        <div class="front">\
+                                            <div class="image">\
+                                                <img src="'+data.imageUrl+'"></img>\
+                                            </div>\
+                                            <h1>'+data.Heading+'</h1>\
+                                            <button onclick="handleClick'+data.id+'()">Read More</button>\
                                         </div>\
-                                        <h1>'+data.Heading+'</h1>\
-                                        <button>Read More</button>\
+                                        <div class="back">\
+                                            <button onclick="handle2ndClick'+data.id+'()">Read Less</button>\
+                                        </div>\
                                     </div>';
     })
 }
+
+function handleClick1() {
+    document.getElementById("1").style.transform = "rotateY(180deg)";
+}
+function handle2ndClick1() {
+    document.getElementById("1").style.transform = "rotateY(0deg)";
+}
+
+function handleClick2() {
+    document.getElementById("2").style.transform = "rotateY(180deg)";
+}
+function handle2ndClick2() {
+    document.getElementById("2").style.transform = "rotateY(0deg)";
+}
+
+function handleClick3() {
+    document.getElementById("3").style.transform = "rotateY(180deg)";
+}
+function handle2ndClick3() {
+    document.getElementById("3").style.transform = "rotateY(0deg)";
+}
+
+function handleClick4() {
+    document.getElementById("4").style.transform = "rotateY(180deg)";
+}
+function handle2ndClick4() {
+    document.getElementById("4").style.transform = "rotateY(0deg)";
+}
+
+function handleClick5() {
+    document.getElementById("5").style.transform = "rotateY(180deg)";
+}
+function handle2ndClick5() {
+    document.getElementById("5").style.transform = "rotateY(0deg)";
+}
+
+function handleClick6() {
+    document.getElementById("6").style.transform = "rotateY(180deg)";
+}
+function handle2ndClick6() {
+    document.getElementById("6").style.transform = "rotateY(0deg)";
+}
+
+function handleClick7() {
+    document.getElementById("7").style.transform = "rotateY(180deg)";
+}
+function handle2ndClick7() {
+    document.getElementById("7").style.transform = "rotateY(0deg)";
+}
+
+function handleClick8() {
+    document.getElementById("8").style.transform = "rotateY(180deg)";
+}
+function handle2ndClick8() {
+    document.getElementById("8").style.transform = "rotateY(0deg)";
+}
+
+function handleClick9() {
+    document.getElementById("9").style.transform = "rotateY(180deg)";
+}
+function handle2ndClick9() {
+    document.getElementById("9").style.transform = "rotateY(0deg)";
+}
+
+function handleClick10() {
+    document.getElementById("10").style.transform = "rotateY(180deg)";
+}
+function handle2ndClick10() {
+    document.getElementById("10").style.transform = "rotateY(0deg)";
+}
+
 
 functionCards()
