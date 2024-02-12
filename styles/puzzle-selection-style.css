@@ -27,6 +27,8 @@ body{
     padding: 10px;
     border-radius: 20px;
     margin: 30px 30px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
 }
 
 .card .image{
@@ -69,4 +71,13 @@ img{
     border-radius: 10px;
     font-weight: 600;
     font-size: 0.9rem;
+}
+
+.front,
+.back{
+    backface-visibility: hidden;
+}
+
+.back{
+    transform: rotateY(180deg);
 }
