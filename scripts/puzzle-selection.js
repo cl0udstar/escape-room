@@ -17,7 +17,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
         imageHeight: "350px",
-        para: "Lilias Bridges is meeting with her fellow vikings, you have gained access to her social media bio. Use the information to answer the questions to find clues to solve the anagram and reveale her location",
+        para: "Lilias Bridges is meeting with her fellow vikings, you have gained access to her social media bio. Use the information to answer the questions to find clues to solve the anagram and reveale her location.",
         link: "../puzzles/puzzle-2-anagram.html"
     },
     {
