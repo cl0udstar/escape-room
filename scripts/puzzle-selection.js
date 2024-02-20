@@ -7,7 +7,8 @@ const arrayData = [
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
         imageHeight: "350px",
-        para: "Test Test Test Test Test Test Test Test Test Test Test Test Test Test "
+        para: "Test Test Test Test Test Test Test Test Test Test Test Test Test Test ",
+        link: "../puzzles/"
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const arrayData = [
         Heading: "Mission 2",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
+        link: "../puzzles/puzzle-2-anagram.html"
     },
     {
         id: 3,
@@ -101,7 +103,7 @@ const functionCards = () => {
                                             <p>'+data.para+'</p>\
                                             <div class="background_back"></div>\
                                             <button class="return" onclick="handle2ndClick'+data.id+'()"><i class="fa-solid fa-arrow-rotate-left"></i></button>\
-                                            <button class="start"><a href="https://www.w3schools.com/">Start</a></button>\
+                                            <button class="start"><a href="'+data.link+'">Start</a></button>\
                                         </div>\
                                     </div>';
     })
