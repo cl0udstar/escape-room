@@ -96,7 +96,7 @@ const functionCards = () => {
                                             <button onclick="handleClick'+data.id+'()">Read More</button>\
                                         </div>\
                                         <div class="back">\
-                                            <img src="./images/backgrounds/Top-secret.png"></img>\
+                                            <img src="../assets/backgrounds/Top-secret.png"></img>\
                                             <h1>MISSION BRIEF</h1>\
                                             <p>'+data.para+'</p>\
                                             <div class="background_back"></div>\
