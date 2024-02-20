@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: rgb(64, 64, 64);
+    background-color: #a5a38d;
     width: 100vw;
 }
 
@@ -21,45 +21,56 @@ body{
 }
 
 .card{
-    color: #fff6c3;
     width: 350px;
-    height: auto;
-    padding: 10px;
+    height: 500px;
     border-radius: 20px;
     margin: 30px 30px;
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    background: #90a4ae;
+    background-image: url('./images/backgrounds/DATA_HQ.png');
+    background-size: cover;
+    background-position: 62.5%;
+    border-color: red;
 }
 
 .card .image{
     position: relative;
-    width: 330px;
+    width: 300px;
     height: 350px;
-    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
 }
 
 img{
-    width:330px;
-    height: 350px;
+    margin-left: 5%;
+    margin-bottom: 10px;
 }
 
-.card h1{
+.card .front h1{
+    color: white;
+    font-size: 50px;
     padding: 10px;
     text-align: center;
     position: relative;
-    margin-bottom: 15px;
+    border-radius: 20px;
+    margin: 370px 0px 0px 0px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    overflow: hidden;
 }
 
 .card h1::before{
     content: '';
-    background-color: #ffdb89;
+    background-color: white;
     height: 3px;
-    width: 125px;
+    width: 225px;
     position: absolute;
     bottom: 5px;
     border-radius: 50%;
+    border-color: #000;
 }
 
 .card button{
@@ -71,13 +82,106 @@ img{
     border-radius: 10px;
     font-weight: 600;
     font-size: 0.9rem;
+    border-color: white;
 }
 
 .front,
 .back{
     backface-visibility: hidden;
+    position: absolute;
+    height: 500px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: -10px 10px 10px #1e1e1e;
+}
+
+.front{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-color: white;
+    border-style: solid;
 }
 
 .back{
     transform: rotateY(180deg);
+    border-radius: 20px;
+    background-color: #abaaaa;
+    border-color: white;
+    border-style: solid;
+}
+
+.back img{
+    position: absolute;
+    height: 60px;
+    width: 120px;
+    margin: 2.5px 0px 0px 220px;
+    transform: rotate(25deg);
+    opacity: 0.5;
+}
+
+.back h1{
+    position: absolute;
+    text-align: center;
+    margin-top: 15%;
+    width: 100%;
+    padding: 10px;
+}
+
+.back h1::before{
+    content: '';
+    background-color: black;
+    height: 3px;
+    width: 235px;
+    position: absolute;
+    bottom: 5px;
+    border-radius: 50%;
+    border-color: #000;
+}
+
+.back p{
+    position: absolute;
+    text-align: center;
+    margin-top: 35%;
+}
+
+.background_back{
+    background-image: url('./images/DATA_Logo.png');
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 500px;
+    width: 350px;
+    position: absolute;
+    opacity: 0.125;
+    z-index: -1;
+}
+
+.back .return{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    align-items: left;
+    margin-left: 0;
+    border-radius: 0px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 90px;
+    border-color: #000;
+    color: white;
+    font-size: 20px;
+    padding-top: 1px;
+    padding-left: 6px;
+}
+
+.back .start{
+    background-color: rgb(80, 137, 80);
+    width: 200px;
+    font-size: 24px;
+    margin-top: 375px;
+    border-color: #000;
+}
+
+.back a{
+    color: white;
+    text-decoration: none;
 }
