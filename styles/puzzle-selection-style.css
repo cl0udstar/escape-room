@@ -28,7 +28,7 @@ body{
     transition: transform 0.6s;
     transform-style: preserve-3d;
     background: #90a4ae;
-    background-image: url('./assets/backgrounds/DATA_HQ.png');
+    background-image: url('../assets/backgrounds/DATA_HQ.png');
     background-size: cover;
     background-position: 62.5%;
     border-color: red;
@@ -146,7 +146,7 @@ img{
 }
 
 .background_back{
-    background-image: url('./assets/backgrounds/DATA_Logo.png');
+    background-image: url('../assets/backgrounds/DATA_Logo.png');
     background-size: 250px;
     background-repeat: no-repeat;
     background-position: 50%;
