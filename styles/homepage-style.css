@@ -11,6 +11,7 @@ body{
     color: black;
     font-weight: bold;
     user-select: none;
+    background-color: #a5a38d;
 }
 
 /* Style of the top of the page (navbar) */
