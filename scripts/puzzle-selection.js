@@ -2,63 +2,84 @@
 const arrayData = [
     {
         id: 1,
-        imageUrl: "./images/Test1.jpg",
-        Heading: "Puzzle 1",
-        color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)"
+        imageUrl: "./images/Major_X.png",
+        Heading: "Mission 1",
+        color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
+        imageWidth: "300px",
+        imageHeight: "350px",
+        para: "Test Test Test Test Test Test Test Test Test Test Test Test Test Test "
     },
     {
         id: 2,
-        imageUrl: "./images/Test1.jpg",
-        Heading: "Puzzle 2",
-        color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)"
+        imageUrl: "./images/Jakub_Gray.png",
+        Heading: "Mission 2",
+        color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
+        imageWidth: "300px",
+        imageHeight: "350px"
     },
     {
         id: 3,
-        imageUrl: "./images/Test1.jpg",
-        Heading: "Puzzle 3",
-        color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)"
+        imageUrl: "./images/Lilias_Bridge.png",
+        Heading: "Mission 3",
+        color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
+        imageWidth: "300px",
+        imageHeight: "350px"
     },
     {
         id: 4,
         imageUrl: "./images/Test1.jpg",
-        Heading: "Puzzle 4",
-        color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)"
+        Heading: "Mission 4",
+        color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
+        imageWidth: "300px",
+        imageHeight: "350px"
     },
     {
         id: 5,
         imageUrl: "./images/Test1.jpg",
-        Heading: "Puzzle 5",
-        color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)"
+        Heading: "Mission 5",
+        color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
+        imageWidth: "300px",
+        imageHeight: "350px"
     },
     {
         id: 6,
         imageUrl: "./images/Test1.jpg",
-        Heading: "Puzzle 6",
-        color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)"
+        Heading: "Mission 6",
+        color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
+        imageWidth: "300px",
+        imageHeight: "350px"
     },
     {
         id: 7,
         imageUrl: "./images/Test1.jpg",
-        Heading: "Puzzle 7",
-        color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)"
+        Heading: "Mission 7",
+        color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
+        imageWidth: "300px",
+        imageHeight: "350px"
     },
     {
         id: 8,
         imageUrl: "./images/Test1.jpg",
-        Heading: "Puzzle 8",
-        color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)"
+        Heading: "Mission 8",
+        color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
+        imageWidth: "300px",
+        imageHeight: "350px"
     },
     {
         id: 9,
         imageUrl: "./images/Test1.jpg",
-        Heading: "Puzzle 9",
-        color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)"
+        Heading: "Mission 9",
+        color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
+        imageWidth: "300px",
+        imageHeight: "350px"
     },
     {
         id: 10,
         imageUrl: "./images/Test1.jpg",
-        Heading: "Puzzle 10",
-        color: "linear-gradient(-135deg, #040d12, #61677a)"
+        Heading: "Mission 10",
+        color: "linear-gradient(-135deg, #040d12, #61677a)",
+        imageWidth: "300px",
+        imageHeight: "350px"
     }
 ]
 
@@ -69,16 +90,18 @@ const cardContainer = document.querySelector('.container')
 const functionCards = () => {
     arrayData.map((data) => {
         
-        cardContainer.innerHTML += '<div class="card" id="'+data.id+'" style="background: '+data.color+'">\
+        cardContainer.innerHTML += '<div class="card" id="'+data.id+'">\
                                         <div class="front">\
-                                            <div class="image">\
-                                                <img src="'+data.imageUrl+'"></img>\
-                                            </div>\
                                             <h1>'+data.Heading+'</h1>\
                                             <button onclick="handleClick'+data.id+'()">Read More</button>\
                                         </div>\
                                         <div class="back">\
-                                            <button onclick="handle2ndClick'+data.id+'()">Read Less</button>\
+                                            <img src="./images/backgrounds/Top-secret.png"></img>\
+                                            <h1>MISSION BRIEF</h1>\
+                                            <p>'+data.para+'</p>\
+                                            <div class="background_back"></div>\
+                                            <button class="return" onclick="handle2ndClick'+data.id+'()"><i class="fa-solid fa-arrow-rotate-left"></i></button>\
+                                            <button class="start"><a href="https://www.w3schools.com/">Start</a></button>\
                                         </div>\
                                     </div>';
     })
@@ -153,6 +176,5 @@ function handleClick10() {
 function handle2ndClick10() {
     document.getElementById("10").style.transform = "rotateY(0deg)";
 }
-
 
 functionCards()
