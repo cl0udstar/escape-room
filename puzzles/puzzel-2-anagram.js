@@ -1,4 +1,4 @@
-const words = ["apple", "banana", "orange", "grape", "melon", "kiwi", "pear", "cherry", "mango", "strawberry"];
+const words = ["apple", "banana", "orange", "grape", "melon", "kiwi", "cherry", "mango", "strawberry"];
 let currentWord = "";
 
 document.addEventListener("DOMContentLoaded", generateRandomWord);
