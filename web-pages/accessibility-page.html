@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Escape Room - Accessibility</title>
+    <link rel="stylesheet" href="../styles/accessibility-style.css">
+</head>
+<body>
+    <div id="text">
+        <a href="../index.html">Home</a>
+        <div class="container">
+            <div class="text-container">
+                <p>test</p>
+            </div>
+        
+            <div class="controls">
+                <button class="resize-btn" id="resize-text-btn" onclick="decreaseTextSize()">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+
+                <input class="slider" type="range" min="10" max="40" value="20" step="3" id="text-size-slider" onchange="resizeText()">
+
+                
+                <button class="resize-btn" id="resize-text-btn" onclick="increaseTextSize()">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <button class="reset-btn" id="reset-text-btn" onclick="resetTextSize()">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="../cookies/accessibility-cookie.js"></script>
+</body>
+</html>
