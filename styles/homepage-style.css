@@ -12,6 +12,7 @@ body{
     font-weight: bold;
     user-select: none;
     background-color: #a5a38d;
+    font-size: 20px;
 }
 
 /* Style of the top of the page (navbar) */
@@ -20,7 +21,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 
@@ -74,6 +75,7 @@ body{
     cursor: pointer;
     color: #FEFFE2;
     box-shadow: 1px 1px 10px 2px #0C0C0C;
-    font-size: 20px;
     text-decoration: none;
 }
+
+/* #a5a38d */
