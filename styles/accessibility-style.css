@@ -1,0 +1,65 @@
+/* Page style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Chrome and Opera */
+    /* transition: ease-in 0.5s; */
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+body{
+    background-color: #a5a38d;
+}
+
+.container {
+    position: absolute;
+    /* display: flex; */
+    /* justify-content: space-between; */    
+    padding: 30px;
+}
+
+.container .text-container {
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+
+
+.container .controls {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container .controls .resize-btn {
+    border: none;
+    background-color: #a5a38d;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.range-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.container .controls .reset-btn {
+    border: none;
+    background-color: #a5a38d;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
