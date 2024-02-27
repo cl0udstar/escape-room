@@ -20,32 +20,32 @@ body{
 }
 
 .container {
-    position: absolute;
+    /* position: absolute; */
     /* display: flex; */
     /* justify-content: space-between; */    
     padding: 30px;
 }
 
-.container .text-container {
+.text-container {
     padding: 10px;
     border: 2px solid;
     border-radius: 20px;
 }
 
 
-.container .controls {
+.controls, .controls2{
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-.container .controls .resize-btn {
+.resize-btn{
     border: none;
     background-color: #a5a38d;
     cursor: pointer;
     border-radius: 20px;
+    padding: 0 10px;
 }
 
 .range-slider {
@@ -56,7 +56,7 @@ body{
 
 
 
-.container .controls .reset-btn {
+.reset-btn{
     border: none;
     background-color: #a5a38d;
     cursor: pointer;
