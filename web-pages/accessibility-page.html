@@ -15,20 +15,25 @@
                 <p>Change text size</p>
             </div>
 
-            <button class="resize-btn" id="resize-text-btn" onclick="decreaseTextSize()">
-                <i class="fa-solid fa-minus"></i>
-            </button>
+            <div class="range">
+                <div class="field">
+                    <div class="value left">
+                        <button class="resize-btn" id="resize-text-btn" onclick="decreaseTextSize()">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <input class="slider" type="range" min="10" max="40" value="20" step="3" id="text-size-slider" onchange="resizeText()">
+                    <div class="value right">
+                        <button class="resize-btn" id="resize-text-btn" onclick="increaseTextSize()">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
 
-            <input class="slider" type="range" min="10" max="40" value="20" step="3" id="text-size-slider" onchange="resizeText()">
-
-            
-            <button class="resize-btn" id="resize-text-btn" onclick="increaseTextSize()">
-                <i class="fa-solid fa-plus"></i>
-            </button>
-
-            <button class="reset-btn" id="reset-text-btn" onclick="resetTextSize()">
-                <i class="fa-solid fa-arrow-rotate-left"></i>
-            </button>
+                        <button class="reset-btn" id="reset-text-btn" onclick="resetTextSize()">
+                            <i class="fa-solid fa-arrow-rotate-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -37,20 +42,25 @@
             <p>Change contrast</p>
         </div>
 
-        <button class="resize-btn" id="contrast-change-btn" onclick="decreaseContrast()">
-            <i class="fa-solid fa-minus"></i>
-        </button>
+        <div class="range">
+            <div class="field">
+                <div class="value left">
+                    <button class="resize-btn" id="contrast-change-btn" onclick="decreaseContrast()">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+                <input class="slider" type="range" min="80" max="150" value="100" step="10" id="contrast-slider" onchange="adjustContrast()">
+                <div class="value right">
+                    <button class="resize-btn" id="contrast-change-btn" onclick="increaseContrast()">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
 
-        <input class="slider" type="range" min="80" max="150" value="100" step="10" id="contrast-slider" onchange="adjustContrast()">
-
-        
-        <button class="resize-btn" id="contrast-change-btn" onclick="increaseContrast()">
-            <i class="fa-solid fa-plus"></i>
-        </button>
-
-        <button class="reset-btn" id="reset-contrast-btn" onclick="resetContrast()">
-            <i class="fa-solid fa-arrow-rotate-left"></i>
-        </button>
+                    <button class="reset-btn" id="reset-contrast-btn" onclick="resetContrast()">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
     
 
