@@ -63,3 +63,52 @@ body{
     border-radius: 20px;
 }
 
+
+
+
+.range{
+    height: 40px;
+    width: 300px;
+    padding: 0 65px 0 45px;
+}
+
+.range .field{
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.range .field .value{
+    position: absolute;
+}
+
+.range .field .value.left{
+    left: -22px;
+}
+
+.range .field .value.right{
+    right: -43px;
+}
+
+.range .field input{
+    -webkit-appearance: none;
+    height: 5px;
+    width: 100%;
+    background: #ddd;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.range .field input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    background: #664aff;
+    border-radius: 50%;
+    border: 1px solid #664aff;
+    cursor: pointer;
+}
