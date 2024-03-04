@@ -12,6 +12,7 @@ const arrayData = [
     },
     {
         id: 2,
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 2",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
@@ -20,6 +21,7 @@ const arrayData = [
     },
     {
         id: 3,
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 3",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
@@ -27,6 +29,7 @@ const arrayData = [
     },
     {
         id: 4,
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 4",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
@@ -34,6 +37,7 @@ const arrayData = [
     },
     {
         id: 5,
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 5",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
@@ -41,6 +45,7 @@ const arrayData = [
     },
     {
         id: 6,
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 6",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
@@ -48,6 +53,7 @@ const arrayData = [
     },
     {
         id: 7,
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 7",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
@@ -55,6 +61,7 @@ const arrayData = [
     },
     {
         id: 8,
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 8",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
@@ -62,6 +69,7 @@ const arrayData = [
     },
     {
         id: 9,
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 9",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
@@ -69,6 +77,7 @@ const arrayData = [
     },
     {
         id: 10,
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 10",
         color: "linear-gradient(-135deg, #040d12, #61677a)",
         imageWidth: "300px",
