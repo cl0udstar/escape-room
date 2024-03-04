@@ -1,0 +1,29 @@
+body{
+    overflow: hidden; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.error-txt{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+}
+
+.error-txt .error-txt1{
+    font-size: 150px;
+    background: linear-gradient(135deg, #7A7453, #FEFFE2);
+    -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+.error-txt p{
+    padding: 5px;
+}
+
+.error-txt a{
+    text-decoration: underline;
+    color: #C3BA85;
+}
