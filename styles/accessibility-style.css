@@ -3,37 +3,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Chrome and Opera */
-    /* transition: ease-in 0.5s; */
     font-family: "Montserrat", sans-serif;
     color: black;
     font-weight: bold;
 }
 
-body{
-    background-color: #a5a38d;
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #22A699, #22A699 25%, #F2BE22 25%, #F2BE22 50%, #F29727 50%, #F29727 75%, #F24C3D 75%, #F24C3D);
+    background-size: 100% 100%;
 }
+    
 
 .container {
-    /* position: absolute; */
-    /* display: flex; */
-    /* justify-content: space-between; */    
+    display: flex; 
     padding: 30px;
+}
+
+.container .change-container1,
+.container .change-container2{
+    padding: 20px;
 }
 
 .text-container {
     padding: 10px;
     border: 2px solid;
     border-radius: 20px;
+    background-color: #FAF9F6;
 }
 
-
-.controls, .controls2{
+.controls{
     padding: 10px;
     display: flex;
     align-items: center;
@@ -41,74 +40,37 @@ body{
 }
 
 .resize-btn{
-    border: none;
-    background-color: #a5a38d;
+    border: 2px solid;
+    background-color: #FAF9F6;
     cursor: pointer;
     border-radius: 20px;
-    padding: 0 10px;
+    padding: 8px 10px;
+    margin: 0 10px;
 }
-
-.range-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 
 .reset-btn{
-    border: none;
-    background-color: #a5a38d;
+    border: 2px solid;
+    background-color: #FAF9F6;
     cursor: pointer;
     border-radius: 20px;
+    padding: 8px 10px;
+    margin: 0 10px;
 }
 
-
-
-
-.range{
-    height: 40px;
-    width: 300px;
-    padding: 0 65px 0 45px;
-}
-
-.range .field{
-    padding: 20px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.range .field .value{
-    position: absolute;
-}
-
-.range .field .value.left{
-    left: -22px;
-}
-
-.range .field .value.right{
-    right: -43px;
-}
-
-.range .field input{
+.container .controls input{
     -webkit-appearance: none;
-    height: 5px;
-    width: 100%;
-    background: #ddd;
+    height: 7px;
+    background: #FAF9F6;
     border-radius: 10px;
     outline: none;
     border: none;
 }
 
-.range .field input::-webkit-slider-thumb{
+.container .controls input::-webkit-slider-thumb{
     -webkit-appearance: none;
     height: 18px;
     width: 18px;
-    background: #664aff;
+    background: black;
     border-radius: 50%;
-    border: 1px solid #664aff;
     cursor: pointer;
 }
