@@ -33,7 +33,7 @@ body{
     transition: transform 0.6s;
     transform-style: preserve-3d;
     background: #90a4ae;
-    background-image: url('./images/backgrounds/DATA_HQ.png');
+    background-image: url('../images/backgrounds/DATA_HQ.png');
     background-size: cover;
     background-position: 62.5%;
     border-color: red;
