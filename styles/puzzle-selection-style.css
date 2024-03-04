@@ -3,6 +3,7 @@
     src: url("../assets/font/EyeSpyItalic.otf") format("opentype");
 }
 
+
 *{
     margin: 0;
     padding: 0;
@@ -11,8 +12,8 @@
 }
 
 body{
-    background-color: #a5a38d;
-    width: 100vw;
+    background: linear-gradient(45deg, #22A699, #22A699 25%, #F2BE22 25%, #F2BE22 50%, #F29727 50%, #F29727 75%, #F24C3D 75%, #F24C3D);
+    background-size: 100% 100%;
 }
 
 .container{
@@ -22,7 +23,6 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 50px 0;
 }
 
 .card{
@@ -33,7 +33,7 @@ body{
     transition: transform 0.6s;
     transform-style: preserve-3d;
     background: #90a4ae;
-    background-image: url("../assets/backgrounds/DATA_HQ.png");
+    background-image: url('./images/backgrounds/DATA_HQ.png');
     background-size: cover;
     background-position: 62.5%;
     border-color: red;
@@ -56,26 +56,26 @@ img{
 
 .card .front h1{
     color: white;
-    font-size: 40px;
+    font-size: 35px;
     padding: 10px;
     text-align: center;
     position: relative;
     border-radius: 20px;
-    margin: 370px 0px 0px 0px;
+    margin: 360px 0px 0px 0px;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
     overflow: hidden;
 }
 
 .card h1::before{
     content: '';
-    background-color: white;
-    height: 3px;
-    width: 225px;
+    background-color: rgb(246, 242, 242);
+    height: 5px;
+    width: 180px;
     position: absolute;
-    bottom: 5px;
+    bottom: 0px;
     border-radius: 50%;
-    border-color: #000;
+    border-color: #000000;
 }
 
 .card button{
@@ -83,11 +83,14 @@ img{
     color: #fff6c3;
     margin: 0 auto;
     display: block;
-    padding: 10px 15px;
+    padding: 2.5px 15px 10px 15px;
     border-radius: 10px;
-    font-weight: 600;
-    font-size: 0.9rem;
     border-color: white;
+}
+
+.front button{
+    margin-top: 10px;
+    font-size: 20px;
 }
 
 .front,
@@ -145,13 +148,14 @@ img{
 }
 
 .back p{
+    font-family: sans-serif;
     position: absolute;
     text-align: center;
-    margin-top: 50%;
+    margin-top: 40%;
 }
 
 .background_back{
-    background-image: url("../assets/backgrounds/DATA_Logo.png");
+    background-image: url('./images/DATA_Logo.png');
     background-size: 250px;
     background-repeat: no-repeat;
     background-position: 50%;
