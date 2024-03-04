@@ -1,3 +1,13 @@
+/* Page style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
 body {
     height: 100vh;
     background: linear-gradient(45deg, #22A699, #22A699 25%, #F2BE22 25%, #F2BE22 50%, #F29727 50%, #F29727 75%, #F24C3D 75%, #F24C3D);
@@ -10,18 +20,7 @@ body {
     top: 20%;
 }
 
-.error-txt .error-txt1{
-    font-size: 150px;
-    background: linear-gradient(135deg, #7A7453, #FEFFE2);
-    -webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-}
-
-.error-txt p{
-    padding: 5px;
-}
-
 .error-txt a{
     text-decoration: underline;
-    color: #C3BA85;
+    color: #FAF9F6;
 }
