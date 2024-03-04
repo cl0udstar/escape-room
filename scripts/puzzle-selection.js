@@ -2,7 +2,6 @@
 const arrayData = [
     {
         id: 1,
-        imageUrl: "./images/Major_X.png",
         Heading: "Mission 1",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
@@ -12,7 +11,6 @@ const arrayData = [
     },
     {
         id: 2,
-        imageUrl: "./images/Jakub_Gray.png",
         Heading: "Mission 2",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
@@ -21,7 +19,6 @@ const arrayData = [
     },
     {
         id: 3,
-        imageUrl: "./images/Lilias_Bridge.png",
         Heading: "Mission 3",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
@@ -29,7 +26,6 @@ const arrayData = [
     },
     {
         id: 4,
-        imageUrl: "./images/Test1.jpg",
         Heading: "Mission 4",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
@@ -37,7 +33,6 @@ const arrayData = [
     },
     {
         id: 5,
-        imageUrl: "./images/Test1.jpg",
         Heading: "Mission 5",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
@@ -45,7 +40,6 @@ const arrayData = [
     },
     {
         id: 6,
-        imageUrl: "./images/Test1.jpg",
         Heading: "Mission 6",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
@@ -53,7 +47,6 @@ const arrayData = [
     },
     {
         id: 7,
-        imageUrl: "./images/Test1.jpg",
         Heading: "Mission 7",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
@@ -61,7 +54,6 @@ const arrayData = [
     },
     {
         id: 8,
-        imageUrl: "./images/Test1.jpg",
         Heading: "Mission 8",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
@@ -69,7 +61,6 @@ const arrayData = [
     },
     {
         id: 9,
-        imageUrl: "./images/Test1.jpg",
         Heading: "Mission 9",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
@@ -77,7 +68,6 @@ const arrayData = [
     },
     {
         id: 10,
-        imageUrl: "./images/Test1.jpg",
         Heading: "Mission 10",
         color: "linear-gradient(-135deg, #040d12, #61677a)",
         imageWidth: "300px",
