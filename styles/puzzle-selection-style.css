@@ -153,7 +153,7 @@ img{
 }
 
 .background_back{
-    background-image: url('./images/DATA_Logo.png');
+    background-image: url('../assets/backgrounds/DATA_Logo.png');
     background-size: 250px;
     background-repeat: no-repeat;
     background-position: 50%;
