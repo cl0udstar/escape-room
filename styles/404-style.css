@@ -1,9 +1,7 @@
-body{
-    overflow: hidden; 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #22A699, #22A699 25%, #F2BE22 25%, #F2BE22 50%, #F29727 50%, #F29727 75%, #F24C3D 75%, #F24C3D);
+    background-size: 100% 100%;
 }
 
 .error-txt{
