@@ -92,8 +92,8 @@ const cardContainer = document.querySelector('.container')
 const functionCards = () => {
     arrayData.map((data) => {
         
-        cardContainer.innerHTML += '<div class="card" id="'+data.id+'" style="background-image: url(\'../assets/backgrounds/'+data.imgUrl+'\');">\
-                                        <div class="front">\
+        cardContainer.innerHTML += '<div class="card" id="'+data.id+'">\
+                                        <div class="front" style="background-image: url(\'../assets/backgrounds/'+data.imgUrl+'\');">\
                                             <h1>'+data.Heading+'</h1>\
                                             <button onclick="handleClick'+data.id+'()">Read More</button>\
                                         </div>\
