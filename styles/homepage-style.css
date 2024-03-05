@@ -55,7 +55,7 @@ body{
 
 .puzzle-box{
     position: relative;
-    background-image: url("/assets/backgrounds/Logic_Puzzles_Landscape-1.png");
+    background-image: url("./assets/backgrounds/Logic_Puzzles_Landscape-1.png");
     background-size: cover;
     border: 2px solid #0C0C0C;
     border-radius: 15px;
