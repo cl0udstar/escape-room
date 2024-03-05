@@ -1,9 +1,14 @@
+@font-face {
+    font-family: EyeSpyItalic;
+    src: url("../assets/font/EyeSpyItalic.otf") format("opentype");
+}
+
 /* Page style */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: EyeSpyItalic;
     font-size: 20px;
     font-weight: bold;
     user-select: none;
