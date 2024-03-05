@@ -33,8 +33,6 @@ body{
     transition: transform 0.6s;
     transform-style: preserve-3d;
     background: #90a4ae;
-    background-size: cover;
-    background-position: 62.5%;
 }
 
 .card .image{
@@ -107,6 +105,8 @@ img{
     text-align: center;
     border-color: white;
     border-style: solid;
+    background-size: cover;
+    background-position: 62.5%;
 }
 
 .back{
