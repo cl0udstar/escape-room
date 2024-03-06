@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Escape Room - Accessibility</title>
     <link rel="stylesheet" href="../styles/accessibility-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
 </head>
 <body id="text">
    <div class="top">
@@ -21,9 +24,10 @@
             </ul>
         </div>
     </div>
+    
     <div class="container">
         <div class="text-container">
-            <p>In a future where Earth's data faces constant threats, futuristic Vikings safeguard our digital legacy aboard advanced starships. Drawing from their ancestors' valor, they defend against space invaders, ensuring humanity's information remains secure across the cosmos.</p>
+            <p class="text1">Size</p>
         </div>
 
         <div class="controls">
@@ -46,7 +50,7 @@
 
     <div class="container">
         <div class="text-container">
-            <p>Change contrast</p>
+            <p>Contrast</p>
         </div>
 
         <div class="controls">
@@ -54,7 +58,7 @@
                 <i class="fa-solid fa-minus"></i>
             </button>
 
-            <input class="slider" type="range" min="80" max="150" value="100" step="1" id="contrast-slider" onchange="adjustContrast()">
+            <input class="slider" type="range" min="10" max="100" value="100" step="10" id="contrast-slider" onchange="adjustContrast()">
 
             <button class="resize-btn" id="contrast-change-btn" onclick="increaseContrast()">
                 <i class="fa-solid fa-plus"></i>
@@ -65,6 +69,55 @@
             </button>
         </div>
     </div>
+
+    <div class="container">
+        <div class="text-container">
+            <p>Saturation</p>
+        </div>
+
+        <div class="controls">
+            <button class="resize-btn" id="saturation-change-btn" onclick="decreaseSaturation()">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <input class="slider" type="range" min="10" max="100" value="10" step="5" id="saturation-slider" onchange="adjustSaturation()">
+
+            <button class="resize-btn" id="saturation-change-btn" onclick="increaseSaturation()">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <button class="reset-btn" id="reset-saturation-btn" onclick="resetSaturation()">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-container">
+            <p>Font</p>
+        </div>
+        
+        <div class="controls">
+            <button class="font-btn" id="anta-font-btn" onclick="changeFont('Anta, sans-serif')">
+                Anta
+            </button>
+            
+            <button class="font-btn" id="verdana-font-btn" onclick="changeFont('Verdana, sans-serif')">
+                Verdana
+            </button>
+
+            <button class="font-btn" id="georgia-font-btn" onclick="changeFont('Georgia, serif')">
+                Georgia
+            </button>
+
+            <button class="reset-btn" id="reset-font-btn" onclick="resetFont()">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="page-footer"></div>
 
     <script src="../scripts/cookies/accessibility-cookie.js"></script>
 </body>
