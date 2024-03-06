@@ -5,6 +5,7 @@
 }
 
 
+/* Page style */
 *{
     margin: 0;
     padding: 0;
@@ -17,7 +18,7 @@ body {
     height: 100vh;
     background: linear-gradient(45deg, #22A699, #22A699 25%, #F2BE22 25%, #F2BE22 50%, #F29727 50%, #F29727 75%, #F24C3D 75%, #F24C3D);
     background-size: 100% 100%;
-    font-family: EyeSpyItalic;
+    font-family: "Montserrat", sans-serif;
 }
 
 .top{
@@ -52,16 +53,17 @@ body {
 }
 
 .container {
-    display: flex; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 30px;
 }
 
-.container .change-container1,
-.container .change-container2{
-    padding: 20px;
-}
-
 .text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 20%; */
     padding: 10px;
     border: 2px solid;
     border-radius: 20px;
@@ -69,7 +71,6 @@ body {
 }
 
 .controls{
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,6 +97,7 @@ body {
 .container .controls input{
     -webkit-appearance: none;
     height: 7px;
+    /* width: 100%; */
     background: #FAF9F6;
     border-radius: 10px;
     outline: none;
@@ -109,4 +111,26 @@ body {
     background: black;
     border-radius: 50%;
     cursor: pointer;
+}
+
+/* Font Buttons */
+.font-btn{
+    border: 2px solid;
+    background-color: #FAF9F6;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 8px 10px;
+    margin: 0 10px;
+}
+
+#anta-font-btn{
+    font-family: "Anta", sans-serif;
+}
+
+#verdana-font-btn{
+    font-family: Verdana, sans-serif;
+}
+
+#georgia-font-btn{
+    font-family: Georgia, serif;
 }
