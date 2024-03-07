@@ -1,0 +1,52 @@
+@font-face {
+    font-family: ;
+    src: url("../assets/font/EyeSpyItalic.otf") format("opentype");
+}
+
+/* Page style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: EyeSpyItalic;
+    color: black;
+    user-select: none;
+    font-size: 20px;
+    height: 100vh;
+    background: linear-gradient(45deg, #22A699, #22A699 25%, #F2BE22 25%, #F2BE22 50%, #F29727 50%, #F29727 75%, #F24C3D 75%, #F24C3D);
+    background-size: 100% 100%;
+}
+
+/* Style of the top of the page (navbar) */
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.top .navbar ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.top .navbar ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 40px 5px 40px;
+    transition: 0.5s ease;
+}
+
+.top .navbar ul:hover li a{
+    color: black;
+}
+
+.top .navbar ul:hover li a:not(:hover){
+    color: black;
+    opacity: 0.8;
+    filter: blur(0.7px);
+}
