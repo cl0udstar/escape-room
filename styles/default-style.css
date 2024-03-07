@@ -1,5 +1,5 @@
 @font-face {
-    font-family: ;
+    font-family: EyeSpyItalic;
     src: url("../assets/font/EyeSpyItalic.otf") format("opentype");
 }
 
@@ -13,6 +13,7 @@
 body{
     font-family: EyeSpyItalic;
     color: black;
+    font-weight: bold;
     user-select: none;
     font-size: 20px;
     height: 100vh;
@@ -45,8 +46,8 @@ body{
     color: black;
 }
 
-.top .navbar ul:hover li a:not(:hover){
+/* .top .navbar ul:hover li a:not(:hover){
     color: black;
     opacity: 0.8;
     filter: blur(0.7px);
-}
+} */
