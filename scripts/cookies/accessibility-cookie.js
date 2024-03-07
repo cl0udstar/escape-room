@@ -100,6 +100,10 @@ document.addEventListener("DOMContentLoaded", function() {
             fontSelect.value = savedFont;
         }
         applyFont(savedFont);
+    } else {
+        const defaultFont = "EyeSpyItalic";
+        setCookie("change-font-btn", defaultFont, 365);
+        applyFont(defaultFont);
     }
     
 
@@ -244,7 +248,7 @@ function changeFont(fontValue) {
 }
 
 function resetFont() {
-    const defaultFont = '"Montserrat", sans-serif';
+    const defaultFont = "EyeSpyItalic";
     const textElement = document.getElementById('text');
     textElement.style.fontFamily = defaultFont;
     setCookie("change-font-btn", defaultFont, 365); // Update cookie with new font
