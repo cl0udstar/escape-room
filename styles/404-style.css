@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
     color: black;
     font-weight: bold;
 }
@@ -12,6 +11,7 @@ body {
     height: 100vh;
     background: linear-gradient(45deg, #22A699, #22A699 25%, #F2BE22 25%, #F2BE22 50%, #F29727 50%, #F29727 75%, #F24C3D 75%, #F24C3D);
     background-size: 100% 100%;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* The text style showed on the 404 page */
