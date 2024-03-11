@@ -1,58 +1,10 @@
-/* Page style */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    transition: ease-in 0.5s;
-    font-family: "Montserrat", sans-serif;
-    color: black;
-    font-weight: bold;
-    user-select: none;
-    background-color: #a5a38d;
-}
-
-/* Style of the top of the page (navbar) */
-.top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    font-size: 20px;
-}
-
-
-.top .navbar ul li{
-    display: inline-block;
-    list-style: none;
-}
-
-.top .navbar ul li a{
-    text-decoration: none;
-    color: black;
-    padding: 5px 40px 5px 40px;
-    transition: 0.5s ease;
-}
-
-.top .navbar ul:hover li a{
-    color: black;
-}
-
-.top .navbar ul:hover li a:not(:hover){
-    color: black;
-    opacity: 0.8;
-    filter: blur(0.7px);
-}
-
-
+/* Page style - Home */
 .puzzle-box{
     position: relative;
     background-color: #9ED2BE;
     border: 2px solid #0C0C0C;
     border-radius: 15px;
-    height: 600px;
+    height: 75%;
     margin: 0 20px 0 20px;
 }
 
@@ -74,6 +26,7 @@ body{
     cursor: pointer;
     color: #FEFFE2;
     box-shadow: 1px 1px 10px 2px #0C0C0C;
-    font-size: 20px;
     text-decoration: none;
 }
+
+/* #a5a38d */

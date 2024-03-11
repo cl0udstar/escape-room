@@ -1,0 +1,71 @@
+.riddle-contents{
+    text-align: center;
+}
+
+.riddle-contents h1{
+    padding: 30px;
+}
+
+.riddle-container{
+    padding: 20px 0;
+}
+
+.answer-check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clue-buttons{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 0 20px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+
+.clue-buttons button{
+    cursor: pointer;
+    background: #FAF9F6;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 5px;
+    font-family: inherit;
+}
+
+.clue-buttons .clue1-btn{
+    margin-right: 5px;
+}
+
+.clue-buttons .clue2-btn{
+    margin-left: 5px;
+}
+.clue2-content-btn{
+    position: relative;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.clue2-content-btn .fa-lock{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .button-content {
+    position: relative;
+}
+  
+.clue-buttons .fa-lock {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.button-content .fa-lock + span {
+    margin-left: 20px; 
+} */
+  

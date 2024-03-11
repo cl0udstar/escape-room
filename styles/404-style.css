@@ -1,0 +1,22 @@
+/* Page style - 404 */
+
+/* The text style showed on the 404 page */
+.error-txt{
+    position: absolute;
+    left: 15%;
+    top: 25%;
+}
+
+.error-txt .error-txt1{
+    font-size: 150px;
+}
+
+.error-txt p{
+    font-size: 20px;
+    padding: 5px;
+}
+
+.error-txt a{
+    text-decoration: underline;
+    color: black;
+}

@@ -1,0 +1,84 @@
+/* Page style - Accessibility */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 20%; */
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 20px;
+    background-color: #FAF9F6;
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resize-btn{
+    border: 2px solid;
+    background-color: #FAF9F6;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 8px 10px;
+    margin: 0 10px;
+}
+
+.reset-btn{
+    border: 2px solid;
+    background-color: #FAF9F6;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 8px 10px;
+    margin: 0 10px;
+}
+
+.container .controls input{
+    -webkit-appearance: none;
+    height: 7px;
+    /* width: 100%; */
+    background: #FAF9F6;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.container .controls input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Font Buttons */
+.font-btn{
+    border: 2px solid;
+    background-color: #FAF9F6;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 8px 10px;
+    margin: 0 10px;
+}
+
+#anta-font-btn{
+    font-family: "Anta", sans-serif;
+}
+
+#lexend-font-btn{
+    font-family: "Lexend", sans-serif;
+}
+
+#calibri-font-btn{
+    font-family: Calibri, serif;
+}

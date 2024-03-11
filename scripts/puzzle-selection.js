@@ -2,87 +2,94 @@
 const arrayData = [
     {
         id: 1,
-        imageUrl: "./images/Major_X.png",
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 1",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
         imageHeight: "350px",
         para: "Test Test Test Test Test Test Test Test Test Test Test Test Test Test ",
-        link: "../puzzles/"
+        link: "../puzzles/puzzle-1.html"
     },
     {
         id: 2,
-        imageUrl: "./images/Jakub_Gray.png",
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 2",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
         imageHeight: "350px",
-        para: "Lilias Bridges is meeting with her fellow vikings, you have gained access to her social media bio. Use the information to answer the questions to find clues to solve the anagram and reveale her location.",
-        link: "../puzzles/puzzle-2-anagram.html"
+        link: "../puzzles/puzzle-2.html"
     },
     {
         id: 3,
-        imageUrl: "./images/Lilias_Bridge.png",
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 3",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
+        link: "../puzzles/puzzle-3.html"
     },
     {
         id: 4,
-        imageUrl: "./images/Test1.jpg",
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 4",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
+        link: "../puzzles/puzzle-4.html"
     },
     {
         id: 5,
-        imageUrl: "./images/Test1.jpg",
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 5",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
+        link: "../puzzles/puzzle-5.html"
     },
     {
         id: 6,
-        imageUrl: "./images/Test1.jpg",
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 6",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
+        link: "../puzzles/puzzle-6.html"
     },
     {
         id: 7,
-        imageUrl: "./images/Test1.jpg",
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 7",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
+        link: "../puzzles/puzzle-7.html"
     },
     {
         id: 8,
-        imageUrl: "./images/Test1.jpg",
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 8",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
+        link: "../puzzles/puzzle-8.html"
     },
     {
         id: 9,
-        imageUrl: "./images/Test1.jpg",
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 9",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
+        link: "../puzzles/puzzle-9.html"
     },
     {
         id: 10,
-        imageUrl: "./images/Test1.jpg",
+        imgUrl: "DATA_HQ.png",
         Heading: "Mission 10",
         color: "linear-gradient(-135deg, #040d12, #61677a)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
+        link: "../puzzles/puzzle-10.html"
     }
 ]
 
@@ -94,7 +101,7 @@ const functionCards = () => {
     arrayData.map((data) => {
         
         cardContainer.innerHTML += '<div class="card" id="'+data.id+'">\
-                                        <div class="front">\
+                                        <div class="front" style="background-image: url(\'../assets/backgrounds/'+data.imgUrl+'\');">\
                                             <h1>'+data.Heading+'</h1>\
                                             <button onclick="handleClick'+data.id+'()">Read More</button>\
                                         </div>\

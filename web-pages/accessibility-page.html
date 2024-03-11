@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Escape Room - Accessibility</title>
+    <link rel="stylesheet" href="../styles/default-style.css">
+    <link rel="stylesheet" href="../styles/accessibility-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body id="text">
+   <div class="top">
+        <div class="logo">
+            <img src="../assets/des-logo.svg" alt="logo" width="200px" height="89px">
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../puzzles/puzzle-selection.html">Puzzles</a></li>
+                <li><a href="https://dataschools.education/contact-us/">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="text-container">
+            <p class="text1">Size</p>
+        </div>
+
+        <div class="controls">
+            <button class="resize-btn" id="resize-text-btn" onclick="decreaseTextSize()">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <input class="slider" type="range" min="10" max="40" value="20" step="1" id="text-size-slider" onchange="resizeText()">
+
+
+            <button class="resize-btn" id="resize-text-btn" onclick="increaseTextSize()">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <button class="reset-btn" id="reset-text-btn" onclick="resetTextSize()">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-container">
+            <p>Contrast</p>
+        </div>
+
+        <div class="controls">
+            <button class="resize-btn" id="contrast-change-btn" onclick="decreaseContrast()">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <input class="slider" type="range" min="10" max="100" value="100" step="10" id="contrast-slider" onchange="adjustContrast()">
+
+            <button class="resize-btn" id="contrast-change-btn" onclick="increaseContrast()">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <button class="reset-btn" id="reset-contrast-btn" onclick="resetContrast()">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-container">
+            <p>Saturation</p>
+        </div>
+
+        <div class="controls">
+            <button class="resize-btn" id="saturation-change-btn" onclick="decreaseSaturation()">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <input class="slider" type="range" min="10" max="100" value="10" step="5" id="saturation-slider" onchange="adjustSaturation()">
+
+            <button class="resize-btn" id="saturation-change-btn" onclick="increaseSaturation()">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <button class="reset-btn" id="reset-saturation-btn" onclick="resetSaturation()">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-container">
+            <p>Font</p>
+        </div>
+        
+        <div class="controls">
+            <button class="font-btn" id="anta-font-btn" onclick="changeFont('Anta, sans-serif')">
+                Anta
+            </button>
+            
+            <button class="font-btn" id="lexend-font-btn" onclick="changeFont('Lexend, sans-serif')">
+                Lexend
+            </button>
+
+            <button class="font-btn" id="calibri-font-btn" onclick="changeFont('Calibri, sans-serif')">
+                Calibri
+            </button>
+
+            <button class="reset-btn" id="reset-font-btn" onclick="resetFont()">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="page-footer"></div>
+
+    <script src="../scripts/cookies/accessibility-cookie.js"></script>
+</body>
+</html>
