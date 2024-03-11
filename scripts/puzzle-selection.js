@@ -111,7 +111,7 @@ const functionCards = () => {
                                             <p>'+data.para+'</p>\
                                             <div class="background_back"></div>\
                                             <button class="return" onclick="handle2ndClick'+data.id+'()"><i class="fa-solid fa-arrow-rotate-left"></i></button>\
-                                            <button class="start"><a href="'+data.link+'">Start</a></button>\
+                                            <a href="'+data.link+'"><button class="start">Start</button></a>\
                                         </div>\
                                     </div>';
     })
