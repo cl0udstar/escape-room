@@ -5,3 +5,8 @@ h1{
 p{
   font-align: centre;
 }
+
+puzzle_container{
+  width: 80%;
+  height: 75%;
+}
