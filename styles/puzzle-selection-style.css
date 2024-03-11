@@ -113,6 +113,7 @@ img{
 .back h1{
     position: absolute;
     text-align: center;
+    font-size: 40px;
     margin-top: 15%;
     width: 100%;
     padding: 10px;
@@ -122,7 +123,7 @@ img{
     content: '';
     background-color: black;
     height: 3px;
-    width: 235px;
+    width: 300px;
     position: absolute;
     bottom: 5px;
     border-radius: 50%;
