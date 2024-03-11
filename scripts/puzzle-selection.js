@@ -8,7 +8,7 @@ const arrayData = [
         imageWidth: "300px",
         imageHeight: "350px",
         para: "Test Test Test Test Test Test Test Test Test Test Test Test Test Test ",
-        link: "../puzzles/"
+        link: "../puzzles/puzzle-1.html"
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
         imageHeight: "350px",
-        link: "../puzzles/puzzle-2-anagram.html"
+        link: "../puzzles/puzzle-2.html"
     },
     {
         id: 3,
@@ -26,6 +26,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
         imageHeight: "350px"
+        link: "../puzzles/puzzle-3.html"
     },
     {
         id: 4,
@@ -34,6 +35,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
         imageHeight: "350px"
+        link: "../puzzles/puzzle-4.html"
     },
     {
         id: 5,
@@ -42,6 +44,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
         imageHeight: "350px"
+        link: "../puzzles/puzzle-5.html"
     },
     {
         id: 6,
@@ -50,6 +53,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
         imageHeight: "350px"
+        link: "../puzzles/puzzle-6.html"
     },
     {
         id: 7,
@@ -58,6 +62,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
         imageHeight: "350px"
+        link: "../puzzles/puzzle-7.html"
     },
     {
         id: 8,
@@ -66,6 +71,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
         imageHeight: "350px"
+        link: "../puzzles/puzzle-8.html"
     },
     {
         id: 9,
@@ -74,6 +80,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
         imageHeight: "350px"
+        link: "../puzzles/puzzle-9.html"
     },
     {
         id: 10,
@@ -82,6 +89,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #040d12, #61677a)",
         imageWidth: "300px",
         imageHeight: "350px"
+        link: "../puzzles/puzzle-10.html"
     }
 ]
 
