@@ -25,7 +25,7 @@ const arrayData = [
         Heading: "Mission 3",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
         link: "../puzzles/puzzle-3.html"
     },
     {
@@ -34,7 +34,7 @@ const arrayData = [
         Heading: "Mission 4",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
         link: "../puzzles/puzzle-4.html"
     },
     {
@@ -43,7 +43,7 @@ const arrayData = [
         Heading: "Mission 5",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
         link: "../puzzles/puzzle-5.html"
     },
     {
@@ -52,7 +52,7 @@ const arrayData = [
         Heading: "Mission 6",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
         link: "../puzzles/puzzle-6.html"
     },
     {
@@ -61,7 +61,7 @@ const arrayData = [
         Heading: "Mission 7",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
         link: "../puzzles/puzzle-7.html"
     },
     {
@@ -70,7 +70,7 @@ const arrayData = [
         Heading: "Mission 8",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
         link: "../puzzles/puzzle-8.html"
     },
     {
@@ -79,7 +79,7 @@ const arrayData = [
         Heading: "Mission 9",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
         link: "../puzzles/puzzle-9.html"
     },
     {
@@ -88,7 +88,7 @@ const arrayData = [
         Heading: "Mission 10",
         color: "linear-gradient(-135deg, #040d12, #61677a)",
         imageWidth: "300px",
-        imageHeight: "350px"
+        imageHeight: "350px",
         link: "../puzzles/puzzle-10.html"
     }
 ]
