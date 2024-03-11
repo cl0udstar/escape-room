@@ -1,12 +1,12 @@
 h1{
-  text-align: centre;
+  text-align: center;
 }
 
 p{
-  text-align: centre;
+  text-align: center;
 }
 
-puzzle_container{
+.puzzle_container{
   width: 80%;
   height: 75%;
   border-radius: 20px;
