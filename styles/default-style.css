@@ -18,7 +18,7 @@ body{
     font-size: 20px;
     height: 100vh;
     background: linear-gradient(45deg, #22A699, #22A699 25%, #F2BE22 25%, #F2BE22 50%, #F29727 50%, #F29727 75%, #F24C3D 75%, #F24C3D);
-    background-size: cover;
+    background-size: 200% 100%;
 }
 
 /* Style of the top of the page (navbar) */
