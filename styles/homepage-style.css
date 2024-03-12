@@ -1,4 +1,24 @@
 /* Page style - Home */
+
+
+  .tv-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tv-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+  }
+
+
+
+
+
 .puzzle-box{
     position: relative;
     background-color: wheat;
