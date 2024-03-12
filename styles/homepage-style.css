@@ -2,7 +2,7 @@
 .puzzle-box{
     position: relative;
     background-color: wheat;
-    border: 2px solid #ffff00;
+    border: 2px solid black;
     border-radius: 15px;
     height: 75%;
     margin: 0 20px 0 20px;
