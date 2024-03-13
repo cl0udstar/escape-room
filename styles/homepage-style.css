@@ -27,6 +27,11 @@
     height: 75%;
     margin: 0 20px 0 20px;
     text-align: center;
+    animation:
+          typing 2s steps(18)
+          cursor .4s step-end infinate alternative;
+  
+    
     
 }
 
