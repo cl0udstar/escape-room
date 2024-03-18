@@ -1,4 +1,3 @@
-// JavaScript for creating the interactive graph
 const svg = document.getElementById('graph-svg');
 const graphContainer = document.getElementById('graph-container');
 const gridSize = 50; // Size of the grid squares
@@ -7,16 +6,24 @@ const gridSize = 50; // Size of the grid squares
 let points = [
     { x: 0, y: 0 },
     { x: 0, y: 0 },
-    { x: 0, y: 0 }
+    { x: 0, y: 0 },
+    { x: 0, y: 0},
+    { x: 0, y: 0},
+    { x: 0, y: 0},
+    { x: 0, y: 0},
+    { x: 0, y: 0},
+    { x: 0, y: 0},
+    { x: 0, y: 0},
+    { x: 0, y: 0},
+    { x: 0, y: 0},
 ];
 
 // Function to generate random coordinates
 function generateRandomCoordinates() {
     const randomCoordinates = [];
     for (let i = 0; i < points.length; i++) {
-        const randomX = getRandomInt(1, 11) * gridSize; // Random X coordinate snapped to grid
         const randomY = getRandomInt(1, 7) * gridSize; // Random Y coordinate snapped to grid
-        randomCoordinates.push({ x: randomX, y: randomY });
+        randomCoordinates.push({ x: i * gridSize, y: randomY });
     }
     return randomCoordinates;
 }
@@ -100,8 +107,6 @@ function drawGraph() {
         circle.setAttribute('cx', point.x);
         circle.setAttribute('cy', point.y);
         circle.setAttribute('r', '5');
-        circle.setAttribute('data-index', i);
-        circle.addEventListener('mousedown', startDragging);
         svg.appendChild(circle);
 
         // Set different color for the first point
@@ -123,39 +128,7 @@ function drawGraph() {
     }
 }
 
-
-
-// Function to handle dragging of points
-function startDragging(event) {
-    const index = event.target.getAttribute('data-index');
-    const point = points[index];
-    let offsetX = event.clientX - point.x;
-    let offsetY = event.clientY - point.y;
-
-    function movePoint(e) {
-        let newX = e.clientX - offsetX;
-        let newY = e.clientY - offsetY;
-        
-        // Ensure the point stays within the boundaries of the graph container
-        newX = Math.max(0, Math.min(Math.round(newX / gridSize) * gridSize, 600));
-        newY = Math.max(0, Math.min(Math.round(newY / gridSize) * gridSize, 400));
-
-        point.x = newX;
-        point.y = newY;
-        drawGraph();
-    }
-
-    function stopDragging() {
-        window.removeEventListener('mousemove', movePoint);
-        window.removeEventListener('mouseup', stopDragging);
-    }
-
-    window.addEventListener('mousemove', movePoint);
-    window.addEventListener('mouseup', stopDragging);
-}
-
 drawGraph(); // Initial draw
-
 
 // Define the correct coordinates
 const correctCoordinates = [
