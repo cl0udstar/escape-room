@@ -18,6 +18,7 @@ body{
     font-size: 20px;
     background: linear-gradient(45deg, #22A699, #22A699 25%, #F2BE22 25%, #F2BE22 50%, #F29727 50%, #F29727 75%, #F24C3D 75%, #F24C3D);
     background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
 /* Style of the top of the page (navbar) */
