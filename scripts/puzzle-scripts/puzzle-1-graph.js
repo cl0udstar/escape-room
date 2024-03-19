@@ -28,8 +28,6 @@ function generateRandomCoordinates() {
     return randomCoordinates;
 }
 
-
-
 // Function to generate random integer between min and max (inclusive)
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -45,6 +43,15 @@ const yLine = [{ x: 0, y: 0 }, { x: 0, y: 400 }];
 // Function to draw points, lines, and axes
 function drawGraph() {
     svg.innerHTML = ''; // Clear previous drawings
+
+    // // Draw custom text above the graph
+    // const customHeading = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+    // customHeading.setAttribute('class', 'heading');
+    // customHeading.setAttribute('x', 300);
+    // customHeading.setAttribute('y', 40); // Adjust the y-coordinate as needed
+    // customHeading.setAttribute('text-anchor', 'middle');
+    // customHeading.textContent = 'What number was Major X Thinking of?';
+    // svg.appendChild(customHeading);
 
     // Draw custom text for x-axis
     const customXText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
@@ -149,8 +156,6 @@ function drawGraph() {
             svg.appendChild(line);
         }
     }
-    
-    
 }
 
 drawGraph(); // Initial draw
@@ -161,4 +166,3 @@ const correctCoordinates = [
     { x: 150, y: 150 },
     { x: 200, y: 200 }
 ];
-

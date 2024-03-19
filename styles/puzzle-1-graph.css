@@ -4,8 +4,8 @@
 
 /* CSS for styling the graph container */
 #graph-container {
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    height: 800px;
     position: relative;
     margin: 50px auto;
     /* border: 1px solid white;  */
@@ -37,4 +37,14 @@
 /* CSS for styling the grid lines */
 .grid-line {
     stroke: red;
+}
+
+/* CSS for styling the h2 */
+h2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; /* Reset margin */
+    padding-bottom: 20px;
 }
