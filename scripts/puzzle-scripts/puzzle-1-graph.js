@@ -28,6 +28,8 @@ function generateRandomCoordinates() {
     return randomCoordinates;
 }
 
+
+
 // Function to generate random integer between min and max (inclusive)
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -44,6 +46,25 @@ const yLine = [{ x: 0, y: 0 }, { x: 0, y: 400 }];
 function drawGraph() {
     svg.innerHTML = ''; // Clear previous drawings
 
+    // Draw custom text for x-axis
+    const customXText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+    customXText.setAttribute('class', 'text');
+    customXText.setAttribute('x', 300);
+    customXText.setAttribute('y', 450);
+    customXText.setAttribute('text-anchor', 'middle');
+    customXText.textContent = 'Time';
+    svg.appendChild(customXText);
+    
+    // Draw custom text for y-axis
+    const customYText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+    customYText.setAttribute('class', 'text');
+    customYText.setAttribute('x', -200);
+    customYText.setAttribute('y', -60); // Adjust the y-coordinate as needed
+    customYText.setAttribute('text-anchor', 'middle');
+    customYText.setAttribute('transform', 'rotate(-90)');
+    customYText.textContent = 'Numbers';
+    svg.appendChild(customYText);
+    
     // Draw x line
     const xLineElement = document.createElementNS("http://www.w3.org/2000/svg", 'line');
     xLineElement.setAttribute('class', 'line');
@@ -73,11 +94,13 @@ function drawGraph() {
         svg.appendChild(gridLineX);
 
         // Add coordinates along x axis
+        const hour = i / gridSize % 12 || 12; // Convert grid position to 12-hour format
+        const period = 'PM'; // Set period to PM
         const text = document.createElementNS("http://www.w3.org/2000/svg", 'text');
         text.setAttribute('class', 'text');
         text.setAttribute('x', i);
         text.setAttribute('y', 415);
-        text.textContent = i.toString();
+        text.textContent = hour + ':00 ' + period; // Display hour and period
         svg.appendChild(text);
     }
 
@@ -126,6 +149,8 @@ function drawGraph() {
             svg.appendChild(line);
         }
     }
+    
+    
 }
 
 drawGraph(); // Initial draw
@@ -137,24 +162,3 @@ const correctCoordinates = [
     { x: 200, y: 200 }
 ];
 
-// Function to display feedback
-function displayFeedback(isCorrect) {
-    const feedbackElement = document.getElementById('feedback');
-    feedbackElement.textContent = isCorrect ? 'Correct!' : 'Wrong. Please try again.';
-}
-
-// Function to check if the current positions match the correct coordinates
-function checkAnswer() {
-    // Check if the current coordinates match the correct coordinates
-    const isCorrect = points.every((point, index) => {
-        const correctPoint = correctCoordinates[index];
-        return point.x === correctPoint.x && point.y === correctPoint.y;
-    });
-
-    // Display feedback to the user
-    displayFeedback(isCorrect);
-}
-
-// Add event listener to the check button
-const checkButton = document.getElementById('check-button');
-checkButton.addEventListener('click', checkAnswer);
