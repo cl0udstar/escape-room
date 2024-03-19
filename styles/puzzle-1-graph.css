@@ -4,8 +4,8 @@
 
 /* CSS for styling the graph container */
 #graph-container {
-    width: 700px;
-    height: 800px;
+    width: 600px;
+    height: 500px;
     position: relative;
     margin: 50px auto;
     /* border: 1px solid white;  */
