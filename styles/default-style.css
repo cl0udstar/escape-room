@@ -47,6 +47,10 @@ body{
     color: black;
 }
 
+p{
+    font-family: lexend;
+}
+
 /* .top .navbar ul:hover li a:not(:hover){
     color: black;
     opacity: 0.8;
