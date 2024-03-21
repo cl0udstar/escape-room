@@ -11,9 +11,18 @@ p{
 }
 
 .puzzle_container{
-  margin: 2% 10%;
+  margin: 10%;
   padding: 5%;
   width: 80%;
   border-radius: 20px;
   background-color: white;
+}
+
+.answer_container{
+  align-items: center;
+  padding-left: 10%;
+}
+
+input{
+  margin: 0% 1%;
 }
