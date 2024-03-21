@@ -1,39 +1,26 @@
 /* Page style - Home */
-
-
-  .tv-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .tv-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    text-align: center;
-  }
-
-
-
-
-
 .puzzle-box{
     position: relative;
-    background-color: wheat;
-    border: 2px solid black;
+    background-color: #9ED2BE;
+    border: 2px solid #0C0C0C;
     border-radius: 15px;
-    height: 75%;
+    height: 600px;
     margin: 0 20px 0 20px;
-    text-align: center;
-    animation:
-          typing 2s steps(18)
-          cursor .4s step-end infinate alternative;
-  
-    
-    
 }
+
+.img-text-container {
+    display: flex;
+}
+
+.puzzle-box .home-text {
+    display: inline-block;
+}
+
+.home-text {
+    max-width: auto;
+    padding: 1em;
+}
+
 
 .puzzle-box .puzzle-box-button{
     position: absolute;
