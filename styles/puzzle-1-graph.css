@@ -38,13 +38,3 @@
 .grid-line {
     stroke: lightgrey;
 }
-
-/* CSS for styling the h2 */
-h2 {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0; /* Reset margin */
-    padding-bottom: 20px;
-}
