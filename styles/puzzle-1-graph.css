@@ -7,7 +7,7 @@
     width: 600px;
     height: 500px;
     position: relative;
-    margin: 50px auto;
+    margin: 100px auto;
     /* border: 1px solid white;  */
 }
 
@@ -36,7 +36,7 @@
 
 /* CSS for styling the grid lines */
 .grid-line {
-    stroke: red;
+    stroke: lightgrey;
 }
 
 /* CSS for styling the h2 */
