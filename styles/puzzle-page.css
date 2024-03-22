@@ -1,11 +1,17 @@
 .header{
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
 }
 
-i{
- margin: 0% 0% 0% 2%;
+a{
+  margin-right: 50%;
+  font-size: 35px;
+  color: black;
+  al
 }
-  
+
 h1{
   text-align: center;
 }
