@@ -1,3 +1,11 @@
+.header{
+  display: inline-flex;
+}
+
+i{
+ margin: 0% 0% 0% 2%;
+}
+  
 h1{
   text-align: center;
 }
