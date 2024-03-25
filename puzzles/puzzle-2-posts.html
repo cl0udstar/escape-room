@@ -1,57 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Post</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <title>Mission 2</title>
     <link rel="stylesheet" href="../styles/puzzle-page.css">
-    <link rel="stylesheet" type="text/css" href="../styles/puzzle-2-posts.css">
+    <link rel="stylesheet" type="text/css" href="../styles/puzzle-2-test.css">
     <link rel="stylesheet" href="../styles/default-style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-</head>
-<body>
-    <div class="container">
-        <div class="post">
-            <div class="head">
-                <img src="../assets/backgrounds/Vikingstagram-nobg.png" alt="Instagram Logo" class="instagram-logo">
-                <div class="profile-detail">
-                    <div class="p-img">
-                        <img src="../assets/backgrounds/lilas-profile-pic.png" alt="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <a href="puzzle-selection.html"><i class="fa-solid fa-map"></i></a>
+            <h1>Mission 2</h1>
+        </div>
+        <p>Insert Puzzle Rules</p>
+        <div class="puzzle_container">
+            <div class="container">
+                <div class="post">
+                    <!-- Post content here -->
+                    <div class="head">
+                        <img src="../assets/backgrounds/Vikingstagram-nobg.png" alt="Instagram Logo" class="instagram-logo">
+                        <div class="profile-detail">
+                            <div class="p-img">
+                                <img src="../assets/backgrounds/lilas-profile-pic.png" alt="">
+                            </div>
+                            <div class="name">LiliasTheSlyViking</div>
+                        </div>
+                        <div class="more">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
                     </div>
-                    <div class="name">LiliasTheSlyViking</div>
-                </div>
-                <div class="more">
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-            </div>
-            <div class="post-img">
-                <img src="../assets/backgrounds/Lilas-1.png" alt="">
-                <i class="fas fa-heart"></i>
-            </div>
-            <div class="reactions head">
-                <div class="react-links">
-                    <i id="heart" class="far fa-heart"></i>
-                    <i class="far fa-comment"></i>
-                    <i class="far fa-paper-plane"></i>
-                </div>
-                <div class="save">
-                    <i class="far fa-bookmark"></i>
-                </div>
-            </div>
-            <div class="react-detail">
-                2,406 likes
-            </div>
-            <div class="caption">
-                <div class="profile-name">
-                    LiliasTheSlyViking
-                </div>
-                <div class="post-cap">
-                    No More Captions needed....
+                    <div class="post-img" id="image-carousel">
+                        <img src="../assets/backgrounds/Lilas-1.png" alt="">
+                        <img src="../assets/backgrounds/Lilas-2.png" alt="">
+                        <!-- Add more images here -->
+                    </div>
+                    <div class="reactions head">
+                        <div class="react-links">
+                            <i id="heart" class="far fa-heart"></i>
+                            <i class="far fa-comment"></i>
+                            <i class="far fa-paper-plane"></i>
+                        </div>
+                        <div class="save">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="react-detail">
+                        2,406 likes
+                    </div>
+                        <div class="caption">
+                            <div class="profile-name">
+                                LiliasTheSlyViking
+                            </div>
+                            <div class="post-cap">
+                                No More Captions needed....
+                            </div>
+                                <div class="post-cap">
+                                No More Captions needed 2....
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
-    </div>
+        
+        <div class="button-container">
+            <button id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <script src="../scripts/puzzle-scripts/puzzle-2-test.js">
+            
+        </script>
 
-    <script src="../scripts/puzzle-scripts/puzzle-2-posts.js"></script>
-</body>
+    </body>
 </html>
