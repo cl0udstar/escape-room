@@ -1,48 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400&display=swap');
 
-body {
-    font-family: 'Blinker', Arial, sans-serif;
-    background-color: #091921;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Blinker',sans-serif;
     color: white;
 }
 
-.container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#word-container {
-    margin: 20px 0;
-}
-
-button {
-    cursor: pointer;
-}
-
-#result {
-    font-weight: bold;
-    color: #1a9b15;
-}
-
-i {
+i{
     font-weight: 100;
     color: white;
 }
 
-.post {
+.container{
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: #091921;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post{
     width: 400px;
     height: 600px;
     background: rgba(255, 255, 255, 0.05);
@@ -51,22 +31,21 @@ i {
     padding-top: 70px;
     padding-bottom: 60px;
     border-radius: 15px;
-    margin-top: 80px;
 }
 
-.head {
+.head{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 12px;
 }
 
-.profile-detail {
+.profile-detail{
     display: flex;
     align-items: center;
 }
 
-.profile-detail .p-img {
+.profile-detail .p-img{
     width: 50px;
     height: 50px;
     border: 3px solid #c31432;
@@ -75,90 +54,93 @@ i {
     overflow: hidden;
 }
 
-.profile-detail .p-img img {
+.profile-detail .p-img img{
     width: 100%;
     height: 100%;
 }
 
-.profile-detail .name {
+.profile-detail .name{
     font-size: 1.5rem;
 }
 
-.more i {
+.more i{
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-.post-img {
+.post-img{
     height: 70%;
     width: 100%;
     position: relative;
 }
-
-.post-img img {
+.post-img img{
     width: 100%;
     height: 100%;
 }
 
-.post-img i {
+.post-img i{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
     opacity: 0;
+    /* transition: 1s; */
 }
 
-.active.post-img i {
+.active.post-img i{
     animation: heart 1s linear;
 }
 
 @keyframes heart {
-    0% {
+    0%{
         opacity: 0;
         transform: scale(0);
     }
-    50% {
+    50%{
         opacity: 1;
         transform: scale(6);
     }
 }
 
-.reactions {
+.reactions{
     margin-top: 1rem;
 }
 
-.reactions i {
+.reactions i{
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-.react-links i {
+.react-links i{
     margin-right: 10px;
 }
 
-i.fa-heart:hover {
+i.fa-heart:hover{
     color: red;
 }
 
-.caption {
+.caption{
     margin-top: 10px;
     display: flex;
 }
 
-.caption .profile-name {
+.caption .profile-name{
     font-size: 1rem;
     font-weight: 800;
     margin-right: 10px;
 }
-
 .container {
-    position: relative;
+  position: relative;
 }
 
 .instagram-logo {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px; /* Adjust size as needed */
+}
+
+.post {
+  margin-top: 80px; /* Adjust spacing between logo and post */
 }
