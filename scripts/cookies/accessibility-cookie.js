@@ -102,8 +102,10 @@ document.addEventListener("DOMContentLoaded", function() {
         applyFont(savedFont);
     } else {
         const defaultFont = "EyeSpyItalic";
-        setCookie("change-font-btn", defaultFont, 365);
+        const defaultHeadingsFont = '"Anta", sans-serif';
+        // setCookie("change-font-btn", defaultFont, 365);
         applyFont(defaultFont);
+        applyHeadingsFont(defaultHeadingsFont);
     }
     
 
@@ -136,6 +138,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const contentContainer = document.getElementById("text");
         if (contentContainer) {
             contentContainer.style.fontFamily = style;
+        }
+    }
+
+    // Function to apply font style to content on other pages
+    function applyHeadingsFont(style) {
+        const headingsContainer = document.getElementById("heading-font");
+        if (headingsContainer) {
+            console.log("Headings Font value:", style)
+            headingsContainer.style.fontFamily = style;
         }
     }
 });
@@ -248,8 +259,8 @@ function changeFont(fontValue) {
 }
 
 function resetFont() {
-    const defaultFont = "EyeSpyItalic";
+    const defaultFont = '"Montserrat", sans-serif';
     const textElement = document.getElementById('text');
     textElement.style.fontFamily = defaultFont;
-    setCookie("change-font-btn", defaultFont, 365); // Update cookie with new font
+    deleteCookie("change-font-btn"); // Delete the saturation cookie
 }
