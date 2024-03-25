@@ -254,13 +254,19 @@ function resetSaturation() {
 ////////
 function changeFont(fontValue) {
     const textElement = document.getElementById('text');
+    const headingElement = document.getElementById('heading-font');
     textElement.style.fontFamily = fontValue;
+    headingElement.style.fontFamily = fontValue;
     setCookie("change-font-btn", fontValue, 365); // Update cookie with new font
 }
 
 function resetFont() {
-    const defaultFont = '"Montserrat", sans-serif';
+    const defaultFont = '"Anta", sans-serif';
+    const defaultHeadingsFont = "EyeSpyItalic";
+    
     const textElement = document.getElementById('text');
+    const headingElement = document.getElementById('heading-font');
     textElement.style.fontFamily = defaultFont;
+    headingElement.style.fontFamily = defaultHeadingsFont;
     deleteCookie("change-font-btn"); // Delete the saturation cookie
 }
