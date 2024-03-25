@@ -1,26 +1,31 @@
-const words = ["apple", "banana", "orange", "grape", "melon", "kiwi", "cherry", "mango", "strawberry"];
-let currentWord = "";
+const heart = document.getElementById('heart');
+const postImg = document.querySelector('.post-img');
 
-document.addEventListener("DOMContentLoaded", generateRandomWord);
+postImg.addEventListener('dblclick', () =>{
 
-function generateRandomWord() {
-    const randomIndex = Math.floor(Math.random() * words.length);
-    currentWord = words[randomIndex];
-    const scrambledWord = scrambleWord(currentWord);
-    document.getElementById("scrambled-word").textContent = scrambledWord;
-    document.getElementById("user-input").value = "";
-    document.getElementById("result").textContent = "";
-}
+    heart.classList.replace('far','fas');
+    heart.style.color ='red';
+    document.querySelector('.react-detail').innerHTML ='2,407 likes';
+    postImg.classList.add('active');
 
-function scrambleWord(word) {
-    return word.split("").sort(() => Math.random() - 0.5).join("");
-}
+    setInterval(() => {
+        postImg.classList.remove('active');
+    }, 1000);
+});
 
-function checkGuess() {
-    const userInput = document.getElementById("user-input").value.toLowerCase();
-    if (userInput === currentWord) {
-        document.getElementById("result").textContent = "Correct! Well done!";
-    } else {
-        document.getElementById("result").textContent = "Try again. Incorrect.";
+heart.addEventListener('click',handleHeart)
+
+function handleHeart() {
+    var attr = heart.getAttributeNode("class").value;
+
+    if(attr == 'far fa-heart'){
+        heart.classList.replace('far','fas');
+        heart.style.color = 'red';
+        document.querySelector('.react-detail').innerHTML = '2,407 likes';
     }
-}
+    else if(attr == 'fas fa-heart'){
+        heart.classList.replace('fas','far');
+        heart.style.color = 'white';
+        document.querySelector('.react-detail').innerHTML = '2,406 likes';
+    }
+}// Add your custom code to handle image and caption inputs here.
