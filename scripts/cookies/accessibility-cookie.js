@@ -101,8 +101,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         applyFont(savedFont);
     } else {
-        const defaultFont = "EyeSpyItalic";
-        const defaultHeadingsFont = '"Anta", sans-serif';
+        const defaultFont = '"Anta", sans-serif';
+        const defaultHeadingsFont = "EyeSpyItalic";
         // setCookie("change-font-btn", defaultFont, 365);
         applyFont(defaultFont);
         applyHeadingsFont(defaultHeadingsFont);
