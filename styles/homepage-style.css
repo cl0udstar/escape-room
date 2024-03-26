@@ -4,8 +4,10 @@
     background-color: #ffe3a7;
     border: 2px solid #0C0C0C;
     border-radius: 15px;
-    height: 600px;
+    min-height: 500px;
+    height: auto;
     margin: 0 20px 0 20px;
+    padding-bottom: 70px;
 }
 
 .img-text-container {
