@@ -131,7 +131,7 @@ img{
 }
 
 .back p{
-    font-family: sans-serif;
+/*     font-family: sans-serif; */
     position: absolute;
     text-align: center;
     margin-top: 40%;
