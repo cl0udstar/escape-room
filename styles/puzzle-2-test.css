@@ -155,3 +155,26 @@ i.fa-heart:hover {
 .button-container button:hover {
     background-color: rgba(255, 255, 255, 0.7);
 }
+/* Updated CSS for dot navigation */
+.dot-navigation {
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999; /* Ensure dots are on top of the images */
+}
+
+.dot-navigation .dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot-navigation .dot.active {
+    background-color: white;
+}
+
