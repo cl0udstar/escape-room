@@ -100,14 +100,15 @@ i.fa-heart:hover {
 .caption {
     margin-top: 10px;
     display: flex;
-    flex-direction: row; /* Change to row */
-    align-items: center; /* Align items to the center */
+    flex-direction: row; /* Keep items in a row */
+    align-items: flex-start; /* Align items to the start */
 }
 
 .caption .profile-name {
     font-size: 1rem;
     font-weight: 800;
-    margin-right: 5px; /* Add margin between profile name and caption */
+    margin-right: 15px; /* Add margin between profile name and caption */
+    align-self: flex-start; /* Align profile name to the start */
 }
 
 .caption .post-cap {
@@ -120,10 +121,10 @@ i.fa-heart:hover {
 
 .instagram-logo {
     position: absolute;
-    top: 1px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    width: 290px; /* Adjust size as needed */
+    width: 300px; /* Adjust size as needed */
 }
 
 .post {
