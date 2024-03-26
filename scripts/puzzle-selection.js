@@ -12,7 +12,7 @@ const arrayData = [
     },
     {
         id: 2,
-        imgUrl: "DATA_HQ.png",
+        imgUrl: "../assets/backgrounds/Puzzle_2.png",
         Heading: "Mission 2",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
@@ -21,7 +21,7 @@ const arrayData = [
     },
     {
         id: 3,
-        imgUrl: "DATA_HQ.png",
+        imgUrl: "../assets/backgrounds/Puzzle_3.png",
         Heading: "Mission 3",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
@@ -30,7 +30,7 @@ const arrayData = [
     },
     {
         id: 4,
-        imgUrl: "DATA_HQ.png",
+        imgUrl: "../assets/backgrounds/Puzzle_4.png",
         Heading: "Mission 4",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
