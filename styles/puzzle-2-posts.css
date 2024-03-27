@@ -13,7 +13,7 @@
 
 .post {
     width: 620px;
-    height: 800px;
+    height: 100vh;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
     padding: 15px;
