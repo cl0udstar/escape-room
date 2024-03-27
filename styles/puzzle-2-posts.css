@@ -180,3 +180,10 @@ i.fa-heart:hover {
     background-color: white;
 }
 
+.puzzle_container{
+    margin: 2% 10%;
+    padding: 5%;
+    width: 80%;
+    border-radius: 20px;
+    background-color: #091921;
+  }

@@ -17,6 +17,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
         imageHeight: "350px",
+        para:"You find yourself walking along a steep winding path over a round hill. A gust of wind knocks you to the ground and you fall to the feet of Lilias Bridge. She is on the phone and doesn’t seem to notice you! “Okay, I’ll be there in 5. I’m so excited to see all the other Vikings, I haven’t seen them in ages!” She says. She puts her phone in her pocket but it falls out without her noticing. You pick up her phone and it is logged into her Vikingstagram. ",
         link: "../puzzles/puzzle-2.html"
     },
     {
