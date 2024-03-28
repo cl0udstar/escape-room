@@ -1,32 +1,31 @@
 .header{
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 65%;
+  justify-content: space-between;
+  padding: 20px 50px 20px 50px;
+}
+
+.icons{
+  text-align: center;
+}
+
+.header-text{
+  text-align: center;
+  padding: 10px 50px 10px 50px;
 }
 
 a{
-  margin-right: 50%;
   font-size: 35px;
   color: black;
 }
 
-h1{
-  text-align: center;
-}
-
-h2{
-  text-align: center;
-}
-
-p{
+.puzzle_container p{
   text-align: center;
 }
 
 .puzzle_container{
   margin: 2% 10%;
   padding: 5%;
-  width: 80%;
   border-radius: 20px;
   background-color: white;
 }
