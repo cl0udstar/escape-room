@@ -17,7 +17,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
         imageHeight: "350px",
-        para: "You begin your journey by walking through the deep dark forest. Suddenly everything goes silent. A tall man with grey hair stops you in your path! It is Major X, the leader of the Data Vikings, “I am here to test your powers of mind reading”.",
+        para: "While walking along a steep, winding path, a gust of wind knocks you down near Lilias Bridge. Oblivious to your presence, she chats excitedly on her phone about meeting other Vikings. As she pockets her phone, it falls out unnoticed. You pick it up and discover she's logged into her Vikingstagram account.",
         link: "../puzzles/puzzle-2.html"
     },
     {
