@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const questions = [
         { question: "1. What town did Lilias voyage to the most?", answer: "Fjordhelm", hint: "Starts with a 'F' and ends with 'helm'", hintShown: false },
         { question: "2. What town did Lilias voyage from the most?", answer: "fjordhelm", hint: "A place with Fjords", hintShown: false },
-        { question: "3. How many hours did Lilias spend travelling in March?", answer: "20 hours", hint: "Greater than 15 hours", hintShown: false },
+        { question: "3. How many hours did Lilias spend travelling in March?", answer: "20 hours", hint: "Greater than 15 'Hours'", hintShown: false },
         { question: "4. What is the least common type of weather that Lilias travelled in?", answer: "Sunny", hint: "heat", hintShown: false },
         { question: "5. How many places has Lilias visited in total?", answer: "8", hint: "Greater than 5 but less than 10", hintShown: false },
         { question: "6. How many miles did Lilias travel in total?", answer: "565 Miles", hint: "Add up the distance traveled in 'Miles'", hintShown: false }
