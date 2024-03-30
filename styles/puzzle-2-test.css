@@ -13,7 +13,7 @@
 
 .post {
     width: 620px;
-    height: 800px;
+    height: 100vh;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
     padding: 15px;
@@ -22,7 +22,7 @@
     border-radius: 15px;
     border-color: black;
     box-sizing: border-box;
-    font-family: 'Blinker', sans-serif;
+/*     font-family: 'Blinker', sans-serif; */
     color: white;
     position: relative;
     overflow: hidden; /* Ensure content does not overflow */
@@ -180,3 +180,26 @@ i.fa-heart:hover {
     background-color: white;
 }
 
+.puzzle_container{
+    margin: 2% 10%;
+    padding: 5%;
+    width: 80%;
+    border-radius: 20px;
+    background-color: #091921;
+  }
+
+.answer-boxes {
+    /* Styles for the container of answer boxes */
+}
+
+.answer-box {
+    /* Styles for individual answer boxes */
+}
+
+.answer-box label {
+    /* Styles for label */
+}
+
+.answer-box input {
+    /* Styles for input */
+}

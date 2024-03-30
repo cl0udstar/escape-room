@@ -187,3 +187,19 @@ i.fa-heart:hover {
     border-radius: 20px;
     background-color: #091921;
   }
+
+.answer-boxes {
+    /* Styles for the container of answer boxes */
+}
+
+.answer-box {
+    /* Styles for individual answer boxes */
+}
+
+.answer-box label {
+    /* Styles for label */
+}
+
+.answer-box input {
+    /* Styles for input */
+}
