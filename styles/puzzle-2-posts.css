@@ -167,8 +167,8 @@ i.fa-heart:hover {
 }
 
 .dot-navigation .dot {
-    height: 16px;
-    width: 16px;
+    height: 20px;
+    width: 20px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     display: inline-block;
