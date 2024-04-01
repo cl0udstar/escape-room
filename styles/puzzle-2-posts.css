@@ -188,18 +188,27 @@ i.fa-heart:hover {
     background-color: #091921;
   }
 
-.answer-boxes {
-    /* Styles for the container of answer boxes */
+/* .answer-boxes {
+    display: flex;
+    flex-direction: column;
 }
 
 .answer-box {
-    /* Styles for individual answer boxes */
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.answer-box input[type="text"] {
+    width: 200px;
 }
 
 .answer-box label {
-    /* Styles for label */
+    margin-left: 10px;
 }
 
-.answer-box input {
-    /* Styles for input */
-}
+.answer-box input[type="checkbox"] {
+    margin-left: auto;
+    margin-right: 10px;
+} */
+
