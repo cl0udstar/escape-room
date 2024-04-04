@@ -59,7 +59,7 @@ function drawGraph() {
     customXText.setAttribute('x', 300);
     customXText.setAttribute('y', 450);
     customXText.setAttribute('text-anchor', 'middle');
-    customXText.textContent = 'Time';
+    customXText.textContent = 'Time (PM)';
     svg.appendChild(customXText);
     
     // Draw custom text for y-axis
@@ -102,12 +102,12 @@ function drawGraph() {
 
         // Add coordinates along x axis
         const hour = i / gridSize % 12 || 12; // Convert grid position to 12-hour format
-        const period = 'PM'; // Set period to PM
+        // const period = 'PM'; // Set period to PM
         const text = document.createElementNS("http://www.w3.org/2000/svg", 'text');
         text.setAttribute('class', 'text');
         text.setAttribute('x', i);
         text.setAttribute('y', 415);
-        text.textContent = hour + ':00 ' + period; // Display hour and period
+        text.textContent = hour + ':00 '; // Display hour and period
         svg.appendChild(text);
     }
 
