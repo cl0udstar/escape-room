@@ -19,109 +19,112 @@
         </div>
 
         <div class="navbar" id="heading-font">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../puzzles/puzzle-selection.html">Missions</a></li>
-                <li><a href="https://dataschools.education/contact-us/">Contact Us</a></li>
-            </ul>
+            <a href="../index.html">Home</a>
+            <a href="../puzzles/puzzle-selection.html">Missions</a>
+            <a href="https://dataschools.education/contact-us/">Contact Us</a>
         </div>
     </div>
     
-    <div class="container">
-        <div class="text-container">
-            <p class="text1">Size</p>
+    <div class="containers">
+        <div class="page-info">
+            <img src="../assets/viking-glasses-clean.png" alt="logo" width="300px" height="300px">
+            <p>Hey Agent. Here in our accessibility chamber, you can enhance your journey by adjusting the strength of your glasses to conquer the challenges ahead!</p>
         </div>
 
-        <div class="controls">
-            <button class="resize-btn" id="resize-text-btn" onclick="decreaseTextSize()">
-                <i class="fa-solid fa-minus"></i>
-            </button>
+        <div class="settings">
+            <div class="container">
+                <div class="text-container">
+                    <p class="text1">Size</p>
+                </div>
 
-            <input class="slider" type="range" min="10" max="40" value="20" step="1" id="text-size-slider" onchange="resizeText()">
+                <div class="controls">
+                    <button class="resize-btn" id="resize-text-btn" onclick="decreaseTextSize()">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+
+                    <input class="slider" type="range" min="10" max="40" value="20" step="1" id="text-size-slider" onchange="resizeText()">
 
 
-            <button class="resize-btn" id="resize-text-btn" onclick="increaseTextSize()">
-                <i class="fa-solid fa-plus"></i>
-            </button>
+                    <button class="resize-btn" id="resize-text-btn" onclick="increaseTextSize()">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
 
-            <button class="reset-btn" id="reset-text-btn" onclick="resetTextSize()">
-                <i class="fa-solid fa-arrow-rotate-left"></i>
-            </button>
+                    <button class="reset-btn" id="reset-text-btn" onclick="resetTextSize()">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="text-container">
+                    <p>Contrast</p>
+                </div>
+
+                <div class="controls">
+                    <button class="resize-btn" id="contrast-change-btn" onclick="decreaseContrast()">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+
+                    <input class="slider" type="range" min="10" max="100" value="100" step="10" id="contrast-slider" onchange="adjustContrast()">
+
+                    <button class="resize-btn" id="contrast-change-btn" onclick="increaseContrast()">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+
+                    <button class="reset-btn" id="reset-contrast-btn" onclick="resetContrast()">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="text-container">
+                    <p>Saturation</p>
+                </div>
+
+                <div class="controls">
+                    <button class="resize-btn" id="saturation-change-btn" onclick="decreaseSaturation()">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+
+                    <input class="slider" type="range" min="10" max="100" value="10" step="5" id="saturation-slider" onchange="adjustSaturation()">
+
+                    <button class="resize-btn" id="saturation-change-btn" onclick="increaseSaturation()">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+
+                    <button class="reset-btn" id="reset-saturation-btn" onclick="resetSaturation()">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="text-container">
+                    <p>Font</p>
+                </div>
+                
+                <div class="controls">
+                    <button class="font-btn" id="anta-font-btn" onclick="changeFont('Anta, sans-serif')">
+                        Anta
+                    </button>
+                    
+                    <button class="font-btn" id="lexend-font-btn" onclick="changeFont('Lexend, sans-serif')">
+                        Lexend
+                    </button>
+
+                    <button class="font-btn" id="calibri-font-btn" onclick="changeFont('Calibri, sans-serif')">
+                        Calibri
+                    </button>
+
+                    <button class="reset-btn" id="reset-font-btn" onclick="resetFont()">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="container">
-        <div class="text-container">
-            <p>Contrast</p>
-        </div>
-
-        <div class="controls">
-            <button class="resize-btn" id="contrast-change-btn" onclick="decreaseContrast()">
-                <i class="fa-solid fa-minus"></i>
-            </button>
-
-            <input class="slider" type="range" min="10" max="100" value="100" step="10" id="contrast-slider" onchange="adjustContrast()">
-
-            <button class="resize-btn" id="contrast-change-btn" onclick="increaseContrast()">
-                <i class="fa-solid fa-plus"></i>
-            </button>
-
-            <button class="reset-btn" id="reset-contrast-btn" onclick="resetContrast()">
-                <i class="fa-solid fa-arrow-rotate-left"></i>
-            </button>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="text-container">
-            <p>Saturation</p>
-        </div>
-
-        <div class="controls">
-            <button class="resize-btn" id="saturation-change-btn" onclick="decreaseSaturation()">
-                <i class="fa-solid fa-minus"></i>
-            </button>
-
-            <input class="slider" type="range" min="10" max="100" value="10" step="5" id="saturation-slider" onchange="adjustSaturation()">
-
-            <button class="resize-btn" id="saturation-change-btn" onclick="increaseSaturation()">
-                <i class="fa-solid fa-plus"></i>
-            </button>
-
-            <button class="reset-btn" id="reset-saturation-btn" onclick="resetSaturation()">
-                <i class="fa-solid fa-arrow-rotate-left"></i>
-            </button>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="text-container">
-            <p>Font</p>
-        </div>
-        
-        <div class="controls">
-            <button class="font-btn" id="anta-font-btn" onclick="changeFont('Anta, sans-serif')">
-                Anta
-            </button>
-            
-            <button class="font-btn" id="lexend-font-btn" onclick="changeFont('Lexend, sans-serif')">
-                Lexend
-            </button>
-
-            <button class="font-btn" id="calibri-font-btn" onclick="changeFont('Calibri, sans-serif')">
-                Calibri
-            </button>
-
-            <button class="reset-btn" id="reset-font-btn" onclick="resetFont()">
-                <i class="fa-solid fa-arrow-rotate-left"></i>
-            </button>
-        </div>
-    </div>
-
-
-    <div class="page-footer"></div>
 
     <script src="../scripts/cookies/accessibility-cookie.js"></script>
 </body>
-
 </html>
