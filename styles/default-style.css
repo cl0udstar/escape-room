@@ -30,13 +30,18 @@ body{
     padding: 20px;
 }
 
+.top .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .top .navbar ul li{
-    display: inline-block;
+    /* display: inline-block; */
     list-style: none;
 }
 
-.top .navbar ul li a{
+.top .navbar a{
     text-decoration: none;
     color: black;
     padding: 5px 40px 5px 40px;
