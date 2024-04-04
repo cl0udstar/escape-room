@@ -64,33 +64,6 @@ const arrayData = [
         imageWidth: "300px",
         imageHeight: "350px",
         link: "../puzzles/puzzle-7.html"
-    },
-    {
-        id: 8,
-        imgUrl: "DATA_HQ.png",
-        Heading: "Mission 8",
-        color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
-        imageWidth: "300px",
-        imageHeight: "350px",
-        link: "../puzzles/puzzle-8.html"
-    },
-    {
-        id: 9,
-        imgUrl: "DATA_HQ.png",
-        Heading: "Mission 9",
-        color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
-        imageWidth: "300px",
-        imageHeight: "350px",
-        link: "../puzzles/puzzle-9.html"
-    },
-    {
-        id: 10,
-        imgUrl: "DATA_HQ.png",
-        Heading: "Mission 10",
-        color: "linear-gradient(-135deg, #040d12, #61677a)",
-        imageWidth: "300px",
-        imageHeight: "350px",
-        link: "../puzzles/puzzle-10.html"
     }
 ]
 
