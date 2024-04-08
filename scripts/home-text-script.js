@@ -1,9 +1,9 @@
 const div = document.querySelector(".home-text");
-const text1 = "Agent, you've been captured by the nefarious organization known as V.I.K.I.N.G.S.";
-const text2 = "Your objective is to escape their highly secured lair by utilizing your expertise as an Agent of Data.";
+const text1 = "Agent, we have heard whispers of an evil plot from the data V.I.K.I.N.G.S over in Fjordhelm, and we need you to help us. Your objective is to get hold of their computer that holds their evil plan and destroy it.";
+const text2 = "You need to participate in an adventure through the mountains and the seas, and prove your knowledge to the mischievous vikings in your way.";
 const text3 = "This is not just any escape; it's a test of your skills in observation, analysis and problem-solving.";
-const text4 = "Your training as an Agent of Data has prepared you for this moment. Trust in your abilities, use every skill at your disposal, and make your escape from the evil V.I.K.I.N.G.S' lair a success.";
-const text5 = "Good luck, Agent. The fate of the world rests in your hands.";
+const text4 = "Once you reach the viking base, you will need to sneakily search through their highly secured lair until you have sight of the computer.";
+const text5 = "This is not just any escape; it's a test of your skills in observation, analysis, and problem-solving. Your training as an Agent of Data has prepared you for this moment. Trust in your abilities, use every skill at your disposal, and make your escape from the evil V.I.K.I.N.G.S' lair a success. Good luck, Agent. The fate of the world rests in your hands.";
 
 let text1Finished = false;
 let text2Finished = false;
