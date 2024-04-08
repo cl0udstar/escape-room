@@ -146,7 +146,7 @@ function checkAnswerQ3() {
     var userAnswer = document.getElementById("userAnswerQ3").value.trim().toLowerCase();
     var result = document.getElementById("result3");
 
-    if (userAnswer === "20" || userAnswer === "twenty") {
+    if (userAnswer === "20" || userAnswer === "twenty" || userAnswer === "20 hours" || userAnswer === "twenty hours" || userAnswer === "20h") {
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ3.disabled = true;
@@ -202,7 +202,7 @@ function checkAnswerQ5() {
     var userAnswer = document.getElementById("userAnswerQ5").value.trim().toLowerCase();
     var result = document.getElementById("result5");
 
-    if (userAnswer === "8" || userAnswer === "eight") {
+    if (userAnswer === "8" || userAnswer === "eight" || userAnswer === "8 villages" || userAnswer === "eight villages") {
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ5.disabled = true;
@@ -230,7 +230,7 @@ function checkAnswerQ6() {
     var userAnswer = document.getElementById("userAnswerQ6").value.trim().toLowerCase();
     var result = document.getElementById("result6");
 
-    if (userAnswer === "565" || userAnswer === "five hundred and sixty five" || userAnswer === "five hundred sixty five" || userAnswer === "five six five") {
+    if (userAnswer === "565" || userAnswer === "565 miles" || userAnswer === "five hundred and sixty five" || userAnswer === "five hundred and sixty five miles" || userAnswer === "five hundred sixty five" || userAnswer === "five hundred sixty five miles" || userAnswer === "five six five" || userAnswer === "five six five miles") {
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ6.disabled = true;
