@@ -57,7 +57,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
         imageHeight: "350px",
-        para: "You have made it into the lair! Congratulations! You notice Data V.I.K.I.N.G Vi Banks’ laptop sitting on the countertop, and you know that this has the secret evil plan on it."
+        para: "You have made it into the lair! Congratulations! You notice Data V.I.K.I.N.G Vi Banks’ laptop sitting on the countertop, and you know that this has the secret evil plan on it.",
         
         link: "../puzzles/puzzle-6.html"
     },
@@ -68,7 +68,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
         imageHeight: "350px",
-        para: "You have made it into the laptop! You see the file on the desktop and click on it. There seem to be 4 different evil plans in the file, so you are not sure which one is the true plan."
+        para: "You have made it into the laptop! You see the file on the desktop and click on it. There seem to be 4 different evil plans in the file, so you are not sure which one is the true plan.",
         link: "../puzzles/puzzle-7.html"
     }
 ]
