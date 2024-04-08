@@ -76,27 +76,27 @@ function checkSequence() {
 }
 
 // First Question
-var keyInputQ2 = document.getElementById("userAnswerQ2");
-keyInputQ2.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        document.getElementById("check-q2").click();
-    }
-});
+// var keyInputQ2 = document.getElementById("userAnswerQ2");
+// keyInputQ2.addEventListener("keypress", function(event) {
+//     if (event.key === "Enter") {
+//         event.preventDefault();
+//         document.getElementById("check-q2").click();
+//     }
+// });
 
-function checkAnswerQ2() {
-    var userAnswer = document.getElementById("userAnswerQ2").value.trim().toLowerCase();
-    var result = document.getElementById("result2");
+// function checkAnswerQ2() {
+//     var userAnswer = document.getElementById("userAnswerQ2").value.trim().toLowerCase();
+//     var result = document.getElementById("result2");
 
-    if (userAnswer === "blue" || userAnswer === "wind speed 1" || userAnswer === "1") {
-        result.textContent = "Nicely done Agent! Your spy game could outsmart even the fiercest Viking warriors.";
-        result.style.color = "green";
-    } else {
-        result.textContent = "Looks like you've stumbled into a Viking hornet's nest, Agent. Try again!";
-        result.style.color = "red";
-    }
-    result.style.display = "block";
-}
+//     if (userAnswer === "blue" || userAnswer === "wind speed 1" || userAnswer === "1") {
+//         result.textContent = "Nicely done Agent! Your spy game could outsmart even the fiercest Viking warriors.";
+//         result.style.color = "green";
+//     } else {
+//         result.textContent = "Looks like you've stumbled into a Viking hornet's nest, Agent. Try again!";
+//         result.style.color = "red";
+//     }
+//     result.style.display = "block";
+// }
 
 
 // Second Question
@@ -112,7 +112,7 @@ function checkAnswerQ3() {
     var userAnswer = document.getElementById("userAnswerQ3").value.trim().toLowerCase();
     var result = document.getElementById("result3");
 
-    if (userAnswer === "310" || userAnswer === "310 miles" || userAnswer === "310 miles per hour" || userAnswer === "310 mph") {
+    if (userAnswer === "190" || userAnswer === "190 miles" || userAnswer === "190 miles per hour" || userAnswer === "190 mph") {
         result.textContent = "Congratulations Agent, your stealth and cunning would make even Viking raiders bow in awe.";
         result.style.color = "green";
     } else {
@@ -136,7 +136,7 @@ function checkAnswerQ4() {
     var userAnswer = document.getElementById("userAnswerQ4").value.trim().toLowerCase();
     var result = document.getElementById("result4");
 
-    if (userAnswer === "340" || userAnswer === "340 miles" || userAnswer === "340 miles per hour" || userAnswer === "340 mph") {
+    if (userAnswer === "460" || userAnswer === "460 miles" || userAnswer === "460 miles per hour" || userAnswer === "460 mph") {
         result.textContent = "Well done, Agent. Your finesse rivals that of the stealthiest Viking scouts.";
         result.style.color = "green";
     } else {
