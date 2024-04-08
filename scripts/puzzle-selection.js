@@ -40,7 +40,7 @@ const arrayData = [
     },
     {
         id: 5,
-        imgUrl: "DATA_HQ.png",
+        imgUrl: "Puzzle_5.png",
         Heading: "Mission 5",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
@@ -49,7 +49,7 @@ const arrayData = [
     },
     {
         id: 6,
-        imgUrl: "DATA_HQ.png",
+        imgUrl: "Puzzle_6.png",
         Heading: "Mission 6",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
@@ -58,7 +58,7 @@ const arrayData = [
     },
     {
         id: 7,
-        imgUrl: "DATA_HQ.png",
+        imgUrl: "Puzzle_7.png",
         Heading: "Mission 7",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
