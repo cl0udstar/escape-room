@@ -57,7 +57,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
         imageHeight: "350px",
-        para: "You have made it into the lair! Congratulations! You notice Data V.I.K.I.N.G Vi Banks’ laptop sitting on the countertop, and you know that this has the secret evil plan on it.",
+        para: "You have made it into the lair! Congratulations! You notice Data V.I.K.I.N.G Vi Banks’ laptop sitting on the countertop, and you know that this has the secret evil plan on it, so you need to access the file and send it back to Major X, then destroy it.",
         
         link: "../puzzles/puzzle-6.html"
     },
