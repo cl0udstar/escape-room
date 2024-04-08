@@ -188,35 +188,57 @@ i.fa-heart:hover {
     background-color: #091921;
   }
 
-/* .answer-boxes {
+.puzzle_container2 {
+	margin: 2% 10%;
+	padding: 0 5% 5% 5%;
+	border-radius: 20px;
+	background-color: white;
+}
+
+.puzzle_container2 .puzzle-q{
+	text-align: center;
+}
+
+.check-btn {
+    background: none;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.puzzle-q1, .puzzle-q2, .puzzle-q3,
+.puzzle-q4, .puzzle-q5, .puzzle-q6 {
     display: flex;
     flex-direction: column;
-}
-
-.answer-box {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
 }
 
-.answer-box input[type="text"] {
-    width: 200px;
+.puzzle-q1 p, .puzzle-q2 p, .puzzle-q3 p,
+.puzzle-q4 p, .puzzle-q5 p, .puzzle-q6 p {
+    padding: 5% 0 0 0;
 }
 
-.answer-box label {
-    margin-left: 10px;
+.puzzle-q1 #result1, .puzzle-q2 #result2, .puzzle-q3 #result3,
+.puzzle-q4 #result4, .puzzle-q5 #result5, .puzzle-q6 #result6 {
+    padding: 0 0 10px 0;
 }
 
-.answer-box input[type="checkbox"] {
-    margin-left: auto;
-    margin-right: 10px;
-} */
+.q-answer {
+    padding: 10px;
+}
 
-.white-container {
-    background-color: white;
-    padding: 20px;
+.user-input {
+    font-family: inherit;
+    padding: 5px;
+    border: 2px solid;
     border-radius: 10px;
-    margin-top: 20px;
-    text-align: center; /* Center align content */
+}
 
+.user-input::placeholder{
+    text-align: center;
+    font-family: inherit;
 }
