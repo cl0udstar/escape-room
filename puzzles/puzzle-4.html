@@ -223,10 +223,23 @@
                 <p id="result" style="display: none;"></p>
                 <button class="check-btn" id="check-seq">Check Sequence</button>
             </div>
+            
 
+            <div class="puzzle-q1">
+                <p>In the least windy route, what is the total wind speed experienced?</p>
+                <div class="q-answer">
+                    <input type="text" placeholder="Your answer..." id="userAnswerQ1" class="user-input">  
+                </div>
 
-            <!-- <div class="puzzle-q2">
-                <p>What would the least windy route be?</p>
+                <p id="result1" style="display: none;"></p>
+
+                <div class="answer-check" onclick="checkAnswerQ1()">
+                    <button class="check-btn" id="check-q1">Check Answer</button>
+                </div>
+            </div>
+
+            <div class="puzzle-q2">
+                <p>How about if you took the most windy route, what would the total wind speed be then?</p>
                 <div class="q-answer">
                     <input type="text" placeholder="Your answer..." id="userAnswerQ2" class="user-input">  
                 </div>
@@ -236,10 +249,10 @@
                 <div class="answer-check" onclick="checkAnswerQ2()">
                     <button class="check-btn" id="check-q2">Check Answer</button>
                 </div>
-            </div> -->
+            </div>
 
             <div class="puzzle-q3">
-                <p>In the least windy route, what is the total wind speed experienced?</p>
+                <p>Between 'Wind Speed 1' and 'Wind Speed 2', which is the least dangerous route to sail?</p>
                 <div class="q-answer">
                     <input type="text" placeholder="Your answer..." id="userAnswerQ3" class="user-input">  
                 </div>
@@ -250,22 +263,7 @@
                     <button class="check-btn" id="check-q3">Check Answer</button>
                 </div>
             </div>
-
-            <div class="puzzle-q4">
-                <p>How about if you took the most windy route, what would the total wind speed be then?</p>
-                <div class="q-answer">
-                    <input type="text" placeholder="Your answer..." id="userAnswerQ4" class="user-input">  
-                </div>
-
-                <p id="result4" style="display: none;"></p>
-
-                <div class="answer-check" onclick="checkAnswerQ4()">
-                    <button class="check-btn" id="check-q4">Check Answer</button>
-                </div>
-            </div>
         </div>
-
-        
 
         <script src="../scripts/puzzle-scripts/puzzle-4-script.js"></script>
         <script src="../scripts/cookies/accessibility-cookie.js"></script>
