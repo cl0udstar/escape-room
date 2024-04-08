@@ -45,7 +45,6 @@ function checkSequence() {
         for (var j = 0; j < correctSet.length; j++) {
             if (checkedIds.includes(correctSet[j])) {
                 isChecked = true;
-                // console.log(checkedIds)
                 correctCheckedButtons.push(correctSet[j]); // Store ID of correct checked button
                 var container = document.getElementById('ww_' + correctSet[j]);
                 container.style.backgroundColor = 'green'; // Set background color to green for correct checked buttons
@@ -60,18 +59,14 @@ function checkSequence() {
     if (correct) {
         result.textContent = "Congratulations, Agent! You've found the best route through the checkpoints! The sail towards the village will be smooth now!";
         result.style.color = "green";
-        // alert("Congratulations! You've completed the sequence.");
     } else {
         result.textContent = "The route to the village will be full of winds, keep exploring, there is a better route!";
         result.style.color = "red";
-        // alert("Wrong Sequence!");
     }
     result.style.display = "block";
 
     // Display IDs of correct checked buttons (for testing)
-    // console.log("Correct checked buttons: ", correctCheckedButtons);
     wrongCheckedButtons = checkedIds.filter(value => !correctCheckedButtons.includes(value));
-    // console.log("Wrong checked buttons: ", wrongCheckedButtons);
 
     for (var i = 0; i < wrongCheckedButtons.length; i++) {
         var container = document.getElementById('ww_' + wrongCheckedButtons[i]);
