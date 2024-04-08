@@ -137,18 +137,18 @@
     /* box-shadow: 1px 1px 10px 2px #DAD5AB; */
 }
 
-.puzzle-q2, .puzzle-q3, .puzzle-q4 {
+.puzzle-q3, .puzzle-q4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.puzzle-q2 p, .puzzle-q3 p, .puzzle-q4 p {
+.puzzle-q3 p, .puzzle-q4 p {
     padding: 5% 0 0 0;
 }
 
-.puzzle-q2 #result2, .puzzle-q3 #result3, .puzzle-q4 #result4 {
+.puzzle-q3 #result3, .puzzle-q4 #result4 {
     padding: 0 0 10px 0;
 }
 
