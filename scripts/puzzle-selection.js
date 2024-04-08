@@ -27,6 +27,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
         imageWidth: "300px",
         imageHeight: "350px",
+        para: "You make it to the giant mountains that have been in the distance for what feels like forever. Jakub Grey – The data viking stops and begins to talk to you. “If you are a true warrior then prove that you can throw an axe like me, then I will let you pass”",
         link: "../puzzles/puzzle-3.html"
     },
     {
@@ -36,6 +37,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
         imageHeight: "350px",
+        para: "You have reached the ancient Viking village of Fjordhelm! However, to get to the Viking base which is where the laptop is, you need to take a boat. Between you and the base sits Evelyn Scott – the data V.I.K.I.N.G in her longboat.",
         link: "../puzzles/puzzle-4.html"
     },
     {
@@ -45,6 +47,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
         imageHeight: "350px",
+        para: "You have finally reached the secret base at Fjordhelm. You try to enter through the giant main door, but it is locked. You notice a keypad to the right of the door. You are about to turn away but notice a piece of paper hidden behind the keypad.",
         link: "../puzzles/puzzle-5.html"
     },
     {
@@ -54,6 +57,8 @@ const arrayData = [
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
         imageWidth: "300px",
         imageHeight: "350px",
+        para: "You have made it into the lair! Congratulations! You notice Data V.I.K.I.N.G Vi Banks’ laptop sitting on the countertop, and you know that this has the secret evil plan on it."
+        
         link: "../puzzles/puzzle-6.html"
     },
     {
@@ -63,6 +68,7 @@ const arrayData = [
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
         imageWidth: "300px",
         imageHeight: "350px",
+        para: "You have made it into the laptop! You see the file on the desktop and click on it. There seem to be 4 different evil plans in the file, so you are not sure which one is the true plan."
         link: "../puzzles/puzzle-7.html"
     }
 ]
