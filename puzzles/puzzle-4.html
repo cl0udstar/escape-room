@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mission 4</title>
+        <title>Mission 4 - Wind Speed Navigation</title>
         <link rel="stylesheet" href="../styles/puzzle-page-default-style.css">
-        <link rel="stylesheet" type="text/css" href="../styles/puzzle-1-graph.css">
+        <link rel="stylesheet" type="text/css" href="../styles/puzzle-4-style.css">
         <link rel="stylesheet" href="../styles/default-style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,14 +25,247 @@
                 <p>Accessibility</p>
             </div>
         </div>
+
         <div class="header-text">
-            <p>Insert Puzzle Rules</p>
-        </div>
-        <div class="puzzle_container">
-            <p><!-- Here goes the heading for the puzzle (inside the white box) --></p> 
+            <p>You have reached the ancient Viking village of Fjordhelm! However, to get to the Viking base which is where the laptop is, you need to take a boat. Between you and the base sits Evelyn Scott – the data V.I.K.I.N.G in her longboat. To get past her and get to the base without her chasing you down, you have to avoid the checkpoints with high wind and make your way to the goal.</p>
         </div>
 
-        <script src="../scripts/puzzle-scripts/puzzle-1-graph.js"></script>
+        <div class="puzzle_container">
+            <p>Wind Speed Navigation</p> 
+            <div class="graph">
+                <img src="../assets/backgrounds/puzzle4-graph.png" alt="bar-graph">
+            </div>
+        </div>
+
+        <div class="puzzle_container2">
+            <p class="puzzle-q">What route should you take to avoid the faster wind speeds?</p>
+            
+            <div class="puzzle-results">
+                <div class="results-checkpoint-text">
+                    <p>Checkpoints</p>
+                </div>
+                
+                <div class="results">
+                    <div class="route" id="route1">
+                        <p>1</p>
+                        <label>
+                            <input type="radio" id="route1-1" name="route1" onchange="changeColor(this, 'lightblue')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route1-1"></div>
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <input type="radio" id="route1-2" name="route1" onchange="changeColor(this, '#FFC47F')">
+                            <div class="container" id="container2">
+                                <div class="water_wave" id="ww_route1-2"></div>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="route" id="route2">
+                        <p>2</p>
+                        <label>
+                            <input type="radio" id="route2-1" name="route2" onchange="changeColor(this, 'lightblue')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route2-1"></div>
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <input type="radio" id="route2-2" name="route2" onchange="changeColor(this, '#FFC47F')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route2-2"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="route" id="route3">
+                        <p>3</p>
+                        <label>
+                            <input type="radio" id="route3-1" name="route3" onchange="changeColor(this, 'lightblue')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route3-1"></div>
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <input type="radio" id="route3-2" name="route3" onchange="changeColor(this, '#FFC47F')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route3-2"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="route" id="route4">
+                        <p>4</p>
+                        <label>
+                            <input type="radio" id="route4-1" name="route4" onchange="changeColor(this, 'lightblue')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route4-1"></div>
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <input type="radio" id="route4-2" name="route4" onchange="changeColor(this, '#FFC47F')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route4-2"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="route" id="route5">
+                        <p>5</p>
+                        <label>
+                            <input type="radio" id="route5-1" name="route5" onchange="changeColor(this, 'lightblue')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route5-1"></div>
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <input type="radio" id="route5-2" name="route5" onchange="changeColor(this, '#FFC47F')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route5-2"></div>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div class="route" id="route6">
+                        <p>6</p>
+                        <label>
+                            <input type="radio" id="route6-1" name="route6" onchange="changeColor(this, 'lightblue')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route6-1"></div>
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <input type="radio" id="route6-2" name="route6" onchange="changeColor(this, '#FFC47F')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route6-2"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="route" id="route7">
+                        <p>7</p>
+                        <label>
+                            <input type="radio" id="route7-1" name="route7" onchange="changeColor(this, 'lightblue')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route7-1"></div>
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <input type="radio" id="route7-2" name="route7" onchange="changeColor(this, '#FFC47F')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route7-2"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="route" id="route8">
+                        <p>8</p>
+                        <label>
+                            <input type="radio" id="route8-1" name="route8" onchange="changeColor(this, 'lightblue')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route8-1"></div>
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <input type="radio" id="route8-2" name="route8" onchange="changeColor(this, '#FFC47F')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route8-2"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="route" id="route9">
+                        <p>9</p>
+                        <label>
+                            <input type="radio" id="route9-1" name="route9" onchange="changeColor(this, 'lightblue')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route9-1"></div>
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <input type="radio" id="route9-2" name="route9" onchange="changeColor(this, '#FFC47F')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route9-2"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="route" id="route10">
+                        <p>10</p>
+                        <label>
+                            <input type="radio" id="route10-1" name="route10" onchange="changeColor(this, 'lightblue')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route10-1"></div>
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <input type="radio" id="route10-2" name="route10" onchange="changeColor(this, '#FFC47F')">
+                            <div class="container">
+                                <div class="water_wave" id="ww_route10-2"></div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="sequence-check" onclick="checkSequence()">
+                <p id="result" style="display: none;"></p>
+                <button class="check-btn" id="check-seq">Check Sequence</button>
+            </div>
+
+
+            <div class="puzzle-q2">
+                <p>What would the least windy route be?</p>
+                <div class="q-answer">
+                    <input type="text" placeholder="Your answer..." id="userAnswerQ2" class="user-input">  
+                </div>
+
+                <p id="result2" style="display: none;"></p>
+
+                <div class="answer-check" onclick="checkAnswerQ2()">
+                    <button class="check-btn" id="check-q2">Check Answer</button>
+                </div>
+            </div>
+
+            <div class="puzzle-q3">
+                <p>In the least windy route, what is the total wind speed experienced?</p>
+                <div class="q-answer">
+                    <input type="text" placeholder="Your answer..." id="userAnswerQ3" class="user-input">  
+                </div>
+
+                <p id="result3" style="display: none;"></p>
+
+                <div class="answer-check" onclick="checkAnswerQ3()">
+                    <button class="check-btn" id="check-q3">Check Answer</button>
+                </div>
+            </div>
+
+            <div class="puzzle-q4">
+                <p>How about if you took the most windy route, what would the total wind be then?</p>
+                <div class="q-answer">
+                    <input type="text" placeholder="Your answer..." id="userAnswerQ4" class="user-input">  
+                </div>
+
+                <p id="result4" style="display: none;"></p>
+
+                <div class="answer-check" onclick="checkAnswerQ4()">
+                    <button class="check-btn" id="check-q4">Check Answer</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="../scripts/puzzle-scripts/puzzle-4-script.js"></script>
         <script src="../scripts/cookies/accessibility-cookie.js"></script>
     </body>
 </html>
