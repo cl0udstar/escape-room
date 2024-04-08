@@ -73,81 +73,171 @@ function handleHeart() {
 // Show the initial image
 showImage(currentIndex);
 
-// New JavaScript for quiz
-document.addEventListener("DOMContentLoaded", function() {
-    // Predefined questions and answers
-    const questions = [
-        { question: "1. What town did Lilias voyage to the most?", answer: "Fjordhelm", hint: "Starts with a 'F' and ends with 'helm'", hintShown: false },
-        { question: "2. What town did Lilias voyage from the most?", answer: "fjordhelm", hint: "A place with Fjords", hintShown: false },
-        { question: "3. How many 'Hours' did Lilias spend travelling in March?", answer: "20", hint: "Greater than 15 'Hours' (Only enter numbers)", hintShown: false },
-        { question: "4. What is the least common type of weather that Lilias travelled in?", answer: "Sunny", hint: "heat", hintShown: false },
-        { question: "5. How many Villages has Lilias visited in total?", answer: "8", hint: "Greater than 5 but less than 10", hintShown: false },
-        { question: "6. How many miles did Lilias travel in total?", answer: "565", hint: "Add up the distance traveled in 'Miles' (Only enter numbers)", hintShown: false }
-    ];
 
-    // Function to create answer box
-    function createAnswerBox(index, question) {
-        const answerBox = document.createElement('div');
-        answerBox.classList.add('answer-box');
 
-        const label = document.createElement('label');
-        label.textContent = question.question;
-        answerBox.appendChild(label);
-
-        const answerInput = document.createElement('input');
-        answerInput.type = 'text';
-        answerInput.dataset.index = index;
-        answerBox.appendChild(answerInput);
-
-        const hint = document.createElement('p');
-        hint.classList.add('hint');
-        hint.style.display = 'none';
-        hint.textContent = `Hint: ${question.hint}`;
-        answerBox.appendChild(hint);
-
-        const result = document.createElement('p');
-        result.classList.add('result');
-        answerBox.appendChild(result);
-
-        const checkButton = document.createElement('button');
-        checkButton.textContent = 'Check Answer';
-        checkButton.addEventListener('click', function() {
-            checkAnswer(answerInput, hint, result, question.answer);
-        });
-        answerBox.appendChild(checkButton);
-
-        answerInput.addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                checkAnswer(answerInput, hint, result, question.answer);
-            }
-        });
-
-        return answerBox;
+////////////////////////////////////////////////
+// Question 1
+////////////////////////////////////////////////
+var keyInputQ1 = document.getElementById("userAnswerQ1");
+keyInputQ1.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("check-q1").click();
     }
-
-    // Function to check answer
-    function checkAnswer(input, hint, result, answer) {
-        const userAnswer = input.value.trim().toLowerCase();
-        if (userAnswer === answer.toLowerCase()) {
-            input.disabled = true;
-            hint.style.display = 'none';
-            result.textContent = 'Correct!';
-            result.style.color = 'green';
-        } else {
-            if (!hint.style.display || hint.style.display === 'none') {
-                hint.style.display = 'block';
-            } else {
-                hint.style.display = 'none';
-            }
-            result.textContent = 'Incorrect!';
-            result.style.color = 'red';
-        }
-    }
-
-    // Add answer boxes to the document
-    const answerBoxesContainer = document.querySelector('.answer-boxes');
-    questions.forEach((question, index) => {
-        const answerBox = createAnswerBox(index, question);
-        answerBoxesContainer.appendChild(answerBox);
-    });
 });
+
+function checkAnswerQ1() {
+    var userAnswer = document.getElementById("userAnswerQ1").value.trim().toLowerCase();
+    var result = document.getElementById("result1");
+
+    if (userAnswer === "fjordhelm") {
+        result.textContent = "Well done, Agent.";
+        result.style.color = "green";
+        keyInputQ1.disabled = true;
+    } else {
+        result.textContent = "Agent, use this hint: Starts with a 'F' and ends with 'helm'";
+        result.style.color = "red";
+    }
+    result.style.display = "block";
+}
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+// Question 2
+////////////////////////////////////////////////
+var keyInputQ2 = document.getElementById("userAnswerQ2");
+keyInputQ2.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("check-q2").click();
+    }
+});
+
+function checkAnswerQ2() {
+    var userAnswer = document.getElementById("userAnswerQ2").value.trim().toLowerCase();
+    var result = document.getElementById("result2");
+
+    if (userAnswer === "fjordhelm") {
+        result.textContent = "Well done, Agent.";
+        result.style.color = "green";
+        keyInputQ2.disabled = true;
+    } else {
+        result.textContent = "Agent, use this hint: A place with Fjords";
+        result.style.color = "red";
+    }
+    result.style.display = "block";
+}
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+// Question 3
+////////////////////////////////////////////////
+var keyInputQ3 = document.getElementById("userAnswerQ3");
+keyInputQ3.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("check-q3").click();
+    }
+});
+
+function checkAnswerQ3() {
+    var userAnswer = document.getElementById("userAnswerQ3").value.trim().toLowerCase();
+    var result = document.getElementById("result3");
+
+    if (userAnswer === "20" || userAnswer === "twenty") {
+        result.textContent = "Well done, Agent.";
+        result.style.color = "green";
+        keyInputQ3.disabled = true;
+    } else {
+        result.textContent = "Agent, use this hint: Greater than 15 'Hours'";
+        result.style.color = "red";
+    }
+    result.style.display = "block";
+}
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+// Question 4
+////////////////////////////////////////////////
+var keyInputQ4 = document.getElementById("userAnswerQ4");
+keyInputQ4.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("check-q4").click();
+    }
+});
+
+function checkAnswerQ4() {
+    var userAnswer = document.getElementById("userAnswerQ4").value.trim().toLowerCase();
+    var result = document.getElementById("result4");
+
+    if (userAnswer === "sunny") {
+        result.textContent = "Well done, Agent.";
+        result.style.color = "green";
+        keyInputQ4.disabled = true;
+    } else {
+        result.textContent = "Agent, use this hint: 'heat'";
+        result.style.color = "red";
+    }
+    result.style.display = "block";
+}
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+// Question 5
+////////////////////////////////////////////////
+var keyInputQ5 = document.getElementById("userAnswerQ5");
+keyInputQ5.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("check-q5").click();
+    }
+});
+
+function checkAnswerQ5() {
+    var userAnswer = document.getElementById("userAnswerQ5").value.trim().toLowerCase();
+    var result = document.getElementById("result5");
+
+    if (userAnswer === "8" || userAnswer === "eight") {
+        result.textContent = "Well done, Agent.";
+        result.style.color = "green";
+        keyInputQ5.disabled = true;
+    } else {
+        result.textContent = "Agent, use this hint: Greater than 5 but less than 10";
+        result.style.color = "red";
+    }
+    result.style.display = "block";
+}
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+// Question 6
+////////////////////////////////////////////////
+var keyInputQ6 = document.getElementById("userAnswerQ6");
+keyInputQ6.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("check-q6").click();
+    }
+});
+
+function checkAnswerQ6() {
+    var userAnswer = document.getElementById("userAnswerQ6").value.trim().toLowerCase();
+    var result = document.getElementById("result6");
+
+    if (userAnswer === "565" || userAnswer === "five hundred and sixty five" || userAnswer === "five hundred sixty five" || userAnswer === "five six five") {
+        result.textContent = "Well done, Agent.";
+        result.style.color = "green";
+        keyInputQ6.disabled = true;
+    } else {
+        result.textContent = "Agent, use this hint: Add up the distance traveled in 'Miles'";
+        result.style.color = "red";
+    }
+    result.style.display = "block";
+}
+////////////////////////////////////////////////
