@@ -34,20 +34,17 @@ function checkSequence() {
     var checkedButtons = document.querySelectorAll('.results input[type="radio"]:checked');
     var checkedIds = Array.from(checkedButtons).map(button => button.id);
 
-    // console.log(checkedIds)
-
     var correct = true;
     var correctCheckedButtons = []; // Array to store IDs of correct checked buttons
     var wrongCheckedButtons = []; // Array to store IDs of wrong checked buttons
     for (var i = 0; i < correctSequence.length; i++) {
         
         var correctSet = correctSequence[i];
-        
+
         var isChecked = false;
         for (var j = 0; j < correctSet.length; j++) {
             if (checkedIds.includes(correctSet[j])) {
                 isChecked = true;
-                // console.log(checkedIds)
                 correctCheckedButtons.push(correctSet[j]); // Store ID of correct checked button
                 var container = document.getElementById('ww_' + correctSet[j]);
                 container.style.backgroundColor = 'green'; // Set background color to green for correct checked buttons
@@ -62,17 +59,19 @@ function checkSequence() {
     if (correct) {
         result.textContent = "Congratulations, Agent! You've found the best route through the checkpoints! The sail towards the village will be smooth now!";
         result.style.color = "green";
-        // alert("Congratulations! You've completed the sequence.");
     } else {
         result.textContent = "The route to the village will be full of winds, keep exploring, there is a better route!";
         result.style.color = "red";
-        // alert("Wrong Sequence!");
     }
     result.style.display = "block";
 
     // Display IDs of correct checked buttons (for testing)
-    // console.log("Correct checked buttons: ", correctCheckedButtons);
-    // console.log("Wrong checked buttons: ", wrongCheckedButtons);
+    wrongCheckedButtons = checkedIds.filter(value => !correctCheckedButtons.includes(value));
+
+    for (var i = 0; i < wrongCheckedButtons.length; i++) {
+        var container = document.getElementById('ww_' + wrongCheckedButtons[i]);
+        container.style.backgroundColor = 'red';
+    }
 }
 
 // First Question
@@ -136,7 +135,7 @@ function checkAnswerQ4() {
     var userAnswer = document.getElementById("userAnswerQ4").value.trim().toLowerCase();
     var result = document.getElementById("result4");
 
-    if (userAnswer === "460" || userAnswer === "460 miles" || userAnswer === "460 miles per hour" || userAnswer === "460 mph") {
+    if (userAnswer === "460" || userAnswer === "460 miles" || userAnswer === "460 miles per hour" || userAnswer === "460 mph" || userAnswer === "460 mph") {
         result.textContent = "Well done, Agent. Your finesse rivals that of the stealthiest Viking scouts.";
         result.style.color = "green";
     } else {
