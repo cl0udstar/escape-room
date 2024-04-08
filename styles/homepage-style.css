@@ -50,7 +50,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 50%; 
+    opacity: 0.5;
+    height: 200px;
+    width: 200px;
 }
 
 /* #a5a38d */
