@@ -98,7 +98,7 @@
     text-align: center;
 }
 
-#add-point-btn {
+#add-point-btn, #reset-btn {
     background: none;
     border: 2px solid;
     border-radius: 10px;

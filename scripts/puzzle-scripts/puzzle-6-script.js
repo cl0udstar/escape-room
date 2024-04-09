@@ -1,3 +1,5 @@
+// JavaScript code
+
 const svg = document.getElementById('graph-svg');
 const graphContainer = document.getElementById('graph-container');
 const gridSize = 25; // Adjust grid size for fitting 16 on both axes
@@ -117,23 +119,8 @@ function addPoint() {
 
     if (!isNaN(x) && !isNaN(y)) {
         const newPoint = { x: x, y: y };
-        let isValid = true;
-        // Check if the entered coordinates match any correct coordinates
-        for (const coord of correctCoordinates) {
-            if (coord.x === newPoint.x && coord.y === newPoint.y) {
-                isValid = true;
-                break;
-            } else {
-                isValid = false;
-            }
-        }
-        // If valid, add the point
-        if (isValid) {
-            points.push(newPoint);
-            drawGraph(); // Redraw graph with updated points and lines
-        } else {
-            alert('The entered coordinates are incorrect. Please enter valid coordinates.');
-        }
+        points.push(newPoint);
+        drawGraph(); // Redraw graph with updated points and lines
     } else {
         alert('Please enter valid coordinates.');
     }
@@ -148,6 +135,15 @@ document.addEventListener('keypress', function(event) {
         addPoint(); // Add point if focus is not on the answer input field
     }
 });
+
+// Function to reset the graph
+function resetGraph() {
+    points = [];
+    drawGraph();
+}
+
+// Event listener for reset button
+document.getElementById('reset-btn').addEventListener('click', resetGraph);
 
 // Function to check answer for the second puzzle container
 function checkAnswerSecondPuzzle() {
