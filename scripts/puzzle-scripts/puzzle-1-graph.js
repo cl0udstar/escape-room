@@ -4,9 +4,9 @@ const gridSize = 50; // Size of the grid squares
 
 // Array to store points
 let points = [
-    { x: 0, y: 0 },
-    { x: 0, y: 0 },
-    { x: 0, y: 0 },
+    { x: 0, y: 0},
+    { x: 0, y: 0},
+    { x: 0, y: 0},
     { x: 0, y: 0},
     { x: 0, y: 0},
     { x: 0, y: 0},
@@ -25,6 +25,8 @@ function generateRandomCoordinates() {
         const randomY = getRandomInt(1, 7) * gridSize; // Random Y coordinate snapped to grid
         randomCoordinates.push({ x: i * gridSize, y: randomY });
     }
+    console.log(randomCoordinates);
+
     return randomCoordinates;
 }
 
@@ -43,15 +45,6 @@ const yLine = [{ x: 0, y: 0 }, { x: 0, y: 400 }];
 // Function to draw points, lines, and axes
 function drawGraph() {
     svg.innerHTML = ''; // Clear previous drawings
-
-    // // Draw custom text above the graph
-    // const customHeading = document.createElementNS("http://www.w3.org/2000/svg", 'text');
-    // customHeading.setAttribute('class', 'heading');
-    // customHeading.setAttribute('x', 300);
-    // customHeading.setAttribute('y', 40); // Adjust the y-coordinate as needed
-    // customHeading.setAttribute('text-anchor', 'middle');
-    // customHeading.textContent = 'What number was Major X Thinking of?';
-    // svg.appendChild(customHeading);
 
     // Draw custom text for x-axis
     const customXText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
@@ -119,15 +112,17 @@ function drawGraph() {
         gridLineY.setAttribute('x2', 600);
         gridLineY.setAttribute('y2', i);
         svg.appendChild(gridLineY);
-
+    
         // Add coordinates along y axis
+        const labelValue = 400 - i; // Adjust label calculation
         const text = document.createElementNS("http://www.w3.org/2000/svg", 'text');
         text.setAttribute('class', 'text');
         text.setAttribute('x', -25);
         text.setAttribute('y', i + 5);
-        text.textContent = (400 - i).toString();
+        text.textContent = labelValue.toString();
         svg.appendChild(text);
     }
+    
 
     // Draw points and lines
     for (let i = 0; i < points.length; i++) {
@@ -160,9 +155,103 @@ function drawGraph() {
 
 drawGraph(); // Initial draw
 
-// Define the correct coordinates
-const correctCoordinates = [
-    { x: 100, y: 100 },
-    { x: 150, y: 150 },
-    { x: 200, y: 200 }
-];
+// // Define the correct coordinates
+// const correctCoordinates = [
+//     { x: 100, y: 100 },
+//     { x: 150, y: 150 },
+//     { x: 200, y: 200 }
+// ];
+
+
+// Define function to get y coordinate for a given x coordinate index
+function getYCoordinateForXIndex(xIndex) {
+    if (xIndex >= 0 && xIndex < points.length) {
+        return points[xIndex].y;
+    } else {
+        console.error("Invalid x index provided.");
+        return null;
+    }
+}
+
+// Define the maximum y-coordinate of your graph
+const maxYCoordinate = 400;
+
+// Get y coordinates for specific x coordinates and adjust them as per your requirement
+const xCoordinates = [2, 6, 10]; // Assuming these are the x coordinates you want
+const yCoordinates = xCoordinates.map(x => maxYCoordinate - getYCoordinateForXIndex(x));
+
+// console.log("Y coordinates for x coordinates:", yCoordinates);
+
+
+// First Question
+var keyInputQ1 = document.getElementById("userAnswerQ1");
+keyInputQ1.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("check-q1").click();
+    }
+});
+
+var keyInputQ2 = document.getElementById("userAnswerQ2");
+keyInputQ2.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("check-q1").click();
+    }
+});
+
+var keyInputQ3 = document.getElementById("userAnswerQ3");
+keyInputQ3.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("check-q1").click();
+    }
+});
+
+function checkAnswerQ1() {
+    var userAnswer1 = document.getElementById("userAnswerQ1").value.trim().toLowerCase();
+    var userAnswer2 = document.getElementById("userAnswerQ2").value.trim().toLowerCase();
+    var userAnswer3 = document.getElementById("userAnswerQ3").value.trim().toLowerCase();
+    var result = document.getElementById("result1");
+
+    if (userAnswer1 === yCoordinates[0].toString() && userAnswer2 === yCoordinates[1].toString() && userAnswer3 === yCoordinates[2].toString()) {
+        
+
+        result.textContent = "Agent, your skills are so sharp, even the Vikings would admire your craftiness.";
+        result.style.color = "green";
+
+        var keyInputs = [keyInputQ1, keyInputQ2, keyInputQ3];
+
+        for (var i = 0; i < keyInputs.length; i++) {
+            // Disable the input
+            keyInputs[i].disabled = true;
+            // Change the background color
+            keyInputs[i].style.background = "#C8E4B2";
+        }
+    } else {
+        if (userAnswer1 === yCoordinates[0].toString()) {
+            keyInputQ1.disabled = true;
+            keyInputQ1.style.background = "#C8E4B2";
+        } else {
+            keyInputQ1.style.background = "#FF7676";
+        }
+
+        if (userAnswer2 === yCoordinates[1].toString()) {
+            keyInputQ2.disabled = true;
+            keyInputQ2.style.background = "#C8E4B2";
+        } else {
+            keyInputQ2.style.background = "#FF7676";
+        }
+
+        if (userAnswer3 === yCoordinates[2].toString()) {
+            keyInputQ3.disabled = true;
+            keyInputQ3.style.background = "#C8E4B2";
+        } else {
+            keyInputQ3.style.background = "#FF7676";
+        }
+
+        result.textContent = "Agent, it seems your mission has hit a Norse iceberg. Time for damage control!";
+        result.style.color = "red";
+    }
+    result.style.display = "block";
+}
