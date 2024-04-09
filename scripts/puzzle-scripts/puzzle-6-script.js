@@ -121,10 +121,26 @@ function addPoint() {
         const newPoint = { x: x, y: y };
         points.push(newPoint);
         drawGraph(); // Redraw graph with updated points and lines
+
+        // Check if all coordinates have been entered
+        if (points.length === correctCoordinates.length) {
+            // Check if the entered coordinates are in the correct order
+            let correctOrder = true;
+            for (let i = 0; i < correctCoordinates.length; i++) {
+                if (points[i].x !== correctCoordinates[i].x || points[i].y !== correctCoordinates[i].y) {
+                    correctOrder = false;
+                    break;
+                }
+            }
+            if (!correctOrder) {
+                alert('Error: Coordinates are not entered in the correct order. Please try again.');
+            }
+        }
     } else {
         alert('Please enter valid coordinates.');
     }
 }
+
 
 // Event listener for adding a point for the first puzzle container
 document.getElementById('add-point-btn').addEventListener('click', addPoint);
