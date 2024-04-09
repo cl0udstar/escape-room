@@ -14,9 +14,9 @@
     background-image: url('../assets/backgrounds/DATA_Logo.png');
     background-size: 250px;
     background-repeat: no-repeat;
-    background-position: 50%;
-    height: 500px;
-    width: 350px;
+    background-position: center;
+    height: 100%;
+    width: 100%;
     position: absolute;
     opacity: 0.125;
 }
