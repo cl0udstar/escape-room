@@ -153,16 +153,17 @@ document.addEventListener('keypress', function(event) {
 function checkAnswerSecondPuzzle() {
     const answer = document.getElementById('answer').value.trim().toLowerCase();
     const correctAnswer = "star";
+    const feedback = document.getElementById('feedback');
 
     if (answer === correctAnswer) {
-        document.getElementById('feedback').textContent = "Correct!";
+        feedback.textContent = "Correct!";
         document.getElementById('hint').textContent = ""; // Clear hint
         // Disable the answer input field after correct answer
         document.getElementById('answer').disabled = true;
         // Remove the event listener for the "Check Answer" button
         document.getElementById('check-answer-btn').removeEventListener('click', checkAnswerSecondPuzzle);
     } else {
-        document.getElementById('feedback').textContent = "Incorrect! Try again.";
+        feedback.textContent = "Incorrect! Try again.";
         // You can provide a hint here, e.g., display a hint message
         document.getElementById('hint').textContent = "Hint: A quote from Vi: 'Nothing beats kicking back after dusk, eyes glued to those twinkling specks painting the night.'";
     }
