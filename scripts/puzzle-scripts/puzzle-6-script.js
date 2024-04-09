@@ -164,7 +164,7 @@ function checkAnswerSecondPuzzle() {
     } else {
         document.getElementById('feedback').textContent = "Incorrect! Try again.";
         // You can provide a hint here, e.g., display a hint message
-        document.getElementById('hint').textContent = "Hint: Your hint message here.";
+        document.getElementById('hint').textContent = "Hint: A quote from Vi: 'Nothing beats kicking back after dusk, eyes glued to those twinkling specks painting the night.'";
     }
 }
 
