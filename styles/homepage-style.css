@@ -19,7 +19,6 @@
     width: 350px;
     position: absolute;
     opacity: 0.125;
-    z-index: -1;
 }
 
 .img-text-container {
