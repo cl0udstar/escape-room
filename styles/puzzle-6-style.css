@@ -38,3 +38,28 @@
 .grid-line {
     stroke: black;
 }
+
+.puzzle_container {
+    position: relative;
+    margin: 2% 10%;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: white;
+    
+}
+
+.puzzle_container:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.puzzle_container:first-child img {
+    max-width: 100%;
+    max-height: 100%;
+
+    
+}

@@ -108,9 +108,9 @@ function drawGraph() {
     }
 }
 
-drawGraph(); // Initial draw
+drawGraph(); // Initial draw for the first puzzle container
 
-// Function to handle adding a point
+// Function to handle adding a point for the first puzzle container
 function addPoint() {
     const x = parseInt(document.getElementById('x-coordinate').value);
     const y = parseInt(document.getElementById('y-coordinate').value);
@@ -139,18 +139,41 @@ function addPoint() {
     }
 }
 
-// Event listener for add point button
+// Event listener for adding a point for the first puzzle container
 document.getElementById('add-point-btn').addEventListener('click', addPoint);
 
-// Event listener for Enter key press
+// Event listener for Enter key press for adding a point for the first puzzle container
 document.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        addPoint();
+    if (event.key === 'Enter' && document.activeElement.id !== 'answer') {
+        addPoint(); // Add point if focus is not on the answer input field
     }
 });
 
-// Event listener for reset button
-document.getElementById('reset-btn').addEventListener('click', function() {
-    points = []; // Reset points array
-    drawGraph(); // Redraw graph with empty points
+// Function to check answer for the second puzzle container
+function checkAnswerSecondPuzzle() {
+    const answer = document.getElementById('answer').value.trim().toLowerCase();
+    const correctAnswer = "star";
+
+    if (answer === correctAnswer) {
+        document.getElementById('feedback').textContent = "Correct!";
+        document.getElementById('hint').textContent = ""; // Clear hint
+        // Disable the answer input field after correct answer
+        document.getElementById('answer').disabled = true;
+        // Remove the event listener for the "Check Answer" button
+        document.getElementById('check-answer-btn').removeEventListener('click', checkAnswerSecondPuzzle);
+    } else {
+        document.getElementById('feedback').textContent = "Incorrect! Try again.";
+        // You can provide a hint here, e.g., display a hint message
+        document.getElementById('hint').textContent = "Hint: Your hint message here.";
+    }
+}
+
+// Event listener for the "Check Answer" button for the second puzzle container
+document.getElementById('check-answer-btn').addEventListener('click', checkAnswerSecondPuzzle);
+
+// Event listener for Enter key press for the second puzzle container
+document.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter' && document.activeElement.id === 'answer') {
+        checkAnswerSecondPuzzle(); // Check the answer if focus is on the answer input field
+    }
 });
