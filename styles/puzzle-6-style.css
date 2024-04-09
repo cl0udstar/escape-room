@@ -9,6 +9,13 @@
     position: relative;
     margin: 50px auto;
 }
+/* CSS for positioning the SVG element */
+#graph-svg {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
 
 /* CSS for styling the points */
 .point {
