@@ -26,20 +26,42 @@
             </div>
         </div>
         <div class="header-text">
-            <p>Read the graph and determine what number Major X is thinking of. Use the boxes underneath to enter the number that goes with the correct time</p>
+            <p>Read the graph and determine what number Major X is thinking of. Use the boxes underneath to enter the number that goes with the correct time.</p>
         </div>
         <div class="puzzle_container">
             <p></p> 
             <div id="graph-container">
-            <svg id="graph-svg" width="100%" height="100%" viewBox="0 0 500 600"></svg>
+            <svg id="graph-svg" width="100%" height="100%" viewBox="0 0 500 550"></svg>
             </div>
             <div class="answer_container">
-                <label for="G1Q1">2:00pm</label>
-                <input type="text" id="G1Q1" name="G1Q1">
-                <label for="G1Q2">6:00pm</label>
-                <input type="text" id="G1Q2" name="G1Q2">
-                <label for="G1Q3">10:00pm</label>
-                <input type="text" id="G1Q3" name="G1Q3">
+                <div class="puzzle-q1">
+                    <p>At 2pm</p>
+                    <div class="q-answer">
+                        <input type="text" placeholder="Your answer..." id="userAnswerQ1" class="user-input">  
+                    </div>
+                </div>
+
+                <div class="puzzle-q2">
+                    <p>At 6pm</p>
+                    <div class="q-answer">
+                        <input type="text" placeholder="Your answer..." id="userAnswerQ2" class="user-input">  
+                    </div>
+                </div>
+
+                <div class="puzzle-q3">
+                    <p>At 10pm</p>
+                    <div class="q-answer">
+                        <input type="text" placeholder="Your answer..." id="userAnswerQ3" class="user-input">  
+                    </div>
+                </div>
+            </div>
+
+            <div class="check-result">
+                <p id="result1" style="display: none;"></p>
+
+                <div class="answer-check" onclick="checkAnswerQ1()">
+                    <button class="check-btn" id="check-q1">Check Answer</button>
+                </div>
             </div>
         </div>
 
