@@ -45,7 +45,10 @@
     padding: 5%;
     border-radius: 20px;
     background-color: white;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
 }
 
 .puzzle_container:first-child {
