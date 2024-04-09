@@ -2,15 +2,24 @@
 .puzzle-box{
     position: relative;
     background-color: #ffe3a7;
-    background-image: url('../assets/DATA_Logo.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     border: 2px solid #0C0C0C;
     border-radius: 15px;
     min-height: 500px;
     height: auto;
     margin: 0 20px 0 20px;
     padding-bottom: 70px;
+}
+
+.background-logo{
+    background-image: url('../assets/backgrounds/DATA_Logo.png');
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 500px;
+    width: 350px;
+    position: absolute;
+    opacity: 0.125;
+    z-index: -1;
 }
 
 .img-text-container {
