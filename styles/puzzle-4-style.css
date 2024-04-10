@@ -134,6 +134,7 @@
     cursor: pointer;
     font-family: inherit;
     font-weight: inherit;
+    font-size: inherit;
     /* box-shadow: 1px 1px 10px 2px #DAD5AB; */
 }
 
@@ -160,6 +161,7 @@
 
 .user-input {
     font-family: inherit;
+    font-size: inherit;
     padding: 5px;
     border: 2px solid;
     border-radius: 10px;
@@ -168,4 +170,5 @@
 .user-input::placeholder{
     text-align: center;
     font-family: inherit;
+    font-size: inherit;
 }
