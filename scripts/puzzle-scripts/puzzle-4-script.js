@@ -94,9 +94,11 @@ function checkAnswerQ1() {
         result.textContent = "Congratulations Agent, your stealth and cunning would make even Viking raiders bow in awe.";
         result.style.color = "green";
         keyInputQ1.disabled = true;
+        keyInputQ1.style.background = "#C8E4B2";
     } else {
         result.textContent = "Agent, I expect more from you. Keep exploring the data!";
         result.style.color = "red";
+        keyInputQ1.style.background = "#FF7676";
     }
     result.style.display = "block";
 }
@@ -119,9 +121,11 @@ function checkAnswerQ2() {
         result.textContent = "Well done, Agent. Your finesse rivals that of the stealthiest Viking scouts.";
         result.style.color = "green";
         keyInputQ2.disabled = true;
+        keyInputQ2.style.background = "#C8E4B2";
     } else {
         result.textContent = "Agent, it seems you've hit a snag in your Viking escapade. Time to regroup and reassess.";
         result.style.color = "red";
+        keyInputQ2.style.background = "#FF7676";
     }
     result.style.display = "block";
 }
@@ -144,9 +148,11 @@ function checkAnswerQ3() {
         result.textContent = "Nicely done Agent! Your spy game could outsmart even the fiercest Viking warriors.";
         result.style.color = "green";
         keyInputQ3.disabled = true;
+        keyInputQ3.style.background = "#C8E4B2";
     } else {
         result.textContent = "Looks like you've stumbled into a Viking hornet's nest, Agent. Try again!";
         result.style.color = "red";
+        keyInputQ3.style.background = "#FF7676";
     }
     result.style.display = "block";
 }
