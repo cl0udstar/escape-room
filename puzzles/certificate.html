@@ -25,11 +25,26 @@
                 <p>Accessibility</p>
             </div>
         </div>
-        <div class="header-text">
-            <p>Insert Puzzle Rules</p>
-        </div>
+        
         <div class="puzzle_container">
-            <p><!-- Here goes the heading for the puzzle (inside the white box) --></p> 
+            <div class="certificate-input">
+                <label for="userName">Enter Your Name:</label>
+                <input type="text" id="userName" name="userName" placeholder="Your Name Here">
+                <label for="textColor">Select Text Color:</label>
+                <select id="textColor">
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                <button onclick="generateCertificate()">Generate Certificate</button>
+            </div>
+            
+            <div class="certificate-preview" id="certificatePreview">
+            </div>
+            
+            <button onclick="printCertificate()">Print Certificate</button>
+            
         </div>
 
         <script src="../scripts/cookies/accessibility-cookie.js"></script>
