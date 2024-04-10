@@ -172,3 +172,13 @@
     font-family: inherit;
     font-size: inherit;
 }
+
+@media (max-width: 1150px) {
+    .results {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
