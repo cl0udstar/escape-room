@@ -94,9 +94,11 @@ function checkAnswerQ1() {
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ1.disabled = true;
+        keyInputQ1.style.background = "#C8E4B2";
     } else {
         result.textContent = "Agent, use this hint: Starts with a 'F' and ends with 'helm'";
         result.style.color = "red";
+        keyInputQ1.style.background = "#FF7676";
     }
     result.style.display = "block";
 }
@@ -122,9 +124,11 @@ function checkAnswerQ2() {
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ2.disabled = true;
+        keyInputQ2.style.background = "#C8E4B2";
     } else {
         result.textContent = "Agent, use this hint: A place with Fjords";
         result.style.color = "red";
+        keyInputQ2.style.background = "#FF7676";
     }
     result.style.display = "block";
 }
@@ -150,9 +154,11 @@ function checkAnswerQ3() {
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ3.disabled = true;
+        keyInputQ3.style.background = "#C8E4B2";
     } else {
         result.textContent = "Agent, use this hint: Greater than 15 'Hours'";
         result.style.color = "red";
+        keyInputQ3.style.background = "#FF7676";
     }
     result.style.display = "block";
 }
@@ -178,9 +184,11 @@ function checkAnswerQ4() {
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ4.disabled = true;
+        keyInputQ4.style.background = "#C8E4B2";
     } else {
         result.textContent = "Agent, use this hint: 'heat'";
         result.style.color = "red";
+        keyInputQ4.style.background = "#FF7676";
     }
     result.style.display = "block";
 }
@@ -206,9 +214,11 @@ function checkAnswerQ5() {
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ5.disabled = true;
+        keyInputQ5.style.background = "#C8E4B2";
     } else {
         result.textContent = "Agent, use this hint: Greater than 5 but less than 10";
         result.style.color = "red";
+        keyInputQ5.style.background = "#FF7676";
     }
     result.style.display = "block";
 }
@@ -234,9 +244,11 @@ function checkAnswerQ6() {
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ6.disabled = true;
+        keyInputQ6.style.background = "#C8E4B2";
     } else {
         result.textContent = "Agent, use this hint: Add up the distance traveled in 'Miles'";
         result.style.color = "red";
+        keyInputQ6.style.background = "#FF7676";
     }
     result.style.display = "block";
 }
