@@ -7,7 +7,7 @@ function generateCertificate() {
             <h2 style="color: ${selectedColor};">Certificate of Completion</h2>
             <p style="color: ${selectedColor};">This certifies that</p>
             <h3 style="color: ${selectedColor};">${userName}</h3>
-            <p style="color: ${selectedColor};">has successfully completed the escape room challenge.</p>
+            <p style="color: ${selectedColor};">has successfully completed the escape room challenge and is officially a D.A.T.A Agent.</p>
             <p style="color: ${selectedColor};">Date: ${new Date().toLocaleDateString()}</p>
         `;
         
