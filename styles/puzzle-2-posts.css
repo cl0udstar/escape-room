@@ -207,6 +207,7 @@ i.fa-heart:hover {
     cursor: pointer;
     font-family: inherit;
     font-weight: inherit;
+    font-size: inherit;
 }
 
 .puzzle-q1, .puzzle-q2, .puzzle-q3,
@@ -220,11 +221,13 @@ i.fa-heart:hover {
 .puzzle-q1 p, .puzzle-q2 p, .puzzle-q3 p,
 .puzzle-q4 p, .puzzle-q5 p, .puzzle-q6 p {
     padding: 5% 0 0 0;
+    text-align: center;
 }
 
 .puzzle-q1 #result1, .puzzle-q2 #result2, .puzzle-q3 #result3,
 .puzzle-q4 #result4, .puzzle-q5 #result5, .puzzle-q6 #result6 {
     padding: 0 0 10px 0;
+    text-align: center;
 }
 
 .q-answer {
@@ -233,6 +236,7 @@ i.fa-heart:hover {
 
 .user-input {
     font-family: inherit;
+    font-size: inherit;
     padding: 5px;
     border: 2px solid;
     border-radius: 10px;
@@ -241,4 +245,5 @@ i.fa-heart:hover {
 .user-input::placeholder{
     text-align: center;
     font-family: inherit;
+    font-size: inherit;
 }
