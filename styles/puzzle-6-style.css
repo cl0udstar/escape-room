@@ -94,7 +94,7 @@
     
 }
 
-.add-point-container {
+.add-point-container, .check-password-button {
     text-align: center;
 }
 
@@ -139,11 +139,22 @@
     text-align: center;
 }
 
-.coordinate-container {
-    display: flex;
-    align-items: center;
-    
+#hint{
+    text-align: center;
 }
+
+.coordinate-container, .password-container {
+    display: flex;
+    align-items: center;    
+}
+
+.check-password-button{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
 
 .coordinate-container input {
     font-family: inherit;
