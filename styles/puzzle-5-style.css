@@ -16,7 +16,7 @@
 }
 
 .sortable-list .item1, .sortable-list .item2 {
-    cursor: grab;
+    cursor: pointer;
     list-style: none;
     display: flex;
     align-items: center;
@@ -42,13 +42,36 @@
 
 .item1 i, .item2 i {
     color: #474747;
-    opacity: 0.8;
-}
-
-.item1.dragging :where(.details, i), .item2.dragging :where(.details, i)  {
-    opacity: 0;
+    /* opacity: 0.8; */
 }
 
 .correct-combination {
     background-color: green;
+}
+
+
+
+
+/* Add CSS styles for selected items here */
+.item1.selected, .item2.selected {
+    background-color: gray;
+}
+
+/* Add CSS styles for item controls (arrows) here */
+.item-controls {
+    display: none; /* Initially hide the controls */
+}
+
+/* Show the controls when an item is selected */
+.item1.selected .item-controls, .item2.selected .item-controls {
+    display: flex;
+}
+
+/* Add CSS styles for the move-up and move-down buttons here */
+.item-controls button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
 }
