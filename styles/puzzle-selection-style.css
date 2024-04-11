@@ -1,4 +1,22 @@
 /* Page style - Puzzle Selection*/
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.small-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2.5px solid black;
+    background-color: red;
+    color: white;
+    margin: 0 10px;
+}
+
+
 
 .container{
     /* width: 100%; */
