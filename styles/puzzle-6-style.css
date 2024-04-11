@@ -171,3 +171,21 @@
     margin-right: 10px;
     white-space: nowrap; /* Prevent wrapping */
 }
+
+.error-message {
+    font-family: inherit;
+    /* padding: 10px; */
+    text-align: center;
+    display: block; /* Ensure it's a block element */
+    margin-top: 0px; /* Adjust margin top to move the error message up or down */
+    margin-bottom: 10px; /* Adjust margin bottom to move the error message up or down */
+    margin-left: auto; /* Adjust margin left to move the error message left or right */
+    margin-right: auto; /* Adjust margin right to move the error message left or right */
+    max-width: auto; /* Limit the width to prevent overflow */
+    white-space: normal; /* Allow text to wrap onto the next line */
+}
+
+/* Style for success message */
+.success-message {
+    color: green;
+}

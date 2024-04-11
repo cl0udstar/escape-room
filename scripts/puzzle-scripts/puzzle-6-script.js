@@ -1,5 +1,3 @@
-// JavaScript code
-
 const svg = document.getElementById('graph-svg');
 const graphContainer = document.getElementById('graph-container');
 const gridSize = 25; // Adjust grid size for fitting 16 on both axes
@@ -94,21 +92,55 @@ function drawGraph() {
         svg.appendChild(circle);
     }
 
-    // Draw lines connecting correct points
-    if (points.length === 11) {
-        const lines = document.createElementNS("http://www.w3.org/2000/svg", 'g');
-        for (let i = 0; i < points.length - 1; i++) {
-            const line = document.createElementNS("http://www.w3.org/2000/svg", 'line');
-            line.setAttribute('class', 'line');
-            line.setAttribute('x1', centerX + points[i].x * gridSize);
-            line.setAttribute('y1', centerY - points[i].y * gridSize);
-            line.setAttribute('x2', centerX + points[i + 1].x * gridSize);
-            line.setAttribute('y2', centerY - points[i + 1].y * gridSize);
-            lines.appendChild(line);
+    // Draw lines connecting points if the correct number of points have been entered
+        // Draw lines connecting points if the correct number of points have been entered
+        if (points.length === 11) {
+            const lines = document.createElementNS("http://www.w3.org/2000/svg", 'g');
+            let correctOrder = true;
+            for (let i = 0; i < points.length - 1; i++) {
+                const line = document.createElementNS("http://www.w3.org/2000/svg", 'line');
+                line.setAttribute('class', 'line');
+                line.setAttribute('x1', centerX + points[i].x * gridSize);
+                line.setAttribute('y1', centerY - points[i].y * gridSize);
+                line.setAttribute('x2', centerX + points[i + 1].x * gridSize);
+                line.setAttribute('y2', centerY - points[i + 1].y * gridSize);
+                lines.appendChild(line);
+    
+                // Check if the entered coordinates are in the correct order
+                if (points[i].x !== correctCoordinates[i].x || points[i].y !== correctCoordinates[i].y) {
+                    correctOrder = false;
+                }
+            }
+            // Add the final line connecting the last and first points
+            const finalLine = document.createElementNS("http://www.w3.org/2000/svg", 'line');
+            finalLine.setAttribute('class', 'line');
+            finalLine.setAttribute('x1', centerX + points[points.length - 1].x * gridSize);
+            finalLine.setAttribute('y1', centerY - points[points.length - 1].y * gridSize);
+            finalLine.setAttribute('x2', centerX + points[0].x * gridSize);
+            finalLine.setAttribute('y2', centerY - points[0].y * gridSize);
+            lines.appendChild(finalLine);
+    
+            if (correctOrder) {
+                let correctMessage = graphContainer.nextSibling;
+                if (!correctMessage || correctMessage.className !== 'correct-message') {
+                    correctMessage = document.createElement("div");
+                    correctMessage.setAttribute('class', 'correct-message');
+                    graphContainer.parentNode.insertBefore(correctMessage, graphContainer.nextSibling);
+                }
+                correctMessage.textContent = "Correct! The shape has been drawn successfully.";
+            } else {
+                let errorLabel = graphContainer.nextSibling;
+                if (!errorLabel || errorLabel.className !== 'error-message') {
+                    errorLabel = document.createElement("div");
+                    errorLabel.setAttribute('class', 'error-message');
+                    graphContainer.parentNode.insertBefore(errorLabel, graphContainer.nextSibling);
+                }
+                errorLabel.textContent = "Incorrect, Press the reset button below and try again! Hint: The coordinates should be entered in order.";
+            }
+    
+            svg.appendChild(lines);
         }
-        svg.appendChild(lines);
     }
-}
 
 drawGraph(); // Initial draw for the first puzzle container
 
@@ -121,40 +153,31 @@ function addPoint() {
         const newPoint = { x: x, y: y };
         points.push(newPoint);
         drawGraph(); // Redraw graph with updated points and lines
-
-        // Check if all coordinates have been entered
-        if (points.length === correctCoordinates.length) {
-            // Check if the entered coordinates are in the correct order
-            let correctOrder = true;
-            for (let i = 0; i < correctCoordinates.length; i++) {
-                if (points[i].x !== correctCoordinates[i].x || points[i].y !== correctCoordinates[i].y) {
-                    correctOrder = false;
-                    break;
-                }
-            }
-            if (!correctOrder) {
-                alert('Error: Coordinates are not entered in the correct order. Please try again.');
-            }
-        }
     } else {
         alert('Please enter valid coordinates.');
     }
 }
 
-
 // Event listener for adding a point for the first puzzle container
 document.getElementById('add-point-btn').addEventListener('click', addPoint);
 
-// Event listener for Enter key press for adding a point for the first puzzle container
-document.addEventListener('keypress', function(event) {
+// Function to handle adding a point on Enter key press
+function addPointOnEnter(event) {
     if (event.key === 'Enter' && document.activeElement.id !== 'answer') {
         addPoint(); // Add point if focus is not on the answer input field
     }
-});
+}
+
+// Event listener for Enter key press for adding a point for the first puzzle container
+document.addEventListener('keypress', addPointOnEnter);
 
 // Function to reset the graph
 function resetGraph() {
     points = [];
+    const errorLabel = graphContainer.parentNode.querySelector('.error-message');
+    if (errorLabel) {
+        errorLabel.remove(); // Remove error message if it exists
+    }
     drawGraph();
 }
 
@@ -164,11 +187,12 @@ document.getElementById('reset-btn').addEventListener('click', resetGraph);
 // Function to check answer for the second puzzle container
 function checkAnswerSecondPuzzle() {
     const answer = document.getElementById('answer').value.trim().toLowerCase();
-    const correctAnswer = "star";
     const feedback = document.getElementById('feedback');
 
-    if (answer === correctAnswer) {
+    if (answer === "star") {
         feedback.textContent = "Correct!";
+        feedback.classList.remove('error-message'); // Remove error message class
+        feedback.classList.add('success-message'); // Add success message class
         document.getElementById('hint').textContent = ""; // Clear hint
         // Disable the answer input field after correct answer
         document.getElementById('answer').disabled = true;
@@ -176,6 +200,8 @@ function checkAnswerSecondPuzzle() {
         document.getElementById('check-answer-btn').removeEventListener('click', checkAnswerSecondPuzzle);
     } else {
         feedback.textContent = "Incorrect! Try again.";
+        feedback.classList.add('error-message'); // Add error message class
+        feedback.classList.remove('success-message'); // Remove success message class
         // You can provide a hint here, e.g., display a hint message
         document.getElementById('hint').textContent = "Hint: A quote from Vi: 'Nothing beats kicking back after dusk, eyes glued to those twinkling specks painting the night.'";
     }
