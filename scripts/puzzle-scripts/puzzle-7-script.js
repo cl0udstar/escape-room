@@ -384,6 +384,8 @@ function checkFinalSequence() {
     }
 
     if (correctCount === rectangleWords.length) {
-        document.getElementById('finalSuccessMessage').style.display = 'block';
+        document.getElementById('final').style.display = 'block';
+        document.getElementById('checkButton').style.display = 'none';
+        
     }
 }
