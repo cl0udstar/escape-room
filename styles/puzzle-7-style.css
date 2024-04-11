@@ -41,7 +41,7 @@ h1 {
     left: 0;
     background-color: red;
     border-radius: 50% 0 0 0;
-    background-image: url('./images/VikingHelmetSymbol.png');
+    background-image: url('../assets/VikingHelmetSymbol.png');
     background-position: 65% 65%;
 }
 
@@ -51,7 +51,7 @@ h1 {
     background-color: green;
     border-radius: 0 50% 0 0;
     border-left: 2.5px solid black;
-    background-image: url('./images/VikingShipSymbol.png');
+    background-image: url('../assets/VikingShipSymbol.png');
     background-position: 50% 60%;
 }
 
@@ -61,7 +61,7 @@ h1 {
     background-color: rgb(8, 197, 255);
     border-radius: 0 0 0 50%;
     border-top: 2.5px solid black;
-    background-image: url('./images/VikingAxeSymbol.png');
+    background-image: url('../assets/VikingAxeSymbol.png');
     background-position: 70% 35%;
 }
 
@@ -72,7 +72,7 @@ h1 {
     border-radius: 0 0 50% 0;
     border-top: 2.5px solid black;
     border-left: 2.5px solid black;
-    background-image: url('./images/VikingShieldSymbol.png');
+    background-image: url('../assets/VikingShieldSymbol.png');
     background-position: 35% 40%;
 }
 
