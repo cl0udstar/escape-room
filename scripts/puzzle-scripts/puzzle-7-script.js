@@ -130,13 +130,13 @@ function updateCircleColors() {
 function getImagePath(color) {
     switch (color) {
         case 'red':
-            return './images/VikingHelmetSymbol.png';
+            return '../assets/VikingHelmetSymbol.png';
         case 'green':
-            return './images/VikingShipSymbol.png';
+            return '../assets/VikingShipSymbol.png';
         case 'rgb(8, 197, 255)':
-            return './images/VikingAxeSymbol.png';
+            return '../assets/VikingAxeSymbol.png';
         case 'yellow':
-            return './images/VikingShieldSymbol.png';
+            return '../assets/VikingShieldSymbol.png';
     }
 }
 
