@@ -384,6 +384,7 @@ function checkFinalSequence() {
     }
 
     if (correctCount === rectangleWords.length) {
+        setPuzzleCompletionStatus(7, 'complete'); // Set completion status of puzzle 7 to 'complete'
         document.getElementById('final').style.display = 'block';
         document.getElementById('checkButton').style.display = 'none';
         
