@@ -219,6 +219,8 @@ function checkAnswerQ1() {
 
         result.textContent = "Agent, your skills are so sharp, even the Vikings would admire your craftiness.";
         result.style.color = "green";
+        let progress = require('../scripts/progress.json');
+        progress.puzzle1 = 'complete';
 
         var keyInputs = [keyInputQ1, keyInputQ2, keyInputQ3];
 
