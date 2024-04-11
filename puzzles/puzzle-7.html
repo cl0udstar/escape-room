@@ -109,11 +109,6 @@
                 <p>Incorrect selections. Please try again.</p>
                 <button id="nextButton" onclick="errorNext()">Next</button>
             </div>
-            <div class="successMessage" id="finalSuccessMessage" style="display: none;">
-              <p>Congratulations! You have found the secret plans and completed your mission!</p>
-              <a href="puzzle-selection.html">
-                <button id="nextButton">Go to Mission Selection Page</button>
-              </a>
           </div>
         
             <div class="circle-container" id="circle-container" style="display: none;">
@@ -142,6 +137,12 @@
             <button id="hideHint" onclick="hideHint()" style="display: none;">Hide Hint</button>
             <button id="verifyButton" onclick="verifySelections()" style="display: none;">Verify Selections</button>
             <button id="checkButton" onclick="checkFinalSequence()" style="display: none;">Check Order</button>
+
+            <p id="finalSuccessMessage">Congratulations! You have found the secret plans and completed your mission!</p>
+            
+            <a href="puzzle-selection.html">
+              <button style="display: none;">Go to Mission Select Page</button>
+            </a>
         </div>
         <script src="../scripts/puzzle-scripts/puzzle-7-script.js"></script>
         <script>
