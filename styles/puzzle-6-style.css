@@ -183,9 +183,14 @@
     margin-right: auto; /* Adjust margin right to move the error message left or right */
     max-width: auto; /* Limit the width to prevent overflow */
     white-space: normal; /* Allow text to wrap onto the next line */
+    color: red;
 }
 
 /* Style for success message */
 .success-message {
     color: green;
+}
+
+.correct-message{
+    color: green
 }

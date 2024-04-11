@@ -127,7 +127,7 @@ function drawGraph() {
                     correctMessage.setAttribute('class', 'correct-message');
                     graphContainer.parentNode.insertBefore(correctMessage, graphContainer.nextSibling);
                 }
-                correctMessage.textContent = "Correct! The shape has been drawn successfully.";
+                correctMessage.textContent = "Correct! The star shape has been drawn successfully, well done agent!";
             } else {
                 let errorLabel = graphContainer.nextSibling;
                 if (!errorLabel || errorLabel.className !== 'error-message') {
@@ -190,7 +190,7 @@ function checkAnswerSecondPuzzle() {
     const feedback = document.getElementById('feedback');
 
     if (answer === "star") {
-        feedback.textContent = "Correct!";
+        feedback.textContent = "Correct, well done agent!";
         feedback.classList.remove('error-message'); // Remove error message class
         feedback.classList.add('success-message'); // Add success message class
         document.getElementById('hint').textContent = ""; // Clear hint
@@ -199,7 +199,7 @@ function checkAnswerSecondPuzzle() {
         // Remove the event listener for the "Check Answer" button
         document.getElementById('check-answer-btn').removeEventListener('click', checkAnswerSecondPuzzle);
     } else {
-        feedback.textContent = "Incorrect! Try again.";
+        feedback.textContent = "Incorrect! Try again agent!";
         feedback.classList.add('error-message'); // Add error message class
         feedback.classList.remove('success-message'); // Remove success message class
         // You can provide a hint here, e.g., display a hint message
