@@ -182,8 +182,8 @@ td {
 
 .rectangle {
     position: relative;
-    left: 25%; /* Center horizontally */
-    width: 50%; /* 50% width */
+    left: 10%; /* Center horizontally */
+    width: 80%; /* 50% width */
     height: 100px; /* 100px */
     border: 2px solid black; /* Black outline */
     border-radius: 20px;
@@ -241,6 +241,7 @@ td {
 #finalSuccessMessage{
     color: #4CAF50;
     text-align: center;
+    margin-top: 20px;
 }
 
 a{
