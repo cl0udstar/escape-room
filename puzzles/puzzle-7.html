@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mission 3</title>
+        <link rel="stylesheet" href="../styles/puzzle-page-default-style.css">
+        <link rel="stylesheet" href="../styles/default-style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body id="text">
+        <div class="header">
+            <div class="icons">
+                <a href="puzzle-selection.html"><i class="fa-solid fa-map"></i></a>
+                <p>Missions</p>
+            </div>
+            <h1 id="heading-font">Mission 7</h1>
+            <div class="icons">
+                <a href="../accessibility/accessibility-page.html"><i class="fa-solid fa-universal-access"></i></a>
+                <p>Accessibility</p>
+            </div>
+        </div>
+        <div class="header-text">
+            <p>Insert Puzzle Rules</p>
+        </div>
+        <div class="puzzle_container">
+            <p><!-- Here goes the heading for the puzzle (inside the white box) --></p> 
+            <div class="circle" id="circle">
+                <div class="quarter top-left" id="red" onclick="handleButtonClick('red')"></div>
+                <div class="quarter top-right" id="green" onclick="handleButtonClick('green')"></div>
+                <div class="quarter bottom-left" id="rgb(8, 197, 255)" onclick="handleButtonClick('rgb(8, 197, 255)')"></div>
+                <div class="quarter bottom-right" id="yellow" onclick="handleButtonClick('yellow')"></div>
+            </div>
+            <div class="table-container" id="tableContainer" style="display: none"><!-- Container to center the table -->
+                <table border="1">
+                    <tbody>
+                        <!-- Table rows -->
+                        <tr id="Row_1">
+                            <td id="row1col1">Symbol</td>
+                            <td id="row1col2">1</td>
+                            <td id="row1col3">2</td>
+                            <td id="row1col4">3</td>
+                            <td id="row1col5">4</td>
+                            <td id="row1col6">5</td>
+                            <td id="row1col7">6</td>
+                            <td id="row1col8">7</td>
+                        </tr>
+                        <tr id="Row_2">
+                            <td><img src="./images/VikingHelmetSymbol.png" alt="Red" width="60px" height="50px"></td>
+                            <td id="row2col2"></td>
+                            <td id="row2col3"></td>
+                            <td id="row2col4"></td>
+                            <td id="row2col5"></td>
+                            <td id="row2col6"></td>
+                            <td id="row2col7"></td>
+                            <td id="row2col8"></td>
+                        </tr>
+                        <tr id="Row_3">
+                            <td><img src="./images/VikingShipSymbol.png" alt="Green" width="60px" height="50px"></td>
+                            <td id="row3col2"></td>
+                            <td id="row3col3"></td>
+                            <td id="row3col4"></td>
+                            <td id="row3col5"></td>
+                            <td id="row3col6"></td>
+                            <td id="row3col7"></td>
+                            <td id="row3col8"></td>
+                        </tr>
+                        <tr id="Row_4">
+                            <td><img src="./images/VikingAxeSymbol.png" alt="Blue" width="60px" height="50px"></td>
+                            <td id="row4col2"></td>
+                            <td id="row4col3"></td>
+                            <td id="row4col4"></td>
+                            <td id="row4col5"></td>
+                            <td id="row4col6"></td>
+                            <td id="row4col7"></td>
+                            <td id="row4col8"></td>
+                        </tr>
+                        <tr id="Row_5">
+                            <td><img src="./images/VikingShieldSymbol.png" alt="Yellow" width="60px" height="50px"></td>
+                            <td id="row5col2"></td>
+                            <td id="row5col3"></td>
+                            <td id="row5col4"></td>
+                            <td id="row5col5"></td>
+                            <td id="row5col6"></td>
+                            <td id="row5col7"></td>
+                            <td id="row5col8"></td>
+                        </tr>                
+                    </tbody>
+                </table>
+            </div>
+            <div class="successMessage" id="simonSuccessMessage" style="display: none;">
+                <p>Congratulations! You have cracked the code!</p>
+                <button id="nextButton" onclick="next()">Next</button>
+            </div>
+            <div class="errorMessage" id="simonErrorMessage" style="display: none;">
+                <p>Game Over! Try Again.</p>
+                <button id="nextButton" onclick="errorNext()">Next</button>
+            </div>
+            <div class="successMessage" id="tableSuccessMessage" style="display: none;">
+                <p>Congratulations! You found the secret, however its seems to be scrambled by the V.I.K.I.N.G.S. Try and shuffle the words to make sense of it all.</p>
+                <button id="nextButton" onclick="tableNext()">Next</button>
+            </div>
+            <div class="errorMessage" id="tableErrorMessage" style="display: none;">
+                <p>Incorrect selections. Please try again.</p>
+                <button id="nextButton" onclick="errorNext()">Next</button>
+            </div>
+            <div class="successMessage" id="finalSuccessMessage" style="display: none;">
+              <p>Congratulations! You have found the secret plans and completed your mission!</p>
+              <a href="puzzle-selection.html">
+                <button id="nextButton">Go to Mission Selection Page</button>
+              </a>
+          </div>
+        
+            <div class="circle-container" id="circle-container" style="display: none;">
+                <div class="small-circle" id="circle1"></div>
+                <div class="small-circle" id="circle2"></div>
+                <div class="small-circle" id="circle3"></div>
+                <div class="small-circle" id="circle4"></div>
+                <div class="small-circle" id="circle5"></div>
+                <div class="small-circle" id="circle6"></div>
+                <div class="small-circle" id="circle7"></div>
+            </div>
+        
+            <div class="rectangle" id="rectangle" style="display: none;">
+                <div class="small-rectangle"></div>
+                <div class="small-rectangle"></div>
+                <div class="small-rectangle"></div>
+                <div class="small-rectangle"></div>
+                <div class="small-rectangle"></div>
+                <div class="small-rectangle"></div>
+                <div class="small-rectangle"></div>
+            </div>
+        
+            
+            <button id="startButton" onclick="startGame()">Start</button>
+            <button id="showHint" onclick="showHint()" style="display: none;">Show Hint</button>
+            <button id="hideHint" onclick="hideHint()" style="display: none;">Hide Hint</button>
+            <button id="verifyButton" onclick="verifySelections()" style="display: none;">Verify Selections</button>
+            <button id="checkButton" onclick="checkFinalSequence()" style="display: none;">Check Order</button>
+        </div>
+        <script src="../script/simon-puzzle.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const smallRectangles = document.querySelectorAll('.small-rectangle');
+            let firstBoxClicked = null;
+    
+            smallRectangles.forEach(item => {
+                item.addEventListener('click', function() {
+                    if (item.classList.contains('correct')) {
+                        return; // Prevent clicking on correct boxes
+                    }
+    
+                    if (!firstBoxClicked) {
+                        firstBoxClicked = item;
+                        firstBoxClicked.classList.add('selected');
+                    } else {
+                        if (firstBoxClicked !== item) {
+                            // Swap the content of the two boxes
+                            const temp = firstBoxClicked.textContent;
+                            firstBoxClicked.textContent = item.textContent;
+                            item.textContent = temp;
+                            // Add moving animation class
+                            firstBoxClicked.classList.add('moving');
+                            item.classList.add('moving');
+                            // Remove moving animation class after a delay
+                            setTimeout(() => {
+                                smallRectangles.forEach(box => {
+                                    box.classList.remove('moving');
+                                });
+                            }, 300); // Adjust the delay to match the animation duration
+                        }
+                        firstBoxClicked.classList.remove('selected');
+                        firstBoxClicked = null;
+                    }
+                });
+              });
+            });
+        </script> 
+        <script src="../scripts/cookies/accessibility-cookie.js"></script>
+    </body>
+</html>
 
