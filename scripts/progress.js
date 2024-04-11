@@ -13,3 +13,18 @@ function getPuzzleCompletionStatus(puzzleNumber) {
     // Retrieve the completion status from localStorage
     return localStorage.getItem(key);
 }
+
+// Function to check puzzle completion status and update div colors
+function updatePuzzleDivColors() {
+    // Loop through each puzzle
+    for (let i = 1; i <= 7; i++) {
+        // Get the completion status of the puzzle
+        const status = getPuzzleCompletionStatus(i);
+        // Get the corresponding div element
+        const div = document.getElementById(`circle${i}`);
+        // Update the div color based on the completion status
+        if (status === 'complete') {
+            div.style.backgroundColor = 'green'; // Set color to green if puzzle is complete
+        } 
+    }
+}
