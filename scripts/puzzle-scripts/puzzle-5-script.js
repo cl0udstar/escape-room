@@ -1,124 +1,4 @@
 ////////////////////////////////////////////////////////////
-// Script for the first list '.sortable-list1'
-////////////////////////////////////////////////////////////
-const sortableLists1 = document.querySelectorAll(".sortable-list1");
-
-sortableLists1.forEach(sortableList => {
-    sortableList.addEventListener("dragover", (e) => {
-        e.preventDefault();
-
-        sortableList.addEventListener("drop", (e) => {
-            // Prevent the default behavior
-            e.preventDefault();
-
-            var secondList1ValuesArray = [];
-            var listItemsSortable1 = document.querySelectorAll('.item1');
-    
-            // Loop through each <li> element
-            listItemsSortable1.forEach(function(item) {
-                var value = item.getAttribute('value');
-                
-                // Push the value into the array
-                secondList1ValuesArray.push(value);
-            });
-    
-            if (secondList1ValuesArray.toString() === list1ValuesArray.toString()) {
-                // console.log("Both arrays are equal");
-                var theItems = document.getElementsByClassName("item1");
-                for (var i = 0; i < theItems.length; i++) {
-                    theItems[i].style.background = "#C8E4B2";
-                }
-            } else {
-                var theItems = document.getElementsByClassName("item1");
-                for (var i = 0; i < theItems.length; i++) {
-                    theItems[i].style.background = "";
-                }
-            }
-        });
-
-        const draggingItem = sortableList.querySelector(".dragging");
-        const siblings = [...sortableList.querySelectorAll(".item1:not(.dragging)")];
-
-        let nextSibling = siblings.find(sibling => {
-            return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2;
-        });
-
-        sortableList.insertBefore(draggingItem, nextSibling);
-    });
-});
-
-const items1 = document.querySelectorAll(".item1");
-
-items1.forEach(item => {
-    item.addEventListener("dragstart", () => {
-        setTimeout(() => item.classList.add("dragging"), 0);
-    });
-    item.addEventListener("dragend", () => item.classList.remove("dragging"));
-});
-////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////
-// Script for the second list '.sortable-list2'
-////////////////////////////////////////////////////////////
-const sortableLists2 = document.querySelectorAll(".sortable-list2");
-
-sortableLists2.forEach(sortableList => {
-    sortableList.addEventListener("dragover", (e) => {
-        e.preventDefault();
-
-        sortableList.addEventListener("drop", (e) => {
-            // Prevent the default behavior
-            e.preventDefault();
-
-            var secondList2ValuesArray = [];
-            var listItemsSortable2 = document.querySelectorAll('.item2');
-    
-            // Loop through each <li> element
-            listItemsSortable2.forEach(function(item) {
-                var value = item.getAttribute('value');
-                
-                // Push the value into the array
-                secondList2ValuesArray.push(value);
-            });
-    
-            if (secondList2ValuesArray.toString() === list2ValuesArray.toString()) {
-                // console.log("Both arrays are equal");
-                var theItems = document.getElementsByClassName("item2");
-                for (var i = 0; i < theItems.length; i++) {
-                    theItems[i].style.background = "#C8E4B2";
-                }
-            } else {
-                var theItems = document.getElementsByClassName("item2");
-                for (var i = 0; i < theItems.length; i++) {
-                    theItems[i].style.background = "";
-                }
-            }
-        });
-
-        const draggingItem = sortableList.querySelector(".dragging");
-        const siblings = [...sortableList.querySelectorAll(".item2:not(.dragging)")];
-
-        let nextSibling = siblings.find(sibling => {
-            return e.clientY <= sibling.offsetTop + sibling.offsetHeight / 2;
-        });
-
-        sortableList.insertBefore(draggingItem, nextSibling);
-    });
-});
-
-const items2 = document.querySelectorAll(".item2");
-
-items2.forEach(item => {
-    item.addEventListener("dragstart", () => {
-        setTimeout(() => item.classList.add("dragging"), 0);
-    });
-    item.addEventListener("dragend", () => item.classList.remove("dragging"));
-});
-////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////
 // Function to shuffle both lists
 ////////////////////////////////////////////////////////////
 function shuffleArray(array) {
@@ -189,4 +69,132 @@ list2ValuesArray.sort(function(a, b) {
     // Convert values to numbers and compare in descending order
     return parseInt(b) - parseInt(a);
 });
+////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////
+// Function to move an item up and down
+////////////////////////////////////////////////////////////
+function moveItemUp(item) {
+    const previousItem = item.previousElementSibling;
+    if (previousItem) {
+        item.parentNode.insertBefore(item, previousItem);
+        checkArraysAndSetColor1();
+        checkArraysAndSetColor2();
+    }
+}
+
+function moveItemDown(item) {
+    const nextItem = item.nextElementSibling;
+    if (nextItem) {
+        item.parentNode.insertBefore(nextItem, item);
+        checkArraysAndSetColor1();
+        checkArraysAndSetColor2();
+    }
+}
+////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////
+// Add click event listeners to select list items
+////////////////////////////////////////////////////////////
+listItems1.forEach(item => {
+    item.addEventListener("click", () => {
+        // Remove selected class from all items
+        listItems1.forEach(item => {
+            item.classList.remove("selected");
+        });
+        // Add selected class to the clicked item
+        item.classList.add("selected");
+    });
+});
+////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////
+// Check the arrays
+////////////////////////////////////////////////////////////
+function checkArraysAndSetColor1() {
+    var secondList1ValuesArray = [];
+    var listItemsSortable1 = document.querySelectorAll('.item1');
+
+    // Loop through each <li> element
+    listItemsSortable1.forEach(function(item) {
+        var value = item.getAttribute('value');
+
+        // Push the value into the array
+        secondList1ValuesArray.push(value);
+    });
+
+    if (secondList1ValuesArray.toString() === list1ValuesArray.toString()) {
+        // console.log("Both arrays are equal");
+        var theItems = document.getElementsByClassName("item1");
+        for (var i = 0; i < theItems.length; i++) {
+            theItems[i].style.background = "#C8E4B2";
+
+            const itemControls = theItems[i].querySelector('.item-controls');
+            if (itemControls) {
+                itemControls.style.display = 'none'; // Show arrows
+            }
+        }
+    } else {
+        var theItems = document.getElementsByClassName("item1");
+        for (var i = 0; i < theItems.length; i++) {
+            theItems[i].style.background = "";
+        }
+    }
+}
+////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////
+// Add click event listeners to select list items
+////////////////////////////////////////////////////////////
+listItems2.forEach(item => {
+    item.addEventListener("click", () => {
+        // Remove selected class from all items
+        listItems2.forEach(item => {
+            item.classList.remove("selected");
+        });
+        // Add selected class to the clicked item
+        item.classList.add("selected");
+    });
+});
+////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////
+// Check the arrays
+////////////////////////////////////////////////////////////
+function checkArraysAndSetColor2() {
+    var secondList2ValuesArray = [];
+    var listItemsSortable2 = document.querySelectorAll('.item2');
+
+    // Loop through each <li> element
+    listItemsSortable2.forEach(function(item) {
+        var value = item.getAttribute('value');
+
+        // Push the value into the array
+        secondList2ValuesArray.push(value);
+    });
+
+    if (secondList2ValuesArray.toString() === list2ValuesArray.toString()) {
+        // console.log("Both arrays are equal");
+        var theItems = document.getElementsByClassName("item2");
+        for (var i = 0; i < theItems.length; i++) {
+            theItems[i].style.background = "#C8E4B2";
+            const itemControls = theItems[i].querySelector('.item-controls');
+            if (itemControls) {
+                itemControls.style.display = 'none'; // Show arrows
+            }
+        }
+    } else {
+        var theItems = document.getElementsByClassName("item2");
+        for (var i = 0; i < theItems.length; i++) {
+            theItems[i].style.background = "";
+        }
+    }
+}
 ////////////////////////////////////////////////////////////
