@@ -238,6 +238,11 @@ td {
     background-color: red;
 }
 
+#finalSuccessMessage{
+    color: #4CAF50;
+    text-align: center;
+}
+
 a{
     text-decoration: none;
     color: inherit;
