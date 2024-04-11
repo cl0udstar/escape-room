@@ -11,6 +11,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script>
+        fetch('../scripts/progress.json')
+          .then(response => response.json())
+          .then(data => {
+            // Iterate over the properties of the JSON object
+            for (const puzzle in data) {
+              if (data.hasOwnProperty(puzzle)) {
+                // Check if the puzzle is complete
+                if (data[puzzle] === 'complete') {
+                  // Change the color of the corresponding div
+                  const divId = `circle${puzzle.substr(6)}`; // Assuming the divs have ids like "circle1", "circle2", etc.
+                  const circleDiv = document.getElementById(divId);
+                  if (circleDiv) {
+                    circleDiv.style.backgroundColor = 'green'; // Change the color to green
+                  }
+                }
+              }
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching progress data:', error);
+          });
+    </script>
 </head>
 
 <body id="text">
