@@ -1,0 +1,54 @@
+.the-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+    /* background: #595db8; */
+}
+
+.sortable-list {
+    background: #fff;
+    width: 445px;
+    border-radius: 6px;
+    padding: 30px 25px 20px;
+    margin: 10px; /* Add some margin between columns */
+    display: inline-block; /* Make columns appear side by side */
+}
+
+.sortable-list .item1, .sortable-list .item2 {
+    cursor: grab;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    margin-bottom: 11px;
+    padding: 10px 13px;
+    border-radius: 10px;
+}
+
+.item1 .details, .item2 .details {
+    display: flex;
+    align-items: center;
+}
+
+.item1 .details img, .item2 .details img {
+    width: 43px;
+    height: 43px;
+    margin-right: 12px;
+    object-fit: cover;
+    /* border-radius: 50%; */
+}
+
+.item1 i, .item2 i {
+    color: #474747;
+    opacity: 0.8;
+}
+
+.item1.dragging :where(.details, i), .item2.dragging :where(.details, i)  {
+    opacity: 0;
+}
+
+.correct-combination {
+    background-color: green;
+}
