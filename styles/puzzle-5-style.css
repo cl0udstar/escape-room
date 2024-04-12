@@ -1,9 +1,119 @@
+.puzzle_container2, .puzzle_container3, .puzzle_container4 {
+	margin: 2% 10%;
+	padding: 5%;
+	border-radius: 20px;
+	background-color: white;
+}
+
+.puzzle_container2 p, .puzzle_container3 p, .puzzle_container4 p {
+    text-align: center;
+}
+
+.puzzle_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.keypad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+    background-color: gray;
+    position: relative;
+    z-index: 1;
+}
+
+.keypad-buttons {
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+
+.keypad-buttons button {
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    margin: 5px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.keypad-user-input {
+    font-family: inherit;
+    background-color: #000;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 10px 28px;
+    margin-bottom: 10px;
+}
+
+.keypad-user-input::placeholder{
+    color: #7ECD07;
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.keypad-container {
+    position: relative; /* Make the container a positioning context */
+}
+
+.keypad-image-small {
+    cursor: pointer;
+    width: 100px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -20px;
+    left: 95%;
+    transform: translateX(-50%) rotate(-15deg);
+    z-index: 0;
+}
+
+.dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+}
+
+.keypad-image-big {
+    display: none;
+    cursor: pointer;
+    width: 1000px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.dark-overlay {
+    display: none;
+}
+
+
+
+
 .the-list {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* min-height: 100vh; */
-    /* background: #595db8; */
 }
 
 .sortable-list {
@@ -11,8 +121,8 @@
     width: 445px;
     border-radius: 6px;
     padding: 30px 25px 20px;
-    margin: 10px; /* Add some margin between columns */
-    display: inline-block; /* Make columns appear side by side */
+    margin: 10px;
+    display: inline-block;
 }
 
 .sortable-list .item1, .sortable-list .item2 {
@@ -21,7 +131,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     margin-bottom: 11px;
     padding: 10px 13px;
     border-radius: 10px;
@@ -37,37 +147,28 @@
     height: 43px;
     margin-right: 12px;
     object-fit: cover;
-    /* border-radius: 50%; */
 }
 
 .item1 i, .item2 i {
     color: #474747;
-    /* opacity: 0.8; */
-}
-
-.correct-combination {
-    background-color: green;
+    font-size: 25px;
 }
 
 
 
 
-/* Add CSS styles for selected items here */
-.item1.selected, .item2.selected {
+.item1.selected, .item2.selected, .letter-button.selected {
     background-color: gray;
 }
 
-/* Add CSS styles for item controls (arrows) here */
 .item-controls {
-    display: none; /* Initially hide the controls */
+    display: none;
 }
 
-/* Show the controls when an item is selected */
 .item1.selected .item-controls, .item2.selected .item-controls {
     display: flex;
 }
 
-/* Add CSS styles for the move-up and move-down buttons here */
 .item-controls button {
     border: none;
     background-color: transparent;
@@ -75,3 +176,106 @@
     font-size: 16px;
     margin: 0 5px;
 }
+
+
+
+.puzzle_container3 img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.details-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.details-container .details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+
+
+.letter-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.letter-button, .keypad-buttons button{
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px 15px;
+    border: 1px solid;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: #e3e2e2;
+}
+
+.letter-circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.check-btn {
+    background: none;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    /* box-shadow: 1px 1px 10px 2px #DAD5AB; */
+}
+
+.puzzle-q1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle-q1 #resultStep3 {
+    padding: 0 0 10px 0;
+    text-align: center;
+}
+
+.q-answer {
+    padding: 10px;
+    margin-top: 2%;
+}
+
+.user-input {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.user-input::placeholder{
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
