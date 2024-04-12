@@ -26,9 +26,49 @@
             </div>
         </div>
         <div class="header-text">
-            <p>Insert Puzzle Rules</p>
+            <p>To unlock the password, you need to follow the steps below:</p>
         </div>
+
         <div class="puzzle_container">
+            <div class="keypad-container">
+                <div class="keypad">
+                    <div class="keypad-input">
+                        <input type="text" placeholder="Insert password" id="display" class="keypad-user-input" autocomplete="off" readonly>  
+                    </div>
+                    <div class="keypad-buttons">
+                        <div class="keypad-row1">
+                            <button onclick="addToDisplay('F')">F</button>
+                            <button onclick="addToDisplay('O')">O</button>
+                            <button onclick="addToDisplay('X')">X</button>
+                        </div>
+                        
+                        <div class="keypad-row2">
+                            <button onclick="addToDisplay('D')">D</button>
+                            <button onclick="addToDisplay('K')">K</button>
+                            <button onclick="addToDisplay('H')">H</button>
+                        </div>
+                        
+                        <div class="keypad-row3">
+                            <button onclick="addToDisplay('S')">S</button>
+                            <button onclick="addToDisplay('I')">I</button>
+                            <button onclick="addToDisplay('J')">J</button>
+                        </div>
+    
+                        <div class="keypad-row4">
+                            <button onclick="clearInput()"><i class="fa-solid fa-xmark"></i></button>
+                            <button onclick="addToDisplay('M')">M</button>
+                            <button onclick="checkInput()"><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <img src="../assets/backgrounds/puzzle5-assets/map.png" class="keypad-image-small" alt="Image" onclick="showBigImage()">
+                <img src="../assets/backgrounds/puzzle5-assets/map.png" class="keypad-image-big" alt="Image" onclick="hideBigImage()">
+                <div class="dark-overlay" onclick="hideBigImage()"></div>
+            </div>
+        </div>
+
+        <div class="puzzle_container2">
+            <p>Step 1: Order the Fjordhelm locations in order of visitors per month, from highest to lowest.</p>
             <div class="the-list">
                 <ul class="sortable-list1 sortable-list" >
                     <li class="item1" value="680">
@@ -144,6 +184,90 @@
                     </li>
                 </ul>
             </div> 
+        </div>
+
+        <div class="puzzle_container3">
+            <p>Step 2: Match each location to its letter from the map</p>
+            
+            <div class="letter-buttons">
+                <button class="letter-button" value="F">F</button>
+                <button class="letter-button" value="O">O</button>
+                <button class="letter-button" value="X">X</button>
+                <button class="letter-button" value="D">D</button>
+                <button class="letter-button" value="K">K</button>
+                <button class="letter-button" value="H">H</button>
+                <button class="letter-button" value="S">S</button>
+                <button class="letter-button" value="I">I</button>
+            </div>
+
+            <div class="details-container">
+                <div class="details" onclick="placeLetter(this)">
+                    <img src="/escape-room/assets/backgrounds/puzzle5-assets/O.png">
+                    <div class="letter-circle" data-value="O"></div>
+                </div>
+
+                <div class="details" onclick="placeLetter(this)">
+                    <img src="/escape-room/assets/backgrounds/puzzle5-assets/F.png">
+                    <div class="letter-circle" data-value="F"></div>
+                </div>
+
+                <div class="details" onclick="placeLetter(this)">
+                    <img src="/escape-room/assets/backgrounds/puzzle5-assets/F2.png">
+                    <div class="letter-circle" data-value="F"></div>
+                </div>
+
+                <div class="details" onclick="placeLetter(this)">
+                    <img src="/escape-room/assets/backgrounds/puzzle5-assets/F3.png">
+                    <div class="letter-circle" data-value="F"></div>
+                </div>
+
+                <div class="details" onclick="placeLetter(this)">
+                    <img src="/escape-room/assets/backgrounds/puzzle5-assets/D.png">
+                    <div class="letter-circle" data-value="D"></div>
+                </div>
+
+                <div class="details" onclick="placeLetter(this)">
+                    <img src="/escape-room/assets/backgrounds/puzzle5-assets/H.png">
+                    <div class="letter-circle" data-value="H"></div>
+                </div>
+
+                <div class="details" onclick="placeLetter(this)">
+                    <img src="/escape-room/assets/backgrounds/puzzle5-assets/I.png">
+                    <div class="letter-circle" data-value="I"></div>
+                </div>
+
+                <div class="details" onclick="placeLetter(this)">
+                    <img src="/escape-room/assets/backgrounds/puzzle5-assets/K.png">
+                    <div class="letter-circle" data-value="K"></div>
+                </div>
+
+                <div class="details" onclick="placeLetter(this)">
+                    <img src="/escape-room/assets/backgrounds/puzzle5-assets/S.png">
+                    <div class="letter-circle" data-value="S"></div>
+                </div>
+
+                <div class="details" onclick="placeLetter(this)">
+                    <img src="/escape-room/assets/backgrounds/puzzle5-assets/X.png">
+                    <div class="letter-circle" data-value="X"></div>
+                </div>
+            </div>
+            <p id="resultStep2" style="display: none;"></p>
+        </div>
+
+        <div class="puzzle_container4">
+            <p>Step 3: In the same order from step one, spell out the letters, in order of visitors per month.</p>
+
+            <div class="puzzle-q1">
+                <div class="q-answer">
+                    <input type="text" placeholder="Your answer..." id="userAnswerStep3" class="user-input" autocomplete="off">  
+                </div>
+
+                <p id="resultStep3" style="display: none;"></p>
+
+                <div class="answer-check" onclick="checkAnswerQ1()">
+                    <button class="check-btn" id="check-q1">Check Answer</button>
+                </div>
+            </div>
         </div>
 
         <script src="../scripts/puzzle-scripts/puzzle-5-script.js"></script>
