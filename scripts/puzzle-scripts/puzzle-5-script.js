@@ -213,19 +213,34 @@ function addToDisplay(letter) {
     var display = document.getElementById('display');
     display.style.color = '#7ECD07';
     display.style.textAlign = 'center';
-    display.value += letter;
+    display.value += letter.textContent; // Use the button's text content
 }
   
 function checkInput() {
     var display = document.getElementById('display');
     var inputValue = display.value;
+    
   
     // Example validation: Check if input contains all the required letters
-    var requiredLetters = ['FOX'];
+    var requiredLetters = [matchedSequence];
     var isValid = requiredLetters.every(letter => inputValue.includes(letter));
-  
+
     if (isValid) {
-        alert('Input is valid!');
+        display.removeAttribute('readonly');
+        display.value = "Success!";
+        display.setAttribute('readonly', 'readonly');
+
+        // Hide puzzle containers after a slight delay
+        setTimeout(function() {
+            var puzzleContainer2 = document.getElementById('p-container2');
+            var puzzleContainer3 = document.getElementById('p-container3');
+            var puzzleContainer4 = document.getElementById('p-container4');
+            var puzzleContainer5 = document.getElementById('p-container5');
+            puzzleContainer2.style.display = 'none';
+            puzzleContainer3.style.display = 'none';
+            puzzleContainer4.style.display = 'none';
+            puzzleContainer5.style.display = 'none';
+        }, 100);
     } else {
         alert('Input is invalid. Please enter all required letters.');
     }
@@ -233,6 +248,46 @@ function checkInput() {
 
 function clearInput() {
     document.getElementById('display').value = '';
+}
+
+
+// Function to update keypad button labels based on the matched sequence
+function updateKeypadButtons(matchedSequence) {
+    const letterButtons = document.querySelectorAll('#letterButton');
+
+    const chars = matchedSequence.split('');
+
+    const uniqueChars = Array.from(new Set(chars));
+
+    // Shuffle the array of characters
+    for (let i = uniqueChars.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [uniqueChars[i], uniqueChars[j]] = [uniqueChars[j], uniqueChars[i]];
+    }
+
+    // Create a pool of available letters excluding those already in uniqueChars
+    const availableLetters = [];
+    for (let i = 65; i <= 90; i++) {
+        const letter = String.fromCharCode(i);
+        if (!uniqueChars.includes(letter)) {
+            availableLetters.push(letter);
+        }
+    }
+
+    // Fill in the remaining buttons with random letters
+    const remainingButtons = letterButtons.length - uniqueChars.length;
+    for (let i = 0; i < remainingButtons; i++) {
+        const randomIndex = Math.floor(Math.random() * availableLetters.length);
+        const randomLetter = availableLetters[randomIndex];
+        uniqueChars.push(randomLetter);
+        availableLetters.splice(randomIndex, 1); // Remove the selected letter from availableLetters
+    }
+
+    // Iterate over each letter button
+    letterButtons.forEach((button, index) => {
+        // Update button label with the matched sequence letter
+        button.textContent = uniqueChars[index];
+    });
 }
 ////////////////////////////////////////////////////////////
 
@@ -270,7 +325,6 @@ letterButtons.forEach(item => {
 
         currentLetter = buttonValue;
         
-
         // Remove selected class from all items
         letterButtons.forEach(item => {
             item.classList.remove("selected");
@@ -300,14 +354,13 @@ function placeLetter(details) {
             if (placedCorrectlyNo === 10) {
                 result.textContent = "Nice work, Agent! It seems the combination is close to being cracked!";
                 result.style.color = "green";
+                result.style.display = "block";
             }
-            result.style.display = "block";
         } else {
-            // If the placed letter was initially correct but changed to wrong, subtract from placedCorrectlyNo
             if (circle.classList.contains('correct')) {
                 placedCorrectlyNo -= 1;
             }
-            circle.classList.remove('correct'); // Remove the 'correct' class
+            circle.classList.remove('correct');
             circle.style.background = "";
             result.style.display = "none";
         }
@@ -318,7 +371,6 @@ function placeLetter(details) {
         });
     }
 }
-
 ////////////////////////////////////////////////////////////
 
 
@@ -349,4 +401,90 @@ function checkAnswerQ1() {
     }
     result.style.display = "block";
 }
+////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////
+// Preparation for the keypad functionality
+////////////////////////////////////////////////////////////
+function caesarShiftAlphabet(box) {
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const letters = Array.from(box.querySelectorAll('.alphabet-letter'));
+
+    // Generate a random shift amount between 1 and 25
+    const shiftAmount = Math.floor(Math.random() * 25) + 1;
+
+    // Perform the Caesar shift on each letter
+    letters.forEach((letter, index) => {
+        const originalIndex = alphabet.indexOf(letter.textContent);
+        const shiftedIndex = (originalIndex + shiftAmount) % 26; // Wrap around if index exceeds 25
+        const shiftedLetter = alphabet.charAt(shiftedIndex);
+        letter.textContent = shiftedLetter;
+    });
+
+    return shiftAmount;
+}
+
+// Function to match a given letter sequence against the shifted alphabet
+function matchSequence(sequence, shiftAmount) {
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let matchedSequence = '';
+
+    // Iterate over each letter in the sequence
+    for (let i = 0; i < sequence.length; i++) {
+        const letter = sequence[i];
+        const originalIndex = alphabet.indexOf(letter);
+        const shiftedIndex = (originalIndex + shiftAmount) % 26; // Apply the same shift amount
+        matchedSequence += alphabet.charAt(shiftedIndex);
+    }
+
+    return matchedSequence;
+}
+////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////
+// Step 4 Functionality
+////////////////////////////////////////////////////////////
+const box1 = document.querySelector('.alphabet-box');
+const box2 = document.querySelector('.alphabet-box2');
+const shiftedBox = document.querySelector('.alphabet-box2');
+
+const shiftAmount = caesarShiftAlphabet(shiftedBox);
+const sequence = 'SFHFKDIXFO';
+
+// Match the sequence against the shifted alphabet
+const matchedSequence = matchSequence(sequence, shiftAmount);
+
+updateKeypadButtons(matchedSequence);
+// Output the matched sequence to the console
+console.log("Matched Sequence:", matchedSequence);
+
+
+// Highlight corresponding letters in alphabet-box1 when hovering over letters in alphabet-box2
+const letters1 = box1.querySelectorAll('.alphabet-letter');
+const letters2 = box2.querySelectorAll('.alphabet-letter');
+
+letters1.forEach((letter1, index) => {
+    letter1.addEventListener('mouseenter', () => {
+        const letter2 = box2.querySelectorAll('.alphabet-letter')[index];
+        letter2.classList.add('highlighted');
+    });
+    letter1.addEventListener('mouseleave', () => {
+        const letter2 = box2.querySelectorAll('.alphabet-letter')[index];
+        letter2.classList.remove('highlighted');
+    });
+});
+  
+letters2.forEach((letter2, index) => {
+    letter2.addEventListener('mouseenter', () => {
+        const letter1 = box1.querySelectorAll('.alphabet-letter')[index];
+        letter1.classList.add('highlighted');
+    });
+    letter2.addEventListener('mouseleave', () => {
+        const letter1 = box1.querySelectorAll('.alphabet-letter')[index];
+        letter1.classList.remove('highlighted');
+    });
+});
 ////////////////////////////////////////////////////////////
