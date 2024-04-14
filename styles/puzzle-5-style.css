@@ -1,11 +1,11 @@
-.puzzle_container2, .puzzle_container3, .puzzle_container4 {
+.puzzle_container2, .puzzle_container3, .puzzle_container4, .puzzle_container5 {
 	margin: 2% 10%;
 	padding: 5%;
 	border-radius: 20px;
 	background-color: white;
 }
 
-.puzzle_container2 p, .puzzle_container3 p, .puzzle_container4 p {
+.puzzle_container2 p, .puzzle_container3 p, .puzzle_container4 p, .puzzle_container5 p {
     text-align: center;
 }
 
@@ -36,6 +36,7 @@
     border: 2px solid;
     border-radius: 5px;
     background-color: #ccc;
+    font-size: 20px;
 }
 
 .keypad-buttons button {
@@ -279,3 +280,39 @@
 }
 
 
+.alphabet1, .alphabet2 {
+    margin: 20px 0;
+    padding: 20px 10px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+
+.alphabet1 p, .alphabet2 p {
+    padding-bottom: 10px;
+}
+
+.alphabet-box, .alphabet-box2 {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 22px;
+}
+
+.alphabet-letter {
+    cursor: pointer;
+    margin: 2px;
+    text-align: center;
+    font-weight: normal;
+    border: 1px solid;
+    width: 30px;
+    border-radius: 5px;
+    background-color: #e3e2e2;
+}
+
+.highlighted {
+    background-color: #F24C3D;
+}
