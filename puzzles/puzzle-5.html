@@ -37,37 +37,38 @@
                     </div>
                     <div class="keypad-buttons">
                         <div class="keypad-row1">
-                            <button onclick="addToDisplay('F')">F</button>
-                            <button onclick="addToDisplay('O')">O</button>
-                            <button onclick="addToDisplay('X')">X</button>
+                            <button id="letterButton" onclick="addToDisplay(this)">F</button>
+                            <button id="letterButton" onclick="addToDisplay(this)">O</button>
+                            <button id="letterButton" onclick="addToDisplay(this)">X</button>
                         </div>
                         
                         <div class="keypad-row2">
-                            <button onclick="addToDisplay('D')">D</button>
-                            <button onclick="addToDisplay('K')">K</button>
-                            <button onclick="addToDisplay('H')">H</button>
+                            <button id="letterButton" onclick="addToDisplay(this)">D</button>
+                            <button id="letterButton" onclick="addToDisplay(this)">K</button>
+                            <button id="letterButton" onclick="addToDisplay(this)">H</button>
                         </div>
                         
                         <div class="keypad-row3">
-                            <button onclick="addToDisplay('S')">S</button>
-                            <button onclick="addToDisplay('I')">I</button>
-                            <button onclick="addToDisplay('J')">J</button>
+                            <button id="letterButton" onclick="addToDisplay(this)">S</button>
+                            <button id="letterButton" onclick="addToDisplay(this)">I</button>
+                            <button id="letterButton" onclick="addToDisplay(this)">J</button>
                         </div>
     
                         <div class="keypad-row4">
-                            <button onclick="clearInput()"><i class="fa-solid fa-xmark"></i></button>
-                            <button onclick="addToDisplay('M')">M</button>
-                            <button onclick="checkInput()"><i class="fa-solid fa-check"></i></button>
+                            <button onclick="clearInput()"><i class="fa-solid fa-square-xmark"></i></button>
+                            <button id="letterButton" onclick="addToDisplay(this)">M</button>
+                            <button onclick="checkInput()"><i class="fa-solid fa-square-check"></i></button>
                         </div>
                     </div>
                 </div>
                 <img src="../assets/backgrounds/puzzle5-assets/map.png" class="keypad-image-small" alt="Image" onclick="showBigImage()">
                 <img src="../assets/backgrounds/puzzle5-assets/map.png" class="keypad-image-big" alt="Image" onclick="hideBigImage()">
                 <div class="dark-overlay" onclick="hideBigImage()"></div>
+                <!-- <p id="resultKeypad" style="display: none;"></p> -->
             </div>
         </div>
 
-        <div class="puzzle_container2">
+        <div class="puzzle_container2" id="p-container2">
             <p>Step 1: Order the Fjordhelm locations in order of visitors per month, from highest to lowest.</p>
             <div class="the-list">
                 <ul class="sortable-list1 sortable-list" >
@@ -186,7 +187,7 @@
             </div> 
         </div>
 
-        <div class="puzzle_container3">
+        <div class="puzzle_container3" id="p-container3">
             <p>Step 2: Match each location to its letter from the map</p>
             
             <div class="letter-buttons">
@@ -254,7 +255,7 @@
             <p id="resultStep2" style="display: none;"></p>
         </div>
 
-        <div class="puzzle_container4">
+        <div class="puzzle_container4" id="p-container4">
             <p>Step 3: In the same order from step one, spell out the letters, in order of visitors per month.</p>
 
             <div class="puzzle-q1">
@@ -266,6 +267,75 @@
 
                 <div class="answer-check" onclick="checkAnswerQ1()">
                     <button class="check-btn" id="check-q1">Check Answer</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="puzzle_container5" id="p-container5">
+            <p>Step 4: Using the letter sequence from 'Step 3', match the letters from the 1st box, with the letters in the second box.</p>
+
+            <div class="alphabet1">
+                <p>This box contains the alphabet in the right order</p>
+
+                <div class="alphabet-box">
+                    <div class="alphabet-letter">A</div>
+                    <div class="alphabet-letter">B</div>
+                    <div class="alphabet-letter">C</div>
+                    <div class="alphabet-letter">D</div>
+                    <div class="alphabet-letter">E</div>
+                    <div class="alphabet-letter">F</div>
+                    <div class="alphabet-letter">G</div>
+                    <div class="alphabet-letter">H</div>
+                    <div class="alphabet-letter">I</div>
+                    <div class="alphabet-letter">J</div>
+                    <div class="alphabet-letter">K</div>
+                    <div class="alphabet-letter">L</div>
+                    <div class="alphabet-letter">M</div>
+                    <div class="alphabet-letter">N</div>
+                    <div class="alphabet-letter">O</div>
+                    <div class="alphabet-letter">P</div>
+                    <div class="alphabet-letter">Q</div>
+                    <div class="alphabet-letter">R</div>
+                    <div class="alphabet-letter">S</div>
+                    <div class="alphabet-letter">T</div>
+                    <div class="alphabet-letter">U</div>
+                    <div class="alphabet-letter">V</div>
+                    <div class="alphabet-letter">W</div>
+                    <div class="alphabet-letter">X</div>
+                    <div class="alphabet-letter">Y</div>
+                    <div class="alphabet-letter">Z</div>
+                </div>
+            </div>
+            
+            <div class="alphabet2">
+                <p>This box contains the alphabet in a shifted order</p>
+                <div class="alphabet-box2">
+                    <div class="alphabet-letter">A</div>
+                    <div class="alphabet-letter">B</div>
+                    <div class="alphabet-letter">C</div>
+                    <div class="alphabet-letter">D</div>
+                    <div class="alphabet-letter">E</div>
+                    <div class="alphabet-letter">F</div>
+                    <div class="alphabet-letter">G</div>
+                    <div class="alphabet-letter">H</div>
+                    <div class="alphabet-letter">I</div>
+                    <div class="alphabet-letter">J</div>
+                    <div class="alphabet-letter">K</div>
+                    <div class="alphabet-letter">L</div>
+                    <div class="alphabet-letter">M</div>
+                    <div class="alphabet-letter">N</div>
+                    <div class="alphabet-letter">O</div>
+                    <div class="alphabet-letter">P</div>
+                    <div class="alphabet-letter">Q</div>
+                    <div class="alphabet-letter">R</div>
+                    <div class="alphabet-letter">S</div>
+                    <div class="alphabet-letter">T</div>
+                    <div class="alphabet-letter">U</div>
+                    <div class="alphabet-letter">V</div>
+                    <div class="alphabet-letter">W</div>
+                    <div class="alphabet-letter">X</div>
+                    <div class="alphabet-letter">Y</div>
+                    <div class="alphabet-letter">Z</div>
                 </div>
             </div>
         </div>
