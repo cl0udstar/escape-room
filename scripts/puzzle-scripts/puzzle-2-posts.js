@@ -253,3 +253,4 @@ function checkAnswerQ6() {
     result.style.display = "block";
 }
 ////////////////////////////////////////////////
+setPuzzleCompletionStatus(2, 'complete'); // Set completion status of puzzle 2 to 'complete'

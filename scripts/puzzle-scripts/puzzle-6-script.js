@@ -204,6 +204,7 @@ function checkAnswerSecondPuzzle() {
         document.getElementById('answer').disabled = true;
         // Remove the event listener for the "Check Answer" button
         document.getElementById('check-answer-btn').removeEventListener('click', checkAnswerSecondPuzzle);
+        setPuzzleCompletionStatus(6, 'complete'); // Set completion status of puzzle 6 to 'complete'
     } else {
         feedback.textContent = "Incorrect! Try again agent!";
         feedback.classList.add('error-message'); // Add error message class
