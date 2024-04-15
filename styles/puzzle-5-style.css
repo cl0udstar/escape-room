@@ -16,6 +16,9 @@
     position: relative;
 }
 
+.next-puzzle {
+    margin-top: 50px;
+}
 
 .keypad {
     display: flex;
@@ -79,6 +82,7 @@
     left: 95%;
     transform: translateX(-50%) rotate(-15deg);
     z-index: 0;
+    box-shadow: 1px 10px 10px 1px #000;
 }
 
 .dark-overlay {
