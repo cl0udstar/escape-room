@@ -33,3 +33,23 @@ a{
 input{
   margin: 0% 1%;
 }
+
+
+.next-puzzle {
+    text-align: right;
+    display: none;
+}
+.next-puzzle-btn {
+    background-color: #87A922;
+    border: 2px solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 20px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
