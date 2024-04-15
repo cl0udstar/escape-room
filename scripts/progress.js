@@ -24,7 +24,7 @@ function updatePuzzleDivColors() {
         const div = document.getElementById(`circle${i}`);
         // Update the div color based on the completion status
         if (status === 'complete') {
-            div.style.backgroundColor = 'green'; // Set color to green if puzzle is complete
+            div.style.backgroundColor = '#87A922'; // Set color to green if puzzle is complete
         } 
     }
 }
