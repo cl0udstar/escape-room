@@ -241,6 +241,8 @@ function checkInput() {
             puzzleContainer4.style.display = 'none';
             puzzleContainer5.style.display = 'none';
         }, 100);
+
+        setPuzzleCompletionStatus(5, 'complete');
     } else {
         alert('Input is invalid. Please enter all required letters.');
     }
