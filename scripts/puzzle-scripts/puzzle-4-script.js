@@ -29,6 +29,11 @@ const correctSequence = [
     ['route10-1']
 ];
 
+var Q1Check = false;
+var Q2Check = false;
+var Q3Check = false;
+var Q4Check = false;
+
 // Function to check the sequence of checked radio buttons
 function checkSequence() {
     var checkedButtons = document.querySelectorAll('.results input[type="radio"]:checked');
@@ -57,6 +62,9 @@ function checkSequence() {
 
     var result = document.getElementById("result");
     if (correct) {
+        Q4Check = true;
+        checkCompletion();
+        
         result.textContent = "Congratulations, Agent! You've found the best route through the checkpoints! The sail towards the village will be smooth now!";
         result.style.color = "green";
     } else {
@@ -91,6 +99,9 @@ function checkAnswerQ1() {
     var result = document.getElementById("result1");
 
     if (userAnswer === "190" || userAnswer === "190 miles" || userAnswer === "190miles" || userAnswer === "190 miles per hour" || userAnswer === "190 mph" || userAnswer === "190mph") {
+        Q1Check = true;
+        checkCompletion();
+        
         result.textContent = "Congratulations Agent, your stealth and cunning would make even Viking raiders bow in awe.";
         result.style.color = "green";
         keyInputQ1.disabled = true;
@@ -118,6 +129,9 @@ function checkAnswerQ2() {
     var result = document.getElementById("result2");
 
     if (userAnswer === "460" || userAnswer === "460 miles" || userAnswer === "460 miles per hour" || userAnswer === "460 mph" || userAnswer === "460mph" || userAnswer === "four hundred and sixty miles per hour" || userAnswer === "four hundred sixty") {
+        Q2Check = true;
+        checkCompletion();
+        
         result.textContent = "Well done, Agent. Your finesse rivals that of the stealthiest Viking scouts.";
         result.style.color = "green";
         keyInputQ2.disabled = true;
@@ -145,6 +159,9 @@ function checkAnswerQ3() {
     var result = document.getElementById("result3");
 
     if (userAnswer === "blue" || userAnswer === "wind speed 1" || userAnswer === "1") {
+        Q3Check = true;
+        checkCompletion();
+        
         result.textContent = "Nicely done Agent! Your spy game could outsmart even the fiercest Viking warriors.";
         result.style.color = "green";
         keyInputQ3.disabled = true;
@@ -156,3 +173,9 @@ function checkAnswerQ3() {
     }
     result.style.display = "block";
 }
+
+function checkCompletion() {
+    if (Q1Check && Q2Check && Q3Check && Q4Check) {
+        setPuzzleCompletionStatus(4, 'complete');
+    }
+} 
