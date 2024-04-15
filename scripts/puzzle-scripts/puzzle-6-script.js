@@ -211,6 +211,8 @@ function checkAnswerSecondPuzzle() {
         feedback.classList.remove('success-message'); // Remove success message class
         // You can provide a hint here, e.g., display a hint message
         document.getElementById('hint').textContent = "Hint: A quote from Vi: 'Nothing beats kicking back after dusk, eyes glued to those twinkling specks painting the night.'";
+
+
     }
 }
 
