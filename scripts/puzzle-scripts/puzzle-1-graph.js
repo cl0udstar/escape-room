@@ -25,7 +25,7 @@ function generateRandomCoordinates() {
         const randomY = getRandomInt(1, 7) * gridSize; // Random Y coordinate snapped to grid
         randomCoordinates.push({ x: i * gridSize, y: randomY });
     }
-    console.log(randomCoordinates);
+    // console.log(randomCoordinates);
 
     return randomCoordinates;
 }
@@ -155,13 +155,6 @@ function drawGraph() {
 
 drawGraph(); // Initial draw
 
-// // Define the correct coordinates
-// const correctCoordinates = [
-//     { x: 100, y: 100 },
-//     { x: 150, y: 150 },
-//     { x: 200, y: 200 }
-// ];
-
 
 // Define function to get y coordinate for a given x coordinate index
 function getYCoordinateForXIndex(xIndex) {
@@ -182,6 +175,9 @@ const yCoordinates = xCoordinates.map(x => maxYCoordinate - getYCoordinateForXIn
 
 // console.log("Y coordinates for x coordinates:", yCoordinates);
 
+var Q1Check = false;
+var Q2Check = false;
+var Q3Check = false;
 
 // First Question
 var keyInputQ1 = document.getElementById("userAnswerQ1");
@@ -215,7 +211,11 @@ function checkAnswerQ1() {
     var result = document.getElementById("result1");
 
     if (userAnswer1 === yCoordinates[0].toString() && userAnswer2 === yCoordinates[1].toString() && userAnswer3 === yCoordinates[2].toString()) {
-        
+        Q1Check = true;
+        Q2Check = true;
+        Q3Check = true;
+
+        checkCompletion();
 
         result.textContent = "Agent, your skills are so sharp, even the Vikings would admire your craftiness.";
         result.style.color = "green";
@@ -230,6 +230,8 @@ function checkAnswerQ1() {
         }
     } else {
         if (userAnswer1 === yCoordinates[0].toString()) {
+            Q1Check = true;
+
             keyInputQ1.disabled = true;
             keyInputQ1.style.background = "#C8E4B2";
         } else {
@@ -237,6 +239,8 @@ function checkAnswerQ1() {
         }
 
         if (userAnswer2 === yCoordinates[1].toString()) {
+            Q2Check = true;
+
             keyInputQ2.disabled = true;
             keyInputQ2.style.background = "#C8E4B2";
         } else {
@@ -244,6 +248,8 @@ function checkAnswerQ1() {
         }
 
         if (userAnswer3 === yCoordinates[2].toString()) {
+            Q3Check = true;
+
             keyInputQ3.disabled = true;
             keyInputQ3.style.background = "#C8E4B2";
         } else {
@@ -254,4 +260,10 @@ function checkAnswerQ1() {
         result.style.color = "red";
     }
     result.style.display = "block";
+}
+
+function checkCompletion() {
+    if (Q1Check && Q2Check && Q3Check) {
+        setPuzzleCompletionStatus(1, 'complete');
+    }
 }
