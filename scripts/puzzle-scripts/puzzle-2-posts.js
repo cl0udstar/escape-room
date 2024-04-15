@@ -74,6 +74,12 @@ function handleHeart() {
 showImage(currentIndex);
 
 
+var Q1Check = false;
+var Q2Check = false;
+var Q3Check = false;
+var Q4Check = false;
+var Q5Check = false;
+var Q6Check = false;
 
 ////////////////////////////////////////////////
 // Question 1
@@ -91,6 +97,9 @@ function checkAnswerQ1() {
     var result = document.getElementById("result1");
 
     if (userAnswer === "fjordhelm") {
+        Q1Check = true;
+        checkCompletion();
+        
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ1.disabled = true;
@@ -121,6 +130,9 @@ function checkAnswerQ2() {
     var result = document.getElementById("result2");
 
     if (userAnswer === "fjordhelm") {
+        Q2Check = true;
+        checkCompletion();
+        
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ2.disabled = true;
@@ -151,6 +163,9 @@ function checkAnswerQ3() {
     var result = document.getElementById("result3");
 
     if (userAnswer === "20" || userAnswer === "twenty" || userAnswer === "20 hours" || userAnswer === "twenty hours" || userAnswer === "20h") {
+        Q3Check = true;
+        checkCompletion();
+        
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ3.disabled = true;
@@ -181,6 +196,9 @@ function checkAnswerQ4() {
     var result = document.getElementById("result4");
 
     if (userAnswer === "sunny") {
+        Q4Check = true;
+        checkCompletion();
+        
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ4.disabled = true;
@@ -211,6 +229,9 @@ function checkAnswerQ5() {
     var result = document.getElementById("result5");
 
     if (userAnswer === "8" || userAnswer === "eight" || userAnswer === "8 villages" || userAnswer === "eight villages") {
+        Q5Check = true;
+        checkCompletion();
+        
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ5.disabled = true;
@@ -241,6 +262,9 @@ function checkAnswerQ6() {
     var result = document.getElementById("result6");
 
     if (userAnswer === "565" || userAnswer === "565 miles" || userAnswer === "five hundred and sixty five" || userAnswer === "five hundred and sixty five miles" || userAnswer === "five hundred sixty five" || userAnswer === "five hundred sixty five miles" || userAnswer === "five six five" || userAnswer === "five six five miles") {
+        Q6Check = true;
+        checkCompletion();
+        
         result.textContent = "Well done, Agent.";
         result.style.color = "green";
         keyInputQ6.disabled = true;
@@ -253,7 +277,6 @@ function checkAnswerQ6() {
     result.style.display = "block";
 }
 ////////////////////////////////////////////////
-setPuzzleCompletionStatus(2, 'complete'); // Set completion status of puzzle 2 to 'complete'
 
 
 ////////////////////////////////////////////////////////////
@@ -271,3 +294,9 @@ function hideBigImage() {
     document.querySelector('.dark-overlay').style.display = 'none';
 }
 ////////////////////////////////////////////////////////////
+
+function checkCompletion() {
+    if (Q1Check && Q2Check && Q3Check && Q4Check && Q5Check && Q6Check) {
+        setPuzzleCompletionStatus(2, 'complete');
+    }
+}
