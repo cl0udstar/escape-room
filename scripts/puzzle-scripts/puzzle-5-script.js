@@ -243,6 +243,8 @@ function checkInput() {
         }, 100);
 
         setPuzzleCompletionStatus(5, 'complete');
+        var nextPuzzle = document.getElementById("next-puzzle");
+        nextPuzzle.style.display = "block";
     } else {
         alert('Input is invalid. Please enter all required letters.');
     }
