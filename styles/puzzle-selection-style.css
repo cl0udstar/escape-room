@@ -10,13 +10,14 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 2.5px solid black;
-    background-color: red;
-    color: white;
+    border: 2px solid white;
+    background-color: #DC0000;
+    color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 10px;
+    box-shadow: 1px 1px 10px 2px #000;
 }
 
 
