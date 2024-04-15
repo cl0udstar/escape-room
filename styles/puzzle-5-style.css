@@ -217,14 +217,14 @@
     padding: 10px 15px;
     border: 1px solid;
     border-radius: 5px;
-    border: 2px solid #ccc;
+    border: 2px solid #6c6c6c;
     background-color: #e3e2e2;
 }
 
 .letter-circle {
     width: 40px;
     height: 40px;
-    border: 2px solid #ccc;
+    border: 2px solid #6c6c6c;
     border-radius: 50%;
     cursor: pointer;
     margin-top: 10px;
