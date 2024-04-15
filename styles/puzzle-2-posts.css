@@ -268,6 +268,7 @@ i.fa-heart:hover {
     left: 91%;
     top: 3%;
     z-index: 0;
+    box-shadow: 1px 1px 10px 1px #000;
 }
 
 .dark-overlay {
