@@ -37,6 +37,7 @@ input{
 
 .next-puzzle {
     text-align: right;
+    margin-top: 20px;
     display: none;
 }
 .next-puzzle-btn {
