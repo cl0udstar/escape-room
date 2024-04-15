@@ -298,5 +298,7 @@ function hideBigImage() {
 function checkCompletion() {
     if (Q1Check && Q2Check && Q3Check && Q4Check && Q5Check && Q6Check) {
         setPuzzleCompletionStatus(2, 'complete');
+        var nextPuzzle = document.getElementById("next-puzzle");
+        nextPuzzle.style.display = "block";
     }
 }
