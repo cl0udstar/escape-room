@@ -254,3 +254,20 @@ function checkAnswerQ6() {
 }
 ////////////////////////////////////////////////
 setPuzzleCompletionStatus(2, 'complete'); // Set completion status of puzzle 2 to 'complete'
+
+
+////////////////////////////////////////////////////////////
+// Functions for showing the image bigger and smaller
+////////////////////////////////////////////////////////////
+function showBigImage() {
+    document.querySelector('.keypad-image-small').style.display = 'none';
+    document.querySelector('.keypad-image-big').style.display = 'block';
+    document.querySelector('.dark-overlay').style.display = 'block';
+}
+
+function hideBigImage() {
+    document.querySelector('.keypad-image-big').style.display = 'none';
+    document.querySelector('.keypad-image-small').style.display = 'block';
+    document.querySelector('.dark-overlay').style.display = 'none';
+}
+////////////////////////////////////////////////////////////
