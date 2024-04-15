@@ -204,6 +204,8 @@ keyInputQ3.addEventListener("keypress", function(event) {
     }
 });
 
+var nextPuzzle = document.getElementById("next-puzzle");
+
 function checkAnswerQ1() {
     var userAnswer1 = document.getElementById("userAnswerQ1").value.trim().toLowerCase();
     var userAnswer2 = document.getElementById("userAnswerQ2").value.trim().toLowerCase();
@@ -219,6 +221,7 @@ function checkAnswerQ1() {
 
         result.textContent = "Agent, your skills are so sharp, even the Vikings would admire your craftiness.";
         result.style.color = "green";
+        nextPuzzle.style.display = "block";
 
         var keyInputs = [keyInputQ1, keyInputQ2, keyInputQ3];
 
