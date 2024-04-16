@@ -202,6 +202,7 @@ function checkAnswerSecondPuzzle() {
         document.getElementById('hint').textContent = ""; // Clear hint
         // Disable the answer input field after correct answer
         document.getElementById('answer').disabled = true;
+        document.getElementById('answer').style.background = "#C8E4B2";
         // Remove the event listener for the "Check Answer" button
         document.getElementById('check-answer-btn').removeEventListener('click', checkAnswerSecondPuzzle);
         setPuzzleCompletionStatus(6, 'complete'); // Set completion status of puzzle 6 to 'complete'
@@ -214,8 +215,7 @@ function checkAnswerSecondPuzzle() {
         feedback.classList.remove('success-message'); // Remove success message class
         // You can provide a hint here, e.g., display a hint message
         document.getElementById('hint').textContent = "Hint: A quote from Vi: 'Nothing beats kicking back after dusk, eyes glued to those twinkling specks painting the night.'";
-
-
+        document.getElementById('answer').style.background = "#FF7676";
     }
 }
 
