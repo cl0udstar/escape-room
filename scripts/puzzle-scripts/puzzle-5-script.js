@@ -398,6 +398,11 @@ function checkAnswerQ1() {
         result.style.color = "green";
         keyInputQ1.disabled = true;
         keyInputQ1.style.background = "#C8E4B2";
+
+        var puzzleContainer2 = document.getElementById('p-container2');
+        var puzzleContainer3 = document.getElementById('p-container3');
+        puzzleContainer2.style.display = 'none';
+        puzzleContainer3.style.display = 'none';
     } else {
         result.textContent = "Agent, this is a challenging one. Keep at it!";
         result.style.color = "red";
