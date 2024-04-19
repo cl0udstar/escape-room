@@ -27,6 +27,8 @@ const correctCoordinates = [
 // Function to draw points, lines, and axes
 function drawGraph() {
     svg.innerHTML = ''; // Clear previous drawings
+// Update the viewBox attribute to zoom in on the graph
+svg.setAttribute('viewBox', '0 0 450 400'); // Adjust the values as needed for zoom level
 
     // Draw x line
     const xLineElement = document.createElementNS("http://www.w3.org/2000/svg", 'line');

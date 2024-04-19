@@ -4,16 +4,16 @@
 
 /* CSS for styling the graph container */
 #graph-container {
-    width: 600px;
-    height: 400px;
+    width: 500px;
+    height: 600px;
     position: relative;
     margin: 50px auto;
 }
 /* CSS for positioning the SVG element */
 #graph-svg {
     position: absolute;
-    top: 50%;
-    left: 55%;
+    top: 55%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
