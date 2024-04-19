@@ -22,6 +22,8 @@ const correctCoordinates = [
     { x: 3, y: 2 },
 ];
 
+
+
 // Function to draw points, lines, and axes
 function drawGraph() {
     svg.innerHTML = ''; // Clear previous drawings
@@ -43,7 +45,7 @@ function drawGraph() {
     yLineElement.setAttribute('x2', centerX);
     yLineElement.setAttribute('y2', 450);
     svg.appendChild(yLineElement);
-
+    
     // Draw grid lines and add coordinates along axes
     for (let i = 0; i <= 16; i++) { // Change the loop range to 16
         const gridLineX = document.createElementNS("http://www.w3.org/2000/svg", 'line');
@@ -226,5 +228,24 @@ document.getElementById('check-answer-btn').addEventListener('click', checkAnswe
 document.addEventListener('keypress', function(event) {
     if (event.key === 'Enter' && document.activeElement.id === 'answer') {
         checkAnswerSecondPuzzle(); // Check the answer if focus is on the answer input field
+    }
+});
+
+
+
+// Add event listener to SVG for adding points on click
+svg.addEventListener('click', function(event) {
+    const svgPoint = svg.createSVGPoint();
+    svgPoint.x = event.clientX;
+    svgPoint.y = event.clientY;
+    
+    const cursorPoint = svgPoint.matrixTransform(svg.getScreenCTM().inverse());
+    const x = Math.round((cursorPoint.x - centerX) / gridSize);
+    const y = Math.round((centerY - cursorPoint.y) / gridSize);
+    
+    if (x >= 0 && x <= 16 && y >= 0 && y <= 16) {
+        const newPoint = { x: x, y: y };
+        points.push(newPoint);
+        drawGraph(); // Redraw graph with updated points and lines
     }
 });
