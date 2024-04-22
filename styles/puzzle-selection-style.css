@@ -247,3 +247,34 @@
 #card-8 .front{
     background-position: 50%;
 }
+
+
+
+a{
+    font-size: 35px;
+    color: black;
+  }
+
+.next-puzzle {
+    text-align: right;
+    margin-top: 20px;
+    display: none;
+}
+.certificate {
+    background-color: white;
+    border: 2px solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 20px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 100px; /* Add margin to increase length */
+}
