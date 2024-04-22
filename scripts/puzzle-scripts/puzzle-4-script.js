@@ -6,11 +6,13 @@ function changeColor(radio, color) {
     var containersInSet = route.querySelectorAll('.water_wave');
     containersInSet.forEach(function(containerInSet) {
         containerInSet.style.backgroundColor = '';
+        containerInSet.style.border = '';
     });
 
     // Set color for the selected container
     if (radio.checked) {
         container.style.backgroundColor = color;
+        container.style.border = "2px solid";
     }
 }
 
