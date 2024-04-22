@@ -103,7 +103,7 @@ const functionCards = () => {
         cardContainer.innerHTML += '<div class="card" id="'+data.id+'">\
                                         <div class="lockScreen" id="'+data.lock+'" style="display: none;"><i class="fa-solid fa-lock" id="lockIcon"></i></div>\
                                         <div class="front" style="background-image: url(\'../assets/backgrounds/'+data.imgUrl+'\');">\
-                                            <div class="'+data.fronFeatures+'" id="'+data.fronFeatures+'">\
+                                            <div class="'+data.frontFeatures+'" id="'+data.frontFeatures+'">\
                                                 <h1>'+data.Heading+'</h1>\
                                                 <button class="more-btn" onclick="handleClick'+data.cardNum+'()">Read More</button>\
                                             </div>\
