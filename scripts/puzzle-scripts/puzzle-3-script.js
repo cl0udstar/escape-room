@@ -44,7 +44,7 @@ function drawGraph() {
 
     // Add the image to the pattern
     const image = document.createElementNS("http://www.w3.org/2000/svg", 'image');
-    image.setAttribute('href', 'puzzle-3-part1.png'); // Replace 'path_to_your_image.png' with the path to your image
+    image.setAttribute('href', '../assets/backgrounds/puzzle3-assets/puzzle-3-part1.png'); // Replace 'path_to_your_image.png' with the path to your image
     image.setAttribute('x', '0');
     image.setAttribute('y', '0');
     image.setAttribute('width', '100%');
