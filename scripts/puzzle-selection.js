@@ -2,6 +2,7 @@
 const arrayData = [
     {
         id: "card-1",
+        cardNum: 1,
         imgUrl: "DATA_HQ.png",
         Heading: "Mission 1",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
@@ -12,6 +13,7 @@ const arrayData = [
     },
     {
         id: "card-2",
+        cardNum: 2,
         imgUrl: "Puzzle_2.png",
         Heading: "Mission 2",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
@@ -22,6 +24,7 @@ const arrayData = [
     },
     {
         id: "card-3",
+        cardNum: 3,
         imgUrl: "Puzzle_3.png",
         Heading: "Mission 3",
         color: "linear-gradient(-135deg, #c8e4b2, #7eaa92)",
@@ -32,6 +35,7 @@ const arrayData = [
     },
     {
         id: "card-4",
+        cardNum: 4,
         imgUrl: "Puzzle_4.png",
         Heading: "Mission 4",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
@@ -42,6 +46,7 @@ const arrayData = [
     },
     {
         id: "card-5",
+        cardNum: 5,
         imgUrl: "Puzzle_5.png",
         Heading: "Mission 5",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
@@ -52,6 +57,7 @@ const arrayData = [
     },
     {
         id: "card-6",
+        cardNum: 6,
         imgUrl: "Puzzle_6.png",
         Heading: "Mission 6",
         color: "linear-gradient(-135deg, #ec8f5e, #f1eb90)",
@@ -63,6 +69,7 @@ const arrayData = [
     },
     {
         id: "card-7",
+        cardNum: 7,
         imgUrl: "Puzzle_7.png",
         Heading: "Mission 7",
         color: "linear-gradient(-135deg, #dc0000, #850000, #ec8f5e)",
@@ -73,6 +80,7 @@ const arrayData = [
     },
     {
         id: "card-8",
+        cardNum: 8,
         imgUrl: "lock.png",
         Heading: "",
         color: "",
@@ -100,7 +108,7 @@ const functionCards = () => {
                                             <h1>MISSION BRIEF</h1>\
                                             <p>'+data.para+'</p>\
                                             <div class="background_back"></div>\
-                                            <button class="return" onclick="handle2ndClick'+data.id+'()"><i class="fa-solid fa-arrow-rotate-left"></i></button>\
+                                            <button class="return" onclick="handle2ndClick'+data.cardNum+'()"><i class="fa-solid fa-arrow-rotate-left"></i></button>\
                                             <a href="'+data.link+'"><button class="start">Start</button></a>\
                                         </div>\
                                     </div>';
