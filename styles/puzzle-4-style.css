@@ -73,12 +73,14 @@
 
 #ww_route1-1, #ww_route2-1, #ww_route3-1, #ww_route4-1, #ww_route5-1,
 #ww_route6-1, #ww_route7-1, #ww_route8-1, #ww_route9-1, #ww_route10-1 {
-	background: #6db1ff;
+/* 	background: #6db1ff; */
+	background: #87C4FF;
 }
 
 #ww_route1-2, #ww_route2-2, #ww_route3-2, #ww_route4-2, #ww_route5-2,
 #ww_route6-2, #ww_route7-2, #ww_route8-2, #ww_route9-2, #ww_route10-2 { 
-	background: #fc9432;
+/* 	background: #fc9432; */
+	background: #FF9800;
 }
 
 .water_wave:after, .water_wave:before {
