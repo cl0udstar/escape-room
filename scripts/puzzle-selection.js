@@ -129,10 +129,10 @@ function handle2ndClick3() {
 }
 
 function handleClick4() {
-    document.getElementById("4").style.transform = "rotateY(180deg)";
+    document.getElementById("card-4").style.transform = "rotateY(180deg)";
 }
 function handle2ndClick4() {
-    document.getElementById("4").style.transform = "rotateY(0deg)";
+    document.getElementById("card-4").style.transform = "rotateY(0deg)";
 }
 
 function handleClick5() {
