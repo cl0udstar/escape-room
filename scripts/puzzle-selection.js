@@ -70,6 +70,16 @@ const arrayData = [
         imageHeight: "350px",
         para: "You have made it into the laptop! You see the file on the desktop and click on it. All you have to do now is decode the file to uncover the evil meeting location.",
         link: "../puzzles/puzzle-7.html"
+    },
+    {
+        id: 8,
+        imgUrl: "lock.png",
+        Heading: "",
+        color: "",
+        imageWidth: "300px",
+        imageHeight: "350px",
+        para: "",
+        link: ""
     }
 ]
 
