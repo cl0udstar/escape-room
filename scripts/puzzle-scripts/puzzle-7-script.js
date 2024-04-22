@@ -80,6 +80,8 @@ function checkSequence() {
         playerSequence = [];
         resetCircleStyles(); // Reset the styles of the small circles
         resetGame()
+        document.getElementById('progress').style.display = 'none';
+        document.getElementById('startButton').style.display = 'block;
     }
 }
 
@@ -88,8 +90,6 @@ function resetGame() {
     playerSequence = [];
     currentStep = 0;
     flashData = [];
-    document.getElementById('progress').style.display = 'none';
-    document.getElementById('startButton').style.display = 'block;
 }
 
 function endGame() {
@@ -153,11 +153,11 @@ function resetCircleStyles() {
 }
 
 function startGame() {
+    document.getElementById('progress').style.display = 'block';
+    document.getElementById('startButton').style.display = 'none';
     addToSimonSequence();
     currentStep = 1;
     displaySequence();
-    document.getElementById('progress').style.display = 'block';
-    document.getElementById('startButton').style.display = 'none';
 }
 
 function next() {
