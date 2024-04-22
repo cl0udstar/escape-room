@@ -42,6 +42,8 @@ button {
     }
     
     .certificate-preview {
+        -webkit-print-color-adjust: exact; /* Chrome/Safari */
+        print-color-adjust: exact; /* Other browsers */
         position: fixed; /* Fixed position */
         left: 0;
         top: 0;
