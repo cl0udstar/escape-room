@@ -88,6 +88,8 @@ function resetGame() {
     playerSequence = [];
     currentStep = 0;
     flashData = [];
+    document.getElementById('progress').style.display = 'none';
+    document.getElementById('startButton').style.display = 'block;
 }
 
 function endGame() {
@@ -154,6 +156,8 @@ function startGame() {
     addToSimonSequence();
     currentStep = 1;
     displaySequence();
+    document.getElementById('progress').style.display = 'block';
+    document.getElementById('startButton').style.display = 'none';
 }
 
 function next() {
