@@ -57,6 +57,7 @@ function submitAnswer() {
     // Check if the answer is equal to 10
     if (answer.trim() === "10") {
         alert("Congratulations! Your answer is correct!");
+        setPuzzleCompletionStatus(1, 'complete');
     } else {
         alert("Sorry, your answer is incorrect. Please try again.");
     }
