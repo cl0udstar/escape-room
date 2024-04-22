@@ -53,6 +53,3 @@ function unlockFinalMission() {
         document.getElementById("lock7").style.display = "flex";
     }
 }
-
-// Call toggleFlexDisplay() initially to set the initial display state
-unlockFinalMission();
