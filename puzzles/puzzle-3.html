@@ -29,8 +29,75 @@
             <p>Insert Puzzle Rules</p>
         </div>
         <div class="puzzle_container">
-            <p><!-- Here goes the heading for the puzzle (inside the white box) --></p> 
-            <!-- Here goes the rest of the puzzle content -->
+            <div id="graph-container">
+                <svg id="graph-svg" width="100%" height="100%" viewBox="0 0 600 500"></svg>
+            </div>
+            <div id="quiz-container">
+                <div id="coordinates-display"></div>
+                <div id="feedback"></div>
+            </div>
+        
+            <div class="input-container" id="input-container">
+                <label for="coordinateX">Enter X Coordinate:</label>
+                <input type="text" id="coordinateX">
+                <label for="coordinateY">Enter Y Coordinate:</label>
+                <input type="text" id="coordinateY">
+            </div>
+        
+            <button class="centerButton" id="checkCoordinates" onclick="userInput(generatedCoordinates)">Check Coordinates</button>
+        
+            <div id="alertMessage"></div>
+        
+            <button class="centerButton" id="next" onclick="next()" style="display: none;">Next</button>
+        
+            <div class="arcGraph" id="arcGraph">
+                <div class="canvasContainer" id="canvasContainer" style="display: none;">
+                    <canvas id="axisCanvas" width="650" height="435"></canvas>
+                    <canvas id="arcCanvas" width="600" height="400"></canvas>
+                </div>
+        
+                <button class="centerButton" id="stopButton" style="display: none;">Stop Movement</button>
+        
+                <div class="exampleAnswers" id="exampleAnswers" style="display: none;">
+                    <div class="exampleAnswer" id="exampleAnswer1" >Coordinates: <span id="option1"></span></div>
+                    <div class="exampleAnswer" id="exampleAnswer2" >Coordinates: <span id="option2"></span></div>
+                    <div class="exampleAnswer" id="exampleAnswer3" >Coordinates: <span id="option3"></span></div>
+                    <div class="exampleAnswer" id="exampleAnswer4" >Coordinates: <span id="option4"></span></div>
+                    <div class="exampleAnswer" id="exampleAnswer5" >Coordinates: <span id="option5"></span></div>
+                </div>
+        
+                <button class="centerButton" id="submitCoordinatesButton" onclick="submitCoordinates()" style="display: none;">Submit</button>
+                <button class="centerButton" id="nextPart3" onclick="nextPart3()" style="display: none;">Next</button>
+            </div>
+        
+            <div class="forceBar" id="forceBar" style="display: none;">
+                <div id="numbers" style="display: none;">
+                  <div class="number" id="number1" style="height: 14%;">17.5N</div>
+                  <div class="number" id="number2" style="height: 14%;">15N</div>
+                  <div class="number" id="number3" style="height: 14%;">12.5N</div>
+                  <div class="number" id="number4" style="height: 14%;">10N</div>
+                  <div class="number" id="number5" style="height: 14%;">7.5N</div>
+                  <div class="number" id="number6" style="height: 14%;">5N</div>
+                  <div class="number" id="number7" style="height: 14%;">2.5N</div>
+                </div>
+                <div id="rectangle">
+                  <div id="horizontal-line"></div>
+                  <div class="red-section"><h1>Too High</h1></div>
+                  <div class="orange-section"><h1>Very High</h1></div>
+                  <div class="yellow-section"><h1>High</h1></div>
+                  <div id="green-section"><h1>Perfect</h1></div>
+                  <div class="yellow-section"><h1>Low</h1></div>
+                  <div class="orange-section"><h1>Very Low</h1></div>
+                  <div class="red-section"><h1>Too Low</h1></div>
+                </div>
+                <button id="button" onclick="toggleMoveLine()">Start/Stop</button>
+            </div>
+            <div class="answer-box" id="answer-box" style="display: none;">
+            <input type="text" id="answer" placeholder="Type your answer here">
+            </div>
+            <div class="finalAnswerButton" id="finalAnswerButton" style="display: none;">
+            <button onclick="submitAnswer()">Submit</button>
+            </div>
         </div>
 
         <script src="../scripts/puzzle-scripts/puzzle-1-graph.js"></script>
