@@ -1,0 +1,283 @@
+* {
+    user-select: none;
+}
+
+h1{
+    text-align: center;
+}
+
+/*Part 1*/
+
+/* CSS for styling the graph container */
+#graph-container {
+    width: 750px;
+    height: 500px;
+    position: relative;
+    margin: 100px auto 0px auto;
+    /* border: 1px solid white;  */
+}
+
+/* CSS for styling the points */
+.point {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* CSS for styling the lines */
+.line {
+    stroke: black;
+    stroke-width: 2px;
+}
+
+/* CSS for styling the text */
+.text {
+    font-size: 12px;
+    fill: black;
+    text-anchor: middle;
+}
+
+/* CSS for styling the grid lines */
+.grid-line {
+    stroke: rgb(255, 255, 255);
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    margin-right: 10px; /* Adds gap between label and input */
+    margin-left: 20px; /* Adds gap between label and input */
+}
+
+.input-container input {
+    margin-left: 10px; /* Adds gap between input and label */
+}
+
+#coordinateInput {
+    width: 200px;
+}
+
+#alertMessage {
+    text-align: center;
+}
+
+/*Part 2*/
+
+.arcGraph{
+    height: 100%;
+    margin: 0;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+canvas, .centerButton {
+    display: block; /* Ensure canvas and button are displayed as block elements */
+    margin: 20px auto; /* Center the elements horizontally */
+}
+
+.canvasContainer {
+    position: relative;
+    width: 650px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+#arcCanvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-49%, -47.5%);
+    border: 1px solid black;
+    background-image: url('puzzle-3-part2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#axisCanvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -48%);
+}
+
+#question {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.exampleAnswers {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.exampleAnswer {
+    display: inline-block;
+    margin: 10px 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.highlighted {
+    background-color: black;
+    color: white;
+}
+
+.correct{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.incorrect{
+    background-color: red;
+    color: white;
+}
+
+#stopButton{
+    margin-top: 50px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+/*Part 3*/
+
+.forceBar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Add position relative */
+}
+
+#numbers {
+    position: absolute; /* Position the rectangle absolutely */
+    left: 5%; /* Move it to the center vertically */
+    transform: translate(1100%, 52%); /* Center it precisely */
+    height: 625px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Additional styles for the number element */
+}
+
+#rectangle {
+    position: absolute; /* Position the rectangle absolutely */
+    left: 50.5%; /* Move it to the center vertically */
+    transform: translate(-50%, 50%); /* Center it precisely */
+    width: 250px;
+    height: 625px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 5px solid #000000;
+    overflow: hidden;
+}
+
+#button{
+    position: absolute; /* Position the rectangle absolutely */
+    left: 5%; /* Move it to the center vertically */
+    transform: translate(300%, 800%); /* Center it precisely */
+    
+}
+
+#horizontal-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #0000ff;
+    transition: bottom 0.1s;
+    z-index: 1; /* Ensure it's above the green section */
+}
+
+#green-section {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 14%;
+    background-color: #179717;
+    border-top: 2.5px solid #000000;
+    z-index: 0; /* Send it to the back */
+}
+
+.yellow-section {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 14%;
+    background-color: #d9ff00;
+    border-top: 2.5px solid #000000;
+    z-index: 0; /* Send it to the back */
+}
+
+.orange-section {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 14%;
+    background-color: #d6a207;
+    border-top: 2.5px solid #000000;
+    z-index: 0; /* Send it to the back */
+}
+
+.red-section {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 14%;
+    background-color: #ff0000;
+    border-top: 2.5px solid #000000;
+    z-index: 0; /* Send it to the back */
+}
+
+.answer-box {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transform: translate(0%, 95%);
+    position: absolute;
+}
+
+.finalAnswerButton{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transform: translate(0%, 100%);
+    position: absolute;
+}
