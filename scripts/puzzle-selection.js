@@ -169,4 +169,5 @@ function handle2ndClick7() {
     document.getElementById("card-7").style.transform = "rotateY(0deg)";
 }
 
-functionCards()
+functionCards();
+unlockFinalMission();
