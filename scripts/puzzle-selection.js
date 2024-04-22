@@ -101,7 +101,7 @@ const functionCards = () => {
         cardContainer.innerHTML += '<div class="card" id="'+data.id+'">\
                                         <div class="front" style="background-image: url(\'../assets/backgrounds/'+data.imgUrl+'\');">\
                                             <h1>'+data.Heading+'</h1>\
-                                            <button class="more-btn" onclick="handleClick'+data.id+'()">Read More</button>\
+                                            <button class="more-btn" onclick="handleClick'+data.cardNum+'()">Read More</button>\
                                         </div>\
                                         <div class="back">\
                                             <img src="../assets/backgrounds/Top-secret.png"></img>\
