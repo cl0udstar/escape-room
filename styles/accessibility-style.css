@@ -1,4 +1,9 @@
 /* Page style - Accessibility */
+body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
 .containers {
     display: flex;
