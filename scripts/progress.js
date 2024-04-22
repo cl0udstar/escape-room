@@ -27,4 +27,5 @@ function updatePuzzleDivColors() {
             div.style.backgroundColor = 'rgb(80, 137, 80)'; // Set color to green if puzzle is complete
         } 
     }
+    document.getElementById("lock7").style.display = "flex";
 }
