@@ -10,7 +10,8 @@ const arrayData = [
         imageHeight: "350px",
         para: "You begin your journey by walking through the deep dark forest. Suddenly everything goes silent. A tall man with grey hair stops you in your path! It is Major X, the leader of the Data Agents, “I am here to test your powers of code breaking”.",
         link: "../puzzles/puzzle-1.html",
-        lock: "lock1"
+        lock: "lock1",
+        frontFeatures: "front1"
     },
     {
         id: "card-2",
@@ -22,7 +23,8 @@ const arrayData = [
         imageHeight: "350px",
         para: "While walking along a steep, winding path, a gust of wind knocks you down near Lilias Bridge. Oblivious to your presence, she chats excitedly on her phone about meeting other Vikings. As she pockets her phone, it falls out unnoticed. You pick it up and discover she's logged into her Vikingstagram account.",
         link: "../puzzles/puzzle-2.html",
-        lock: "lock2"
+        lock: "lock2",
+        frontFeatures: "front2"
     },
     {
         id: "card-3",
@@ -34,7 +36,8 @@ const arrayData = [
         imageHeight: "350px",
         para: "You make it to the giant mountains that have been in the distance for what feels like forever. Jakub Grey – The data viking stops and begins to talk to you. “If you are a true warrior then prove that you can throw an axe like me, then I will let you pass”",
         link: "../puzzles/puzzle-3.html",
-        lock: "lock3"
+        lock: "lock3",
+        frontFeatures: "front3"
     },
     {
         id: "card-4",
@@ -46,7 +49,8 @@ const arrayData = [
         imageHeight: "350px",
         para: "You have reached the ancient Viking village of Fjordhelm! However, to get to the Viking base which is where the laptop is, you need to take a boat. Between you and the base sits Evelyn Scott – the data V.I.K.I.N.G in her longboat.",
         link: "../puzzles/puzzle-4.html",
-        lock: "lock4"
+        lock: "lock4",
+        frontFeatures: "front4"
     },
     {
         id: "card-5",
@@ -58,7 +62,8 @@ const arrayData = [
         imageHeight: "350px",
         para: "You have finally reached the secret base at Fjordhelm. You try to enter through the giant main door, but it is locked. You notice a keypad to the right of the door. You are about to turn away but notice a piece of paper hidden behind the keypad.",
         link: "../puzzles/puzzle-5.html",
-        lock: "lock5"
+        lock: "lock5",
+        frontFeatures: "front5"
     },
     {
         id: "card-6",
@@ -70,7 +75,8 @@ const arrayData = [
         imageHeight: "350px",
         para: "You have made it into the lair! Congratulations! You notice Data V.I.K.I.N.G Vi Banks’ laptop sitting on the countertop, and you know that this has the secret evil plan location on it, so you need to access the file and send it back to Major X, then destroy it.",
         link: "../puzzles/puzzle-6.html",
-        lock: "lock6"
+        lock: "lock6",
+        frontFeatures: "front6"
     },
     {
         id: "card-7",
@@ -82,7 +88,8 @@ const arrayData = [
         imageHeight: "350px",
         para: "You have made it into the laptop! You see the file on the desktop and click on it. All you have to do now is decode the file to uncover the evil meeting location.",
         link: "../puzzles/puzzle-7.html",
-        lock: "lock7"
+        lock: "lock7",
+        frontFeatures: "front7"
     }
 ]
 
@@ -96,8 +103,10 @@ const functionCards = () => {
         cardContainer.innerHTML += '<div class="card" id="'+data.id+'">\
                                         <div class="lockScreen" id="'+data.lock+'" style="display: none;"><i class="fa-solid fa-lock" id="lockIcon"></i></div>\
                                         <div class="front" style="background-image: url(\'../assets/backgrounds/'+data.imgUrl+'\');">\
-                                            <h1>'+data.Heading+'</h1>\
-                                            <button class="more-btn" onclick="handleClick'+data.cardNum+'()">Read More</button>\
+                                            <div class="'+data.fronFeatures+'" id="'+data.fronFeatures+'">\
+                                                <h1>'+data.Heading+'</h1>\
+                                                <button class="more-btn" onclick="handleClick'+data.cardNum+'()">Read More</button>\
+                                            </div>\
                                         </div>\
                                         <div class="back">\
                                             <img src="../assets/backgrounds/Top-secret.png"></img>\
