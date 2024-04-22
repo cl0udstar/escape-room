@@ -108,24 +108,24 @@ const functionCards = () => {
 }
 
 function handleClick1() {
-    document.getElementById("1").style.transform = "rotateY(180deg)";
+    document.getElementById("card-1").style.transform = "rotateY(180deg)";
 }
 function handle2ndClick1() {
-    document.getElementById("1").style.transform = "rotateY(0deg)";
+    document.getElementById("card-1").style.transform = "rotateY(0deg)";
 }
 
 function handleClick2() {
-    document.getElementById("2").style.transform = "rotateY(180deg)";
+    document.getElementById("card-2").style.transform = "rotateY(180deg)";
 }
 function handle2ndClick2() {
-    document.getElementById("2").style.transform = "rotateY(0deg)";
+    document.getElementById("card-2").style.transform = "rotateY(0deg)";
 }
 
 function handleClick3() {
-    document.getElementById("3").style.transform = "rotateY(180deg)";
+    document.getElementById("card-3").style.transform = "rotateY(180deg)";
 }
 function handle2ndClick3() {
-    document.getElementById("3").style.transform = "rotateY(0deg)";
+    document.getElementById("card-3").style.transform = "rotateY(0deg)";
 }
 
 function handleClick4() {
@@ -136,45 +136,24 @@ function handle2ndClick4() {
 }
 
 function handleClick5() {
-    document.getElementById("5").style.transform = "rotateY(180deg)";
+    document.getElementById("card-5").style.transform = "rotateY(180deg)";
 }
 function handle2ndClick5() {
-    document.getElementById("5").style.transform = "rotateY(0deg)";
+    document.getElementById("card-5").style.transform = "rotateY(0deg)";
 }
 
 function handleClick6() {
-    document.getElementById("6").style.transform = "rotateY(180deg)";
+    document.getElementById("card-6").style.transform = "rotateY(180deg)";
 }
 function handle2ndClick6() {
-    document.getElementById("6").style.transform = "rotateY(0deg)";
+    document.getElementById("card-6").style.transform = "rotateY(0deg)";
 }
 
 function handleClick7() {
-    document.getElementById("7").style.transform = "rotateY(180deg)";
+    document.getElementById("card-7").style.transform = "rotateY(180deg)";
 }
 function handle2ndClick7() {
-    document.getElementById("7").style.transform = "rotateY(0deg)";
-}
-
-function handleClick8() {
-    document.getElementById("8").style.transform = "rotateY(180deg)";
-}
-function handle2ndClick8() {
-    document.getElementById("8").style.transform = "rotateY(0deg)";
-}
-
-function handleClick9() {
-    document.getElementById("9").style.transform = "rotateY(180deg)";
-}
-function handle2ndClick9() {
-    document.getElementById("9").style.transform = "rotateY(0deg)";
-}
-
-function handleClick10() {
-    document.getElementById("10").style.transform = "rotateY(180deg)";
-}
-function handle2ndClick10() {
-    document.getElementById("10").style.transform = "rotateY(0deg)";
+    document.getElementById("card-7").style.transform = "rotateY(0deg)";
 }
 
 functionCards()
