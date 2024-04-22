@@ -175,13 +175,11 @@ button:active {
     height: 100%;
     justify-content: center;
     align-items: center;
-    position: relative; /* Add position relative */
 }
 
 #numbers {
-    position: absolute; /* Position the rectangle absolutely */
-    left: 5%; /* Move it to the center vertically */
-    transform: translate(1100%, 52%); /* Center it precisely */
+    position: relative;
+    margin-right: 20px;
     height: 625px;
     display: flex;
     flex-direction: column;
@@ -193,13 +191,10 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Additional styles for the number element */
 }
 
 #rectangle {
-    position: absolute; /* Position the rectangle absolutely */
-    left: 50.5%; /* Move it to the center vertically */
-    transform: translate(-50%, 50%); /* Center it precisely */
+    position: relative;
     width: 250px;
     height: 625px;
     background-color: #ffffff;
@@ -209,10 +204,8 @@ button:active {
 }
 
 #button{
-    position: absolute; /* Position the rectangle absolutely */
-    left: 5%; /* Move it to the center vertically */
-    transform: translate(300%, 800%); /* Center it precisely */
-    
+    position: relative;
+    margin-left: 20px
 }
 
 #horizontal-line {
@@ -230,7 +223,7 @@ button:active {
     position: relative;
     left: 0;
     width: 100%;
-    height: 14%;
+    height: 14.3%;
     background-color: #179717;
     border-top: 2.5px solid #000000;
     z-index: 0; /* Send it to the back */
@@ -240,7 +233,7 @@ button:active {
     position: relative;
     left: 0;
     width: 100%;
-    height: 14%;
+    height: 14.3%;
     background-color: #d9ff00;
     border-top: 2.5px solid #000000;
     z-index: 0; /* Send it to the back */
@@ -250,7 +243,7 @@ button:active {
     position: relative;
     left: 0;
     width: 100%;
-    height: 14%;
+    height: 14.3%;
     background-color: #d6a207;
     border-top: 2.5px solid #000000;
     z-index: 0; /* Send it to the back */
@@ -260,7 +253,7 @@ button:active {
     position: relative;
     left: 0;
     width: 100%;
-    height: 14%;
+    height: 14.3%;
     background-color: #ff0000;
     border-top: 2.5px solid #000000;
     z-index: 0; /* Send it to the back */
@@ -270,14 +263,11 @@ button:active {
     text-align: center;
     width: 100%;
     height: 100%;
-    transform: translate(0%, 95%);
-    position: absolute;
+    margin-top: 100px;
 }
 
 .finalAnswerButton{
     text-align: center;
     width: 100%;
     height: 100%;
-    transform: translate(0%, 100%);
-    position: absolute;
 }
