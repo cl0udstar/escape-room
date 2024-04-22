@@ -235,3 +235,15 @@
     text-decoration: none;
     width: 200px;
 }
+
+#card-7{
+    display: none
+}
+
+#card-8 .more-btn{
+    display: none;
+}
+
+#card-8 .front{
+    background-position: 50%;
+}
