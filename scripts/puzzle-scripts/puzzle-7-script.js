@@ -81,7 +81,7 @@ function checkSequence() {
         resetCircleStyles(); // Reset the styles of the small circles
         resetGame()
         document.getElementById('progress').style.display = 'none';
-        document.getElementById('startButton').style.display = 'block;
+        document.getElementById('startButton').style.display = 'block';
     }
 }
 
