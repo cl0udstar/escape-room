@@ -27,5 +27,32 @@ function updatePuzzleDivColors() {
             div.style.backgroundColor = 'rgb(80, 137, 80)'; // Set color to green if puzzle is complete
         } 
     }
-    document.getElementById("lock7").style.display = "flex";
 }
+
+// Function to count completed puzzles
+function countCompletedPuzzles() {
+    let count = 0;
+    // Loop through each puzzle
+    for (let i = 1; i <= 7; i++) {
+        // Get the completion status of the puzzle
+        const status = getPuzzleCompletionStatus(i);
+        // If puzzle is complete, increment count
+        if (status === 'complete') {
+            count++;
+        }
+    }
+    return count;
+}
+
+// Function to toggle flex display based on completed puzzles
+function unlockFinalMission() {
+    if (countCompletedPuzzles() >= 6) {
+        document.getElementById("lock7").style.display = "none";
+        document.getElementById("front7").style.display = "block";
+    } else {
+        document.getElementById("lock7").style.display = "flex";
+    }
+}
+
+// Call toggleFlexDisplay() initially to set the initial display state
+unlockFinalMission();
