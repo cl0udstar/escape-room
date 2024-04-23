@@ -211,6 +211,7 @@
 .certificate {
     text-align: center;
     margin: 20px;
+    height: 50px;
 }
 .certificate-btn {
     background-color: #EEEDEB;
