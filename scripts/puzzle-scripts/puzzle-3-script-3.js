@@ -52,7 +52,7 @@ let intervalId = null;
 
 function submitAnswer() {
     // Get the value from the input field
-    const answer = document.getElementById("answer").value;
+    const answer = document.getElementById("forceInput").value;
     
     // Check if the answer is equal to 10
     if (answer.trim() === "10" || answer.trim() === "10N" || answer.trim() === "10n" || answer.trim() === "10newtons" || answer.trim() === "10Newtons" || answer.trim() === "10 newtons" || answer.trim() === "10 Newtons") {
