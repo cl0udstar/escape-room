@@ -240,7 +240,7 @@ function userInput(generatedCoordinates) {
     } else {
         alertMessage.textContent = ('Sorry, the point you entered is not correct. Try again!');
         document.getElementById("input1").style.backgroundColor = "#FF7676"
-        document.getElementById("input2").style.backgroundColor = "#C8E4B2";
+        document.getElementById("input2").style.backgroundColor = "#FF7676";
     }
 }
 
