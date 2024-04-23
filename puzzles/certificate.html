@@ -1,56 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Certificate</title>
-        <link rel="stylesheet" href="../styles/puzzle-page-default-style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="../styles/certificate.css">
-        <link rel="stylesheet" href="../styles/default-style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-        <link rel="icon" type="png" href="../assets/backgrounds/DATA_Logo.png">
-    </head>
-    <body id="text">
-        <div class="header">
-            <div class="icons">
-                <a href="puzzle-selection.html"><i class="fa-solid fa-map"></i></a>
-                <p>Missions</p>
-            </div>
-            <h1 id="heading-font">Certificate</h1>
-            <div class="icons">
-                <a href="../accessibility/accessibility-page.html"><i class="fa-solid fa-universal-access"></i></a>
-                <p>Accessibility</p>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <link rel="stylesheet" href="../styles/puzzle-page-default-style.css">
+    <link rel="stylesheet" href="../styles/default-style.css">
+    <link rel="stylesheet" href="../styles/certificate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="../scripts/puzzle-scripts/certificate.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <!-- header content -->
+    </div>
+    
+    <div class="certificate-container">
+        <img src="../assets/certificate_background.png" alt="Certificate Background" id="certificate-background">
+        <div class="certificate-content">
+            <p>This certifies that <span id="name-placeholder">(insert name here)</span></p>
+            <p>has successfully completed the escape room challenge and is officially a D.A.T.A Agent.</p>
+            <p>Date: <span id="date-placeholder"></span></p>
         </div>
-        
-        <div class="puzzle_container">
-            <div class="certificate-input">
-                <label for="userName">Enter Your Name:</label>
-                <input type="text" id="userName" name="userName" placeholder="Your Name Here">
-                <label for="textColor">Select Text Color:</label>
-                <select id="textColor">
-                    <option value="black">Black</option>
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                </select>
-                <button onclick="generateCertificate()">Generate Certificate</button>
-            </div>
-            
-            <div class="certificate-preview" id="certificatePreview">
-            </div>
-            
-            <button onclick="printCertificate()">Print Certificate</button>
-            
-        </div>
+    </div>
+    
+    <div class="name-input">
+        <input type="text" id="name-input" placeholder="Enter your name here" autocomplete="off">
+        <button id="print-btn">Print Certificate</button>
+    </div>
 
-        <script src="../scripts/cookies/accessibility-cookie.js"></script>
-        <script src="../scripts/puzzle-scripts/certificate.js"></script>
-
-
-    </body>
+</body>
 </html>
