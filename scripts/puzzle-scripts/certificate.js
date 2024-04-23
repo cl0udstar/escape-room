@@ -3,6 +3,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const printButton = document.getElementById('print-btn');
     const date = new Date().toLocaleDateString();
 
+    const namePlaceholder = document.getElementById('name-placeholder');
+    const datePlaceholder = document.getElementById('date-placeholder');
+
+    // Set current date
+    datePlaceholder.textContent = new Date().toLocaleDateString();
+
+    // Update name placeholder on input
+    nameInput.addEventListener('input', function() {
+        namePlaceholder.textContent = this.value.trim() !== '' ? this.value : '...';
+    });
+
     // Print certificate
     printButton.addEventListener('click', function() {
         const name = nameInput.value.trim();
