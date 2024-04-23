@@ -57,7 +57,13 @@ h1{
 }
 
 .input-container input {
-    margin-left: 10px; /* Adds gap between input and label */
+    font-family: inherit;
+    font-size: inherit;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 10px;
+    width: 5%;
+    text-align: center;
 }
 
 #coordinateInput {
