@@ -1,62 +1,46 @@
-.certificate-input {
+/* Add your existing styles here, and below are additional styles for the certificate. */
+.certificate-container {
+    position: relative;
     text-align: center;
-    margin-bottom: 20px;
+    max-width: 800px; /* Adjust based on the actual image size */
+    margin: auto;
 }
 
+#certificate-background {
+    width: 100%;
+    height: auto;
+}
 
+.certificate-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #3a3a3a;
+    font-size: 14px; /* Decreased font size */
+    display: none; /* Add this line to initially hide the content */
+}
 
-.certificate-preview {
-    background-repeat: no-repeat;
-    border: 2px solid #000;
-    padding: 30vh;
-    margin: 20px auto;
-    width: 100% auto;
-    height: 87vh;
+.name-input {
     text-align: center;
-    display: none;
-    background-color: #f9f9f9;
-    background-image: url('../assets/certificate_background.png');
-    background-size: contain;
-    background-position: center;
+    margin-top: 20px;
 }
 
-
-.certificate-preview h2, .certificate-preview p {
-    margin: 10px 0;
-    font-size: 14px;
-
+#name-input {
+    font-size: 1rem;
+    padding: 10px;
+    margin-right: 10px;
 }
 
-button {
+#print-btn {
+    padding: 10px 20px;
     cursor: pointer;
 }
 
-@media print {
-    body * {
-        display: hidden; /* Hide all elements */
-    }
-    
-    .certificate-preview, .certificate-preview * {
-        display: block; /* Display the certificate preview and its contents */
-        visibility: visible; /* Make them visible */
-    }
-    
-    .certificate-preview {
-        -webkit-print-color-adjust: exact; /* Chrome/Safari */
-        print-color-adjust: exact; /* Other browsers */
-        position: fixed; /* Fixed position */
-        left: 0;
-        top: 0;
-        right: 0; /* Stretch to the right edge */
-        bottom: 0; /* Stretch to the bottom edge */
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        margin: 0; /* No margins */
-        padding: 33vh;
-        border: none; /* Remove border if not needed */
-        background: #f9f9f9 url('../assets/certificate_background.png') no-repeat top left; /* Adjust background */
-        background-size: 100% 100%;
-        box-shadow: none;
+/* If you need even smaller text on mobile devices, add a media query */
+@media (max-width: 768px) {
+    .certificate-content {
+        font-size: 12px; /* Further decrease for small devices */
     }
 }
 
