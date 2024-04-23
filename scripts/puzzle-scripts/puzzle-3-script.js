@@ -251,7 +251,7 @@ function userInput(generatedCoordinates) {
     } else {
         alertMessage.textContent = ('Sorry, the point you entered is not correct. Try again!');
         
-        document.getElementById("alertMessage").style.backgroundColor = "red";
+        document.getElementById("alertMessage").style.color = "red";
     }
 }
 
