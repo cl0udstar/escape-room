@@ -232,16 +232,26 @@ function userInput(generatedCoordinates) {
 
     const alertMessage = document.getElementById('alertMessage');
 
+    if (userInputX === generatedCoordinates[0].x) {
+        document.getElementById("coordinateX").style.backgroundColor = "#C8E4B2";
+    } else{
+        document.getElementById("coordinateX").style.backgroundColor = "#FF7676";
+    }
+
+     if (userInputY === generatedCoordinates[0].y) {
+        document.getElementById("coordinateY").style.backgroundColor = "#C8E4B2";
+    } else{
+        document.getElementById("coordinateY").style.backgroundColor = "#FF7676";
+    }
+
     if (userInputX === generatedCoordinates[0].x && userInputY === generatedCoordinates[0].y) {
         alertMessage.textContent = ('Congratulations! You found the correct point!');
         document.getElementById("checkCoordinates").style.display = "none";
         document.getElementById("next").style.display = "block";
-        document.getElementById("coordinateX").style.backgroundColor = "#C8E4B2";
-        document.getElementById("coordinateY").style.backgroundColor = "#C8E4B2";
     } else {
         alertMessage.textContent = ('Sorry, the point you entered is not correct. Try again!');
-        document.getElementById("coordinateX").style.backgroundColor = "#FF7676"
-        document.getElementById("coordinateY").style.backgroundColor = "#FF7676"
+        
+        document.getElementById("alertMessage").style.backgroundColor = "red";
     }
 }
 
