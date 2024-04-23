@@ -234,13 +234,14 @@ function userInput(generatedCoordinates) {
 
     if (userInputX === generatedCoordinates[0].x && userInputY === generatedCoordinates[0].y) {
         alertMessage.textContent = ('Congratulations! You found the correct point!');
+        document.getElementById("checkCoordinates").style.display = "none";
         document.getElementById("next").style.display = "block";
-        document.getElementById("input1").style.backgroundColor = "#C8E4B2";
-        document.getElementById("input2").style.backgroundColor = "#C8E4B2";
+        document.getElementById("coordinateX").style.backgroundColor = "#C8E4B2";
+        document.getElementById("coordinateY").style.backgroundColor = "#C8E4B2";
     } else {
         alertMessage.textContent = ('Sorry, the point you entered is not correct. Try again!');
-        document.getElementById("input1").style.backgroundColor = "#FF7676"
-        document.getElementById("input2").style.backgroundColor = "#FF7676";
+        document.getElementById("coordinateX").style.backgroundColor = "#FF7676"
+        document.getElementById("coordinateY").style.backgroundColor = "#FF7676"
     }
 }
 
