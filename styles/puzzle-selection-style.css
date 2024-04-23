@@ -208,13 +208,13 @@
     color: white;
 }
 
-.next-puzzle {
+.certificate {
     text-align: right;
     margin-top: 20px;
     display: none;
 }
-.certificate {
-    background-color: white;
+.certificate-btn {
+    background-color: #87A922;
     border: 2px solid;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -226,8 +226,4 @@
     font-weight: inherit;
     font-size: inherit;
     text-decoration: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 100px;
 }
