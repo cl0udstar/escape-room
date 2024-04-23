@@ -17,8 +17,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #3a3a3a;
-    font-size: 14px; /* Decreased font size */
-    display: none; /* Add this line to initially hide the content */
 }
 
 .name-input {
