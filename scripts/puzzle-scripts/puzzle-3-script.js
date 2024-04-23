@@ -248,6 +248,7 @@ function userInput(generatedCoordinates) {
         alertMessage.textContent = ('Congratulations! You found the correct point!');
         document.getElementById("checkCoordinates").style.display = "none";
         document.getElementById("next").style.display = "block";
+        document.getElementById("alertMessage").style.color = "green";
     } else {
         alertMessage.textContent = ('Sorry, the point you entered is not correct. Try again!');
         
