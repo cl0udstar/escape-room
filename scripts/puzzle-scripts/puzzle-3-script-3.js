@@ -55,10 +55,12 @@ function submitAnswer() {
     const answer = document.getElementById("answer").value;
     
     // Check if the answer is equal to 10
-    if (answer.trim() === "10") {
+    if (answer.trim() === "10" || answer.trim() === "10N" || answer.trim() === "10n" || answer.trim() === "10newtons" || answer.trim() === "10Newtons" || answer.trim() === "10 newtons" || answer.trim() === "10 Newtons") {
         alert("Congratulations! Your answer is correct!");
         setPuzzleCompletionStatus(3, 'complete');
+        document.getElementByID("forceInput").style.backgroundColor = "#C8E4B2";
     } else {
         alert("Sorry, your answer is incorrect. Please try again.");
+        document.getElementByID("forceInput").style.backgroundColor = "#FF7676";
     }
 }
