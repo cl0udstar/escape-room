@@ -141,12 +141,12 @@ canvas, .centerButton {
 
 .correct{
     background-color: #c8e4b2;
-    color: white;
+    color: black;
 }
 
 .incorrect{
     background-color: #ff7676;
-    color: white;
+    color: black;
 }
 
 #stopButton{
