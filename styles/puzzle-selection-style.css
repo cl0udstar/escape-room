@@ -209,12 +209,12 @@
 }
 
 .certificate {
-    text-align: right;
-    margin-top: 20px;
-    display: none;
+    text-align: center;
+    margin: 20px;
 }
 .certificate-btn {
-    background-color: #87A922;
+    background-color: #EEEDEB;
+    color: black;
     border: 2px solid;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -226,4 +226,5 @@
     font-weight: inherit;
     font-size: inherit;
     text-decoration: none;
+    box-shadow: 0 0 20px 2px #B4B4B8;
 }

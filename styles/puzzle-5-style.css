@@ -241,7 +241,7 @@
 
 
 .check-btn {
-    background: none;
+    background: #EEEDEB;
     border: 2px solid;
     border-radius: 10px;
     padding: 5px 10px;
@@ -249,7 +249,7 @@
     font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
-    /* box-shadow: 1px 1px 10px 2px #DAD5AB; */
+    box-shadow: 0 0 20px 2px #B4B4B8;
 }
 
 .puzzle-q1 {

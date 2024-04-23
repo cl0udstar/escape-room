@@ -42,6 +42,7 @@ input{
 }
 .next-puzzle-btn {
     background-color: #87A922;
+    color: black;
     border: 2px solid;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -53,4 +54,5 @@ input{
     font-weight: inherit;
     font-size: inherit;
     text-decoration: none;
+    box-shadow: 0 0 20px 2px #B4B4B8;
 }
