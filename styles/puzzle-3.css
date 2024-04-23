@@ -148,22 +148,14 @@ canvas, .centerButton {
 }
 
 button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    background: none;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-button:active {
-    background-color: #3e8e41;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }
 
 /*Part 3*/
@@ -174,14 +166,14 @@ button:active {
     margin: 0;
     padding: 0;
     height: 100%;
-    left: 22.5%;
+    left: 17.5%;
     align-items: center;
 }
 
 #numbers {
     position: relative;
     margin-right: 20px;
-    width: 100px;
+    width: 150px;
     height: 625px;
     display: flex;
     flex-direction: column;
@@ -208,7 +200,7 @@ button:active {
 #button{
     position: relative;
     margin-right: 20px;
-    width: 100px;
+    width: 150px;
 }
 
 #horizontal-line {
