@@ -24,9 +24,14 @@
         </div>
     </div>
     
-    <div class="name-input">
-        <input type="text" id="name-input" placeholder="Enter your name here" autocomplete="off">
-        <button id="print-btn">Print Certificate</button>
+    <div class="name-input-container">
+        <div class="name-input">
+            <input type="text" placeholder="Enter your name here" id="name-input" class="user-input" autocomplete="off">  
+        </div>
+        <div class="user-print" onclick="checkAnswerQ1()">
+            <button class="print-btn" id="print-btn">Print Certificate</button>
+        </div>
+        <!-- <button id="print-btn">Print Certificate</button> -->
     </div>
 
 </body>

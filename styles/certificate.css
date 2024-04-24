@@ -30,9 +30,31 @@
     margin-right: 10px;
 }
 
-#print-btn {
-    padding: 10px 20px;
+.print-btn {
+    background: #EEEDEB;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
     cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    box-shadow: 0 0 20px 2px #B4B4B8;
+}
+
+.user-input {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.user-input::placeholder{
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 /* If you need even smaller text on mobile devices, add a media query */
