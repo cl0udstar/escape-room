@@ -57,6 +57,11 @@
     font-size: inherit;
 }
 
+.user-print {
+    text-align: center;
+    padding: 10px;
+}
+
 /* If you need even smaller text on mobile devices, add a media query */
 @media (max-width: 768px) {
     .certificate-content {
