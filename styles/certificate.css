@@ -20,9 +20,14 @@
     color: #3a3a3a;
 }
 
+.name-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .name-input {
     padding: 10px;
-    text-align: center;
 }
 
 .print-btn {
