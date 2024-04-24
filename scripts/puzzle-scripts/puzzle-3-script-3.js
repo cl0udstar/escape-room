@@ -53,14 +53,16 @@ let intervalId = null;
 function submitAnswer() {
     // Get the value from the input field
     const answer = document.getElementById("forceInput").value;
-    
+    const alertMessage2 = document.getElementById('alertMessage2');
     // Check if the answer is equal to 10
     if (answer.trim() === "10" || answer.trim() === "10N" || answer.trim() === "10n" || answer.trim() === "10newtons" || answer.trim() === "10Newtons" || answer.trim() === "10 newtons" || answer.trim() === "10 Newtons") {
         document.getElementById("forceInput").style.backgroundColor = "#C8E4B2";
-        alert("Congratulations! Your answer is correct!");
+        alertMessage2.textContent = ("Congratulations! Your answer is correct!");
+        document.getElementById("alertMessage").style.color = "green";
         setPuzzleCompletionStatus(3, 'complete');
     } else {
         document.getElementById("forceInput").style.backgroundColor = "#FF7676";
-        alert("Sorry, your answer is incorrect. Please try again.");
+        alertMessage2.textContent = ("Sorry, your answer is incorrect. Please try again.");
+        document.getElementById("alertMessage").style.color = "red";
     }
 }
