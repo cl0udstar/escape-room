@@ -12,8 +12,13 @@
     padding: 20px;
 }
 
-.info_container2 p {
+.info_container2 p{
     text-align: center;
+}
+
+.info_container2 h3 {
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .info_container a {
