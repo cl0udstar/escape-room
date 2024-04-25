@@ -226,8 +226,12 @@ function drawGraph() {
 
 // Function to regenerate the graph
 function regenerateGraph() {
-    document.getElementbyId("next").style.display = "none";
-    document.getElementbyId("next2").style.display = "none";
+    document.getElementById("next").style.display = "none";
+    document.getElementById("next2").style.display = "none";
+    document.getElementById("coordinateX").style.backgroundColor = "white";
+    document.getElementById("coordinateY").style.backgroundColor = "white";
+    document.getElementById("coordinateX").value = "";
+    document.getElementById("coordinateY").value = "";
     // Regenerate random coordinates
     points = generateRandomCoordinates();
     // Redraw the graph with new coordinates
