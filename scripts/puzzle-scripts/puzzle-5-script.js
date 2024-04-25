@@ -209,7 +209,12 @@ function checkArraysAndSetColor2() {
 ////////////////////////////////////////////////////////////
 // Functions for the keypad
 ////////////////////////////////////////////////////////////
+let isInputWrong = false;
 function addToDisplay(letter) {
+    if (isInputWrong) {
+        clearInput();
+        isInputWrong = false;
+    }
     var display = document.getElementById('display');
     display.style.color = '#7ECD07';
     display.style.textAlign = 'center';
@@ -246,6 +251,7 @@ function checkInput() {
         var nextPuzzle = document.getElementById("next-puzzle");
         nextPuzzle.style.display = "block";
     } else {
+        isInputWrong = true;
         display.removeAttribute('readonly');
         display.value = "Wrong passkey! Try Again!";
         display.setAttribute('readonly', 'readonly');
