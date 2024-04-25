@@ -97,7 +97,7 @@ canvas, .centerButton {
     top: 50%;
     transform: translate(-49%, -47.5%);
     border: 1px solid black;
-    background-image: url('puzzle-3-part3.png');
+    background-image: url('puzzle-3-part2.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
