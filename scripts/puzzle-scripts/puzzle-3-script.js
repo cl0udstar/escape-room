@@ -244,7 +244,7 @@ function regenerateGraph() {
     // Regenerate random coordinates
     points = generateRandomCoordinates();
     // Redraw the graph with new coordinates
-    drawGraph();
+    generatedCoordinates = drawGraph();
 }
 
 const generatedCoordinates = drawGraph(); // Initial draw
