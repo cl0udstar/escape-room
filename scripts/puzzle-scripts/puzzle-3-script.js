@@ -1,6 +1,7 @@
 const svg = document.getElementById('graph-svg');
 const graphContainer = document.getElementById('graph-container');
 const gridSize = 50; // Size of the grid squares
+let correctAnswer = 0;
 
 // Array to store points
 let points = [
@@ -142,6 +143,16 @@ function drawGraph() {
         svg.appendChild(text);
     }
 
+    // Function to regenerate the graph
+    function regenerateGraph() {
+        document.getElementbyId("next").style.display = "none";
+        document.getElementbyId("next2").style.display = "none";
+        // Regenerate random coordinates
+        points = generateRandomCoordinates();
+        // Redraw the graph with new coordinates
+        drawGraph();
+    }
+
     // Draw grid lines and add coordinates along y axis
     for (let i = gridSize; i < 400; i += gridSize) {
         const gridLineY = document.createElementNS("http://www.w3.org/2000/svg", 'line');
@@ -247,12 +258,21 @@ function userInput(generatedCoordinates) {
     if (userInputX === generatedCoordinates[0].x && userInputY === generatedCoordinates[0].y) {
         alertMessage.textContent = ('Congratulations! You found the correct point!');
         document.getElementById("checkCoordinates").style.display = "none";
-        document.getElementById("next").style.display = "block";
         document.getElementById("alertMessage").style.color = "green";
+        correctAnswer++
     } else {
         alertMessage.textContent = ('Sorry, the point you entered is not correct. Try again!');
         
         document.getElementById("alertMessage").style.color = "red";
+    }
+    if (correctAnswer == 1){
+        document.getElementById("next").style.display = "block";
+    }
+    if (correctAnswer == 2){
+        document.getElementById("next2").style.display = "block";
+    }
+    if (correctAnswer == 3){
+        document.getElementById("next3").style.display = "block";
     }
 }
 
@@ -262,7 +282,7 @@ function next(){
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("input-container").style.display = "none";
     document.getElementById("checkCoordinates").style.display = "none";
-    document.getElementById("next").style.display = "none";
+    document.getElementById("next3").style.display = "none";
     document.getElementById("alertMessage").style.display = "none";
 
     // Show Part 2
