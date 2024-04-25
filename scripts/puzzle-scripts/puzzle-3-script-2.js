@@ -143,12 +143,7 @@ function submitCoordinates2(){
         if (element.classList.contains(className) && options[4] === spanId){
             document.getElementById(elementId).classList.add('correct');
             document.getElementById('submitCoordinatesButton2').style.display = "none";
-            document.getElementById('exampleAnswer1').removeEventListener('click', () => handleOptionClick('exampleAnswer1'));
-            document.getElementById('exampleAnswer2').removeEventListener('click', () => handleOptionClick('exampleAnswer2'));
-            document.getElementById('exampleAnswer3').removeEventListener('click', () => handleOptionClick('exampleAnswer3'));
-            document.getElementById('exampleAnswer4').removeEventListener('click', () => handleOptionClick('exampleAnswer4'));
-            document.getElementById('exampleAnswer5').removeEventListener('click', () => handleOptionClick('exampleAnswer5'));
-            
+            setPuzzleCompletionStatus(3, 'complete');
         }
         if (element.classList.contains(className) && options[4] !== spanId){
         document.getElementById(elementId).classList.add('incorrect');
