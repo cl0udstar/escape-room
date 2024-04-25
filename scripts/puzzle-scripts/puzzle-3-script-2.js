@@ -125,6 +125,8 @@ function submitCoordinates(){
             document.getElementById(elementId).classList.add('correct');
             document.getElementById('submitCoordinatesButton').style.display = "none";
             document.getElementById('submitCoordinatesButton2').style.display = "block";
+            document.getElementById("para1").style.display = "none";
+            document.getElementById("para2").style.display = "block";
         }
         if (element.classList.contains(className) && options[0] !== spanId){
         document.getElementById(elementId).classList.add('incorrect');
@@ -143,6 +145,8 @@ function submitCoordinates2(){
         if (element.classList.contains(className) && options[4] === spanId){
             document.getElementById(elementId).classList.add('correct');
             document.getElementById('submitCoordinatesButton2').style.display = "none";
+            document.getElementById("para2").style.display = "none";
+            document.getElementById("para3").style.display = "block";
             setPuzzleCompletionStatus(3, 'complete');
         }
         if (element.classList.contains(className) && options[4] !== spanId){
@@ -299,6 +303,7 @@ let coordinates = [0,0];
 
 function stopAnimation(){
     cancelAnimationFrame(animationIdDot2); // Stop animation of dot 1
+    document.getElementById("para1").style.display = "block";
     document.getElementById("stopAnimation").style.display = "none";
     coordinates[0] = dotX2/3;
     invertedDotY2 = 600 - dotY2;
