@@ -143,16 +143,6 @@ function drawGraph() {
         svg.appendChild(text);
     }
 
-    // Function to regenerate the graph
-    function regenerateGraph() {
-        document.getElementbyId("next").style.display = "none";
-        document.getElementbyId("next2").style.display = "none";
-        // Regenerate random coordinates
-        points = generateRandomCoordinates();
-        // Redraw the graph with new coordinates
-        drawGraph();
-    }
-
     // Draw grid lines and add coordinates along y axis
     for (let i = gridSize; i < 400; i += gridSize) {
         const gridLineY = document.createElementNS("http://www.w3.org/2000/svg", 'line');
@@ -232,6 +222,16 @@ function drawGraph() {
         generatedCoordinates.push({ x: xLetter, y: yNumber });
     }
     return generatedCoordinates;
+}
+
+// Function to regenerate the graph
+function regenerateGraph() {
+    document.getElementbyId("next").style.display = "none";
+    document.getElementbyId("next2").style.display = "none";
+    // Regenerate random coordinates
+    points = generateRandomCoordinates();
+    // Redraw the graph with new coordinates
+    drawGraph();
 }
 
 const generatedCoordinates = drawGraph(); // Initial draw
