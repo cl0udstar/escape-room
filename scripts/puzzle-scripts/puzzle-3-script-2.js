@@ -1,69 +1,28 @@
 const canvas = document.getElementById('arcCanvas');
 const ctx = canvas.getContext('2d');
 
-let startX = 0; // Starting point x-coordinate
-let startY = canvas.height / 2; // Starting point y-coordinate
-let controlX = canvas.width / 2; // Control point x-coordinate
-let controlY = 0; // Control point y-coordinate
-let endX = canvas.width; // Ending point x-coordinate
-let endY = canvas.height / 2; // Ending point y-coordinate
-let middleX = (startX + endX) / 2; // Middle point x-coordinate
-let middleY = (startY + endY) / 2; // Middle point y-coordinate
-let deltaY = 6; // Speed of movement
 let direction = 1; // Initial direction of movement (1 for downwards, -1 for upwards)
-let movementInterval; // Interval ID for continuous movement
-let withinGreenStrip = true; // Flag to track whether the point is within the green strip
-let dashedLinesDrawn = false;
+
 const options = ['option1', 'option2', 'option3', 'option4', 'option5'];
+
+// Moving dot variables
+let dotX = 10; // Initial x-coordinate of the dot
+const dotY = canvas.height-10; // Y-coordinate of the dot
+const dotRadius = 10; // Radius of the dot
+const deltaX = 2; // Amount to move the dot in each frame
+
+let dotX2 = 10; // Initial x-coordinate of the second dot
+let dotY2 = canvas.height / 2; // Y-coordinate of the second dot (you can adjust this as needed)
+const dotRadius2 = 10; // Radius of the second dot
+const deltaY2 = 2; // Amount to move the second dot in each frame
+
+let dotX3 = 0;
+let dotY3 = 0;
 
 // Set up canvas
 function init() {
-    drawGreenStrip();
-    startContinuousMovement();
-    setupStopButton();
     drawAxisNumbers();
-}
-
-// Draw the arc
-function drawArc() {
-    ctx.beginPath();
-    ctx.moveTo(startX, startY);
-    ctx.quadraticCurveTo(controlX, controlY, endX, endY);
-    ctx.strokeStyle = 'black';
-    ctx.lineWidth = 3;
-    ctx.stroke();
-}
-
-// Draw dashed lines from the middle point to both the x-axis and y-axis
-function drawDashedLines() {
-    console.log("TEST")
-    if (middleX !== undefined && middleY !== undefined && !dashedLinesDrawn) {
-        // Draw dashed line from middle point to x-axis
-        ctx.strokeStyle = 'red';
-        ctx.lineWidth = 3;
-        ctx.beginPath();
-        ctx.setLineDash([5, 5]); // Set dash pattern
-        ctx.moveTo(middleX, middleY);
-        ctx.lineTo(middleX, canvas.height); // Draw line to x-axis
-        ctx.stroke();
-
-        // Draw dashed line from middle point to y-axis
-        ctx.beginPath();
-        ctx.moveTo(middleX, middleY);
-        ctx.lineTo(0, middleY); // Draw line to y-axis
-        ctx.stroke();
-
-        dashedLinesDrawn = true; // Set dashed lines drawn flag
-    }
-}
-
-// Draw points on the arc
-function drawPointsOnArc() {
-    ctx.fillStyle = 'blue';
-
-    ctx.beginPath();
-    ctx.arc(endX, endY, 8, 0, Math.PI * 2);
-    ctx.fill();
+    animateDot(); // Add animation for the moving dot
 }
 
 // Draw numbers on the axis
@@ -83,7 +42,6 @@ function drawAxisNumbers() {
         ctx.fillText(number, xPos, axisCanvas.height);
     }
 
-
     // Y-axis numbers
     for (let i = 0; i <= 11; i++) {
         const xPos = 5; // X-coordinate for Y-axis numbers
@@ -93,99 +51,28 @@ function drawAxisNumbers() {
     }
 }
 
-// Draw the middle dot
-function drawMiddleDot() {
-    const t = 0.5; // Parameter for calculating middle point along the curve
-    middleX = (1 - t) * (1 - t) * startX + 2 * (1 - t) * t * controlX + t * t * endX;
-    middleY = (1 - t) * (1 - t) * startY + 2 * (1 - t) * t * controlY + t * t * endY;
-
-    ctx.fillStyle = 'blue';
-    ctx.beginPath();
-    ctx.arc(middleX, middleY, 8, 0, Math.PI * 2);
-    ctx.fill();
-}
-
-// Draw green strip
-function drawGreenStrip() {
-    const stripHeight = canvas.height * 0.2; // Height of the green strip (20% of canvas height)
-    const stripY = (canvas.height - stripHeight) / 2; // Y-coordinate of the top of the strip
-
-    ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
-    ctx.fillRect(0, stripY, canvas.width, stripHeight);
-}
-
-// Start continuous movement
-function startContinuousMovement() {
-    clearInterval(movementInterval); // Clear previous interval
-    movementInterval = setInterval(movePointBackAndForth, 50); // Start new interval
-}
-
-// Function to move the last point back and forth
-function movePointBackAndForth() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
-
-    // Update endY based on direction
-    endY += deltaY * direction;
-
-    // Reverse direction if reaching top or bottom
-    if (endY <= 0 || endY >= canvas.height) {
-        direction *= -1;
-    }
-
-    drawGreenStrip();
-    drawArc();
-    drawPointsOnArc();
-
-    // Check if the point is within the green strip
-    const stripHeight = canvas.height * 0.2;
-    const stripY = (canvas.height - stripHeight) / 2;
-    withinGreenStrip = endY >= stripY && endY <= stripY + stripHeight;
-}
-
-// Set up stop button
-function setupStopButton() {
-    const stopButton = document.getElementById('stopButton');
-    stopButton.addEventListener('click', stopMovement);
-}
-
-// Function to stop the continuous movement
-function stopMovement() {
-    clearInterval(movementInterval);
-
-    // Restart movement if the point is not within the green strip
-    if (!withinGreenStrip) {
-        setTimeout(startContinuousMovement, 2000); // Restart movement after 2 seconds
-    } else {
-        drawMiddleDot();
-        drawDashedLines();
-        drawAxisNumbers();
-        storeCenterPointCoordinates()
-        document.getElementById('stopButton').style.display = "none";
-        document.getElementById('exampleAnswers').style.display = "inline-block";
-        document.getElementById('submitCoordinatesButton').style.display = "block";
-    }
-}
-
 // Function to draw the blue center point and display coordinates
-function storeCenterPointCoordinates() {
-    const centerPointX = Math.round((middleX / 2) - 50);
-    const invertedY = Math.round((canvas.height - middleY) / 2); // Inverted y-coordinate
-    const WrongY1 = Math.round(invertedY + 20);
-    const WrongY2 = Math.round(invertedY - 20);
-    const WrongY3 = Math.round(invertedY + 28.5);
-    const WrongY4 = Math.round(invertedY - 28.5);
-    const WrongX1 = Math.round(50);
-    const WrongX2 = Math.round(20);
-    const WrongX3 = Math.round(100);
-    const WrongX4 = Math.round(150);
+function storePointCoordinates() {
+    const PointX = Math.round(coordinates[0]);
+    const PointY = Math.round(coordinates[1]);
+    const WrongY1 = Math.round(PointY + 20);
+    const WrongY2 = Math.round(PointY - 20);
+    const WrongY3 = Math.round(PointY + 28.5);
+    const invertedDot3Y = 600 - dotY3;
+    const PointY2 = Math.round(invertedDot3Y/3);
+    const WrongX1 = Math.round(PointX + 20);
+    const WrongX2 = Math.round(PointX - 20);
+    const WrongX3 = Math.round(PointX + 28.5);
+    const PointX2 = Math.round(dotX3/3);
 
+    console.log(PointX2, PointY2);
     shuffleArray(options);
 
-    document.getElementById(options[0]).innerText = `(${centerPointX}, ${invertedY})`;
+    document.getElementById(options[0]).innerText = `(${PointX}, ${PointY})`;
     document.getElementById(options[1]).innerText = `(${WrongX1}, ${WrongY1})`;
     document.getElementById(options[2]).innerText = `(${WrongX2}, ${WrongY2})`;
     document.getElementById(options[3]).innerText = `(${WrongX3}, ${WrongY3})`;
-    document.getElementById(options[4]).innerText = `(${WrongX4}, ${WrongY4})`;
+    document.getElementById(options[4]).innerText = `(${PointX2}, ${PointY2})`;
 }
 
 function shuffleArray(array) {
@@ -207,18 +94,23 @@ function handleOptionClick(optionId) {
     const options = document.querySelectorAll('.exampleAnswer');
     options.forEach(option => option.classList.remove('highlighted'));
     let flag = false;
+    let counter = 0;
     for (let i = 1; i <= 5; i++) {
         const elementId = `exampleAnswer${i}`;
         const element = document.getElementById(elementId);
         // Highlight the clicked option
         if (element.classList.contains('correct')){
-           flag = true;
+           counter++;
+        }
+        if (counter == 2){
+            flag = true;
         }
     }
     if (flag === false){
         document.getElementById(optionId).classList.add('highlighted');
     }
 }
+
 
 function submitCoordinates(){
     const optionsClass = document.querySelectorAll('.exampleAnswer');
@@ -232,7 +124,7 @@ function submitCoordinates(){
         if (element.classList.contains(className) && options[0] === spanId){
             document.getElementById(elementId).classList.add('correct');
             document.getElementById('submitCoordinatesButton').style.display = "none";
-            document.getElementById('nextPart3').style.display = "block";
+            document.getElementById('submitCoordinatesButton2').style.display = "block";
         }
         if (element.classList.contains(className) && options[0] !== spanId){
         document.getElementById(elementId).classList.add('incorrect');
@@ -240,9 +132,217 @@ function submitCoordinates(){
     }
 }
 
-function nextPart3(){
-    document.getElementById('arcGraph').style.display = "none";
-    document.getElementById('forceBar').style.display = "flex";
+function submitCoordinates2(){
+    const optionsClass = document.querySelectorAll('.exampleAnswer');
+    optionsClass.forEach(option => option.classList.remove('incorrect'));
+    const className = 'highlighted';
+    for (let i = 1; i <= 5; i++) {
+        const elementId = `exampleAnswer${i}`;
+        const spanId = `option${i}`;
+        const element = document.getElementById(elementId);
+        if (element.classList.contains(className) && options[4] === spanId){
+            document.getElementById(elementId).classList.add('correct');
+            document.getElementById('submitCoordinatesButton2').style.display = "none";
+            document.getElementById('exampleAnswer1').removeEventListener('click', () => handleOptionClick('exampleAnswer1'));
+            document.getElementById('exampleAnswer2').removeEventListener('click', () => handleOptionClick('exampleAnswer2'));
+            document.getElementById('exampleAnswer3').removeEventListener('click', () => handleOptionClick('exampleAnswer3'));
+            document.getElementById('exampleAnswer4').removeEventListener('click', () => handleOptionClick('exampleAnswer4'));
+            document.getElementById('exampleAnswer5').removeEventListener('click', () => handleOptionClick('exampleAnswer5'));
+            
+        }
+        if (element.classList.contains(className) && options[4] !== spanId){
+        document.getElementById(elementId).classList.add('incorrect');
+        }
+    }
+}
+
+// Draw the moving dot on the canvas
+function drawDot() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before drawing
+
+    // Draw the dot
+    ctx.beginPath();
+    ctx.arc(dotX, dotY, dotRadius, 0, Math.PI * 2);
+    ctx.fillStyle = 'green';
+    ctx.fill();
+
+    // Draw the border
+    ctx.strokeStyle = 'black'; // Border color
+    ctx.lineWidth = 2; // Border width
+    ctx.stroke();
+}
+
+// Function to stop the movement of the dot
+function stopDotMovement() {
+    // Cancel the animation frame to stop the dot movement
+    cancelAnimationFrame(animationId);
+}
+
+let animationIdDot1; // Variable to store the animation ID for the first dot
+let animationIdDot2; // Variable to store the animation ID for the second dot
+
+
+// Animate the movement of the dot
+function animateDot() {
+    // Move the dot
+    dotX += deltaX * direction;
+
+    // Reverse direction if the dot reaches the edges of the canvas
+    if (dotX + dotRadius >= canvas.width || dotX - dotRadius <= 0) {
+        direction *= -1;
+    }
+
+    drawDot(); // Redraw the dot
+    animationIdDot1 = requestAnimationFrame(animateDot); // Repeat the animation
+}
+
+// Draw the moving dot on the canvas
+function drawDot2() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before drawing
+
+    // Draw the second dot
+    ctx.beginPath();
+    ctx.arc(dotX2, dotY2, dotRadius2, 0, Math.PI * 2);
+    ctx.fillStyle = 'green'; // Choose a different color for the second dot (e.g., red)
+    ctx.fill();
+
+    // Draw the border
+    ctx.strokeStyle = 'black'; // Border color
+    ctx.lineWidth = 2; // Border width
+    ctx.stroke();
+}
+
+function drawDot3() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before drawing
+
+    // Draw the second dot
+    ctx.beginPath();
+    ctx.arc(dotX3, dotY3, 10, 0, Math.PI * 2);
+    ctx.fillStyle = 'blue'; // Choose a different color for the second dot (e.g., red)
+    ctx.fill();
+
+    // Draw the border
+    ctx.strokeStyle = 'black'; // Border color
+    ctx.lineWidth = 2; // Border width
+    ctx.stroke();
+
+    // Draw dotted line from second dot to x-axis
+    ctx.setLineDash([5, 5]); // Set line dash pattern
+    ctx.beginPath();
+    ctx.moveTo(dotX3, dotY3);
+    ctx.lineTo(dotX3, canvas.height); // Endpoint at the x-axis
+    ctx.strokeStyle = "blue";
+    ctx.stroke();
+    ctx.setLineDash([]); // Reset line dash pattern
+
+    // Draw dotted line from second dot to y-axis
+    ctx.setLineDash([5, 5]); // Set line dash pattern
+    ctx.beginPath();
+    ctx.moveTo(dotX3, dotY3);
+    ctx.lineTo(0, dotY3); // Endpoint at the y-axis
+    ctx.strokeStyle = "blue";
+    ctx.stroke();
+    ctx.setLineDash([]); // Reset line dash pattern
+
+    // Draw the second dot
+    ctx.beginPath();
+    ctx.arc(dotX2, dotY2, dotRadius2, 0, Math.PI * 2);
+    ctx.fillStyle = 'green'; // Choose a different color for the second dot (e.g., red)
+    ctx.fill();
+
+    // Draw the border
+    ctx.strokeStyle = 'black'; // Border color
+    ctx.lineWidth = 2; // Border width
+    ctx.stroke();
+
+    // Draw dotted line from second dot to x-axis
+    ctx.setLineDash([5, 5]); // Set line dash pattern
+    ctx.beginPath();
+    ctx.moveTo(dotX2, dotY2);
+    ctx.lineTo(dotX2, canvas.height); // Endpoint at the x-axis
+    ctx.strokeStyle = "green";
+    ctx.stroke();
+    ctx.setLineDash([]); // Reset line dash pattern
+
+    // Draw dotted line from second dot to y-axis
+    ctx.setLineDash([5, 5]); // Set line dash pattern
+    ctx.beginPath();
+    ctx.moveTo(dotX2, dotY2);
+    ctx.lineTo(0, dotY2); // Endpoint at the y-axis
+    ctx.strokeStyle = "green";
+    ctx.stroke();
+    ctx.setLineDash([]); // Reset line dash pattern
+}
+
+let directionY2 = -1;
+
+// Animate the movement of the second dot
+function animateDot2() {
+    // Move the second dot
+    dotY2 += deltaY2 * directionY2;
+
+    // Reverse direction if the dot reaches the edges of the canvas along the y-axis
+    if (dotY2 + dotRadius2 >= canvas.height || dotY2 - dotRadius2 <= 0) {
+        directionY2 *= -1;
+    }
+
+    drawDot2(); // Redraw the second dot
+    animationIdDot2 = requestAnimationFrame(animateDot2); // Repeat the animation for the second dot
+}
+
+// Function to toggle between the animations of the two dots
+function toggleAnimation() {
+    cancelAnimationFrame(animationIdDot1); // Stop animation of dot 1
+    dotY2 = dotY; // Set dotY2 position to match dotY position
+    dotX2 = dotX;
+    animateDot2(); // Start animation of dot 2
+    document.getElementById("toggleButton").style.display = "none";
+    document.getElementById("stopAnimation").style.display = "block";
+}
+
+let coordinates = [0,0];
+
+function stopAnimation(){
+    cancelAnimationFrame(animationIdDot2); // Stop animation of dot 1
+    document.getElementById("stopAnimation").style.display = "none";
+    coordinates[0] = dotX2/3;
+    invertedDotY2 = 600 - dotY2;
+    coordinates[1] = invertedDotY2/3;
+    if (coordinates[0] < 100){
+        dotX3 = dotX2 - 57;
+    }
+    if (coordinates[0] > 100){
+        dotX3 = dotX2 + 62;
+    }
+    if (coordinates[1] < 100){
+        dotY3 = dotY2 + 43;
+    }
+    if (coordinates[1] > 100){
+        dotY3 = dotY2 - 29;
+    }
+
+    if (dotX3 < 0){
+        dotX3 = dotY3 + 600;
+    }
+
+    if (dotY3 < 0){
+        dotY3 = dotY3 + 600;
+    }
+
+    if (dotX3 > 600){
+        dotX3 = dotX3 - 600;
+    }
+
+    if (dotY3 > 600){
+        dotY3 = dotY3 - 600;
+    }
+
+    console.log(coordinates[0], coordinates[1]);
+    console.log(dotX3, dotY3)
+    document.getElementById("exampleAnswers").style.display = "block";
+    document.getElementById("submitCoordinatesButton").style.display = "block";
+    drawDot3();
+    storePointCoordinates();
 }
 
 init(); // Initialize the canvas
