@@ -170,11 +170,3 @@ button {
     font-size: inherit;
     box-shadow: 0 0 20px 2px #B4B4B8;
 }
-
-button:hover {
-    background-color: #45a049;
-}
-
-button:active {
-    background-color: #3e8e41;
-}
