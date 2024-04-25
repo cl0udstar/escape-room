@@ -232,6 +232,15 @@ function regenerateGraph() {
     document.getElementById("coordinateY").style.backgroundColor = "white";
     document.getElementById("coordinateX").value = "";
     document.getElementById("coordinateY").value = "";
+    document.getElementById("checkCoordinates").style.display = "block";
+    if (correctAnswer == 1){
+        document.getElementById("throw1").style.display = "none";
+        document.getElementById("throw2").style.display = "block";
+    }
+    if (correctAnswer == 2){
+        document.getElementById("throw2").style.display = "none";
+        document.getElementById("throw3").style.display = "block";
+    }
     // Regenerate random coordinates
     points = generateRandomCoordinates();
     // Redraw the graph with new coordinates
@@ -274,9 +283,13 @@ function userInput(generatedCoordinates) {
     }
     if (correctAnswer == 2){
         document.getElementById("next2").style.display = "block";
+        document.getElementById("throw2").style.display = "block";
+        document.getElementById("throw1").style.display = "none";
     }
     if (correctAnswer == 3){
         document.getElementById("next3").style.display = "block";
+        document.getElementById("throw2").style.display = "block";
+        document.getElementById("throw1").style.display = "none";
     }
 }
 
