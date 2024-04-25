@@ -56,13 +56,14 @@
             
             <div id="alertMessage" style="color: green;"></div>
         
-            <div class="arcGraph" id="arcGraph">
-                <div class="canvasContainer" id="canvasContainer" style="display: none;">
-                    <canvas id="axisCanvas" width="650" height="435"></canvas>
-                    <canvas id="arcCanvas" width="600" height="400"></canvas>
+            <div class="arcGraph">
+                <div class="canvasContainer">
+                    <canvas id="axisCanvas" width="650" height="650"></canvas>
+                    <canvas id="arcCanvas" width="600" height="600"></canvas>
                 </div>
         
-                <button class="centerButton" id="stopButton" style="display: none;">Stop Movement</button>
+                <button class="centerButton" id="toggleButton" onclick="toggleAnimation()">Stop Horizontal Movement</button>
+                <button class="centerButton" id="stopAnimation" onclick="stopAnimation()" style="display: none;">Stop Vertical Movement</button>
         
                 <div class="exampleAnswers" id="exampleAnswers" style="display: none;">
                     <div class="exampleAnswer" id="exampleAnswer1" >Coordinates: <span id="option1"></span></div>
@@ -73,7 +74,7 @@
                 </div>
         
                 <button class="centerButton" id="submitCoordinatesButton" onclick="submitCoordinates()" style="display: none;">Submit</button>
-                <button class="centerButton" id="nextPart3" onclick="nextPart3()" style="display: none;">Next</button>
+                <button class="centerButton" id="submitCoordinatesButton2" onclick="submitCoordinates2()" style="display: none;">Submit</button>
             </div>
         </div>
 
