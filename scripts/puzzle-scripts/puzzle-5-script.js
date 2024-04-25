@@ -246,7 +246,9 @@ function checkInput() {
         var nextPuzzle = document.getElementById("next-puzzle");
         nextPuzzle.style.display = "block";
     } else {
-        alert('Input is invalid. Please enter all required letters.');
+        display.removeAttribute('readonly');
+        display.value = "Wrong passkey! Try Again!";
+        display.setAttribute('readonly', 'readonly');
     }
 }
 
