@@ -301,7 +301,6 @@ function next(){
     document.getElementById("alertMessage").style.display = "none";
 
     // Show Part 2
-    document.getElementById("canvasContainer").style.display = "block";
-    document.getElementById("stopButton").style.display = "block";
+    document.getElementById("arcGraph").style.display = "block";
 
 }
