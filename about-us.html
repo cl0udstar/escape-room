@@ -32,13 +32,38 @@
         </div>
 
         <div class="info_container2">
-            <p>Meet the team:</p> 
-            <p>Cameron Donnelly</p>
-            <p>Ruben Lazell</p> 
-            <p>Catalin Nanu</p> 
-            <p>Bassam Qureshi</p>
-            <p>Daniel Zukovski</p> 
+            <h3>Meet the team:</h3> 
+            <div class="names">
+                <p>Cameron Donnelly</p>
+                <p>Ruben Lazell</p> 
+                <p>Catalin Nanu</p> 
+                <p>Bassam Qureshi</p>
+                <p>Daniel Zukovski</p> 
+            </div>
         </div>
+
+        <script>
+            var container = document.querySelector(".names");
+
+            if (container) {
+                var paragraphs = container.querySelectorAll("p");
+
+                // Ensure we have at least 3 paragraphs to swap
+                if (paragraphs.length >= 3) {
+                    var first = paragraphs[0]; // First paragraph
+                    var third = paragraphs[2]; // Third paragraph
+
+                    // Randomly decide whether to swap the paragraphs
+                    if (Math.random() < 0.5) { // 50% chance to swap
+                        // Insert the first after the third (essentially swapping them)
+                        container.insertBefore(first, third.nextSibling);
+
+                        // Now move the third to the start (this completes the swap)
+                        container.insertBefore(third, container.firstChild);
+                    }
+                }
+            }
+        </script>
 
         <script src="./scripts/cookies/accessibility-cookie.js"></script>
     </body>
