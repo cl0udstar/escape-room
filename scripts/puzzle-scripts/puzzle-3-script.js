@@ -71,7 +71,7 @@ function drawGraph() {
     customXText.setAttribute('x', 300);
     customXText.setAttribute('y', 450);
     customXText.setAttribute('text-anchor', 'middle');
-    customXText.textContent = 'Letters';
+    customXText.textContent = 'X';
     svg.appendChild(customXText);
     
     // Draw custom text for y-axis
@@ -81,7 +81,7 @@ function drawGraph() {
     customYText.setAttribute('y', -60);
     customYText.setAttribute('text-anchor', 'middle');
     customYText.setAttribute('transform', 'rotate(-90)');
-    customYText.textContent = 'Numbers';
+    customYText.textContent = 'Y';
     svg.appendChild(customYText);
     
     // Draw x line
@@ -133,13 +133,13 @@ function drawGraph() {
         gridLineX.setAttribute('stroke-width', '2');
         svg.appendChild(gridLineX);
 
-        // Add letters along x axis
-        const letter = alphabet[i];
+        // Add numbers along x axis
+        const number = alphabet[i];
         const text = document.createElementNS("http://www.w3.org/2000/svg", 'text');
         text.setAttribute('class', 'text');
         text.setAttribute('x', (i + 1) * gridSize);
         text.setAttribute('y', 415);
-        text.textContent = letter;
+        text.textContent = number;
         svg.appendChild(text);
     }
 
@@ -163,13 +163,13 @@ function drawGraph() {
         svg.appendChild(text);
     }
 
-    // Define arrays for mapping coordinates to letters and numbers
-    const xLetters = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'];
+    // Define arrays for mapping coordinates to numbers
+    const xNumbers = ['', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
     const yNumbers = ['', '7', '6', '5', '4', '3', '2', '1'];
 
-    // Function to convert X coordinate to letter
-    function getXLetter(x) {
-        return xLetters[Math.floor(x / gridSize)];
+    // Function to convert X coordinate to number
+    function getXNumber(x) {
+        return xNumbers[Math.floor(x / gridSize)];
     }
 
     // Function to convert Y coordinate to number
@@ -182,7 +182,7 @@ function drawGraph() {
     for (let i = 0; i < points.length; i++) {
         const point = points[i];
         
-        console.log('Point coordinates:', getXLetter(point.x), getYNumber(point.y));
+        console.log('Point coordinates:', getXNumber(point.x), getYNumber(point.y));
 
         // Draw bullseye
         for (let r = 6; r >= 2; r--) {
@@ -217,9 +217,9 @@ function drawGraph() {
     const generatedCoordinates = [];
     for (let i = 0; i < points.length; i++) {
         const point = points[i];
-        const xLetter = getXLetter(point.x);
+        const xNumber = getXNumber(point.x);
         const yNumber = getYNumber(point.y);
-        generatedCoordinates.push({ x: xLetter, y: yNumber });
+        generatedCoordinates.push({ x: xNumber, y: yNumber });
     }
     return generatedCoordinates;
 }
