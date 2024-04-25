@@ -58,6 +58,12 @@ h1{
 
 .input-container input {
     margin-left: 10px; /* Adds gap between input and label */
+    font-family: inherit;
+    font-size: inherit;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 10px;
+    text-align: center;
 }
 
 #coordinateInput {
@@ -97,7 +103,7 @@ canvas, .centerButton {
     top: 50%;
     transform: translate(-49%, -47.5%);
     border: 1px solid black;
-    background-image: url('puzzle-3-part2.png');
+    background-image: url('../assets/backgrounds/puzzle3-assets/puzzle-3-part2.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -153,14 +159,15 @@ canvas, .centerButton {
 
 button {
     position: relative;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    background: #EEEDEB;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
     cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    box-shadow: 0 0 20px 2px #B4B4B8;
 }
 
 button:hover {
