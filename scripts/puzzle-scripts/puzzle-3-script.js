@@ -233,6 +233,7 @@ function regenerateGraph() {
     document.getElementById("coordinateX").value = "";
     document.getElementById("coordinateY").value = "";
     document.getElementById("checkCoordinates").style.display = "block";
+    document.getElementById("alertMessage").style.display = "none";
     if (correctAnswer == 1){
         document.getElementById("throw1").style.display = "none";
         document.getElementById("throw2").style.display = "block";
@@ -273,23 +274,19 @@ function userInput(generatedCoordinates) {
         document.getElementById("checkCoordinates").style.display = "none";
         document.getElementById("alertMessage").style.color = "green";
         correctAnswer++
+        if (correctAnswer == 1){
+        document.getElementById("next").style.display = "block";
+        }
+        if (correctAnswer == 2){
+            document.getElementById("next2").style.display = "block";
+        }
+        if (correctAnswer == 3){
+            document.getElementById("next3").style.display = "block";
+        }
     } else {
         alertMessage.textContent = ('Sorry, the point you entered is not correct. Try again!');
         
         document.getElementById("alertMessage").style.color = "red";
-    }
-    if (correctAnswer == 1){
-        document.getElementById("next").style.display = "block";
-    }
-    if (correctAnswer == 2){
-        document.getElementById("next2").style.display = "block";
-        document.getElementById("throw2").style.display = "block";
-        document.getElementById("throw1").style.display = "none";
-    }
-    if (correctAnswer == 3){
-        document.getElementById("next3").style.display = "block";
-        document.getElementById("throw2").style.display = "block";
-        document.getElementById("throw1").style.display = "none";
     }
 }
 
@@ -299,6 +296,7 @@ function next(){
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("input-container").style.display = "none";
     document.getElementById("checkCoordinates").style.display = "none";
+    document.getElementById("throw3").style.display = "none";
     document.getElementById("next3").style.display = "none";
     document.getElementById("alertMessage").style.display = "none";
 
