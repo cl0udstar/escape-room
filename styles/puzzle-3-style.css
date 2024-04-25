@@ -57,13 +57,7 @@ h1{
 }
 
 .input-container input {
-    font-family: inherit;
-    font-size: inherit;
-    padding: 5px;
-    border: 2px solid;
-    border-radius: 10px;
-    width: 5%;
-    text-align: center;
+    margin-left: 10px; /* Adds gap between input and label */
 }
 
 #coordinateInput {
@@ -93,7 +87,7 @@ canvas, .centerButton {
 .canvasContainer {
     position: relative;
     width: 650px;
-    height: 450px;
+    height: 650px;
     margin: 0 auto;
 }
 
@@ -103,7 +97,7 @@ canvas, .centerButton {
     top: 50%;
     transform: translate(-49%, -47.5%);
     border: 1px solid black;
-    background-image: url('../assets/backgrounds/puzzle3-assets/puzzle-3-part2.png');
+    background-image: url('puzzle-3-part3.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -112,7 +106,7 @@ canvas, .centerButton {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -48%);
+    transform: translate(-50%, -49%);
 }
 
 #question {
@@ -135,155 +129,44 @@ canvas, .centerButton {
 }
 
 .highlighted {
-    background-color: #6c6c6c;
+    background-color: black;
     color: white;
 }
 
 .correct{
-    background-color: #c8e4b2;
-    color: black;
+    background-color: #4CAF50;
+    color: white;
 }
 
 .incorrect{
-    background-color: #ff7676;
-    color: black;
+    background-color: red;
+    color: white;
 }
 
-#stopButton{
-    margin-top: 50px;
+#toggleButton{
+    margin-top: 60px;
+}
+
+#stopAnimation{
+    margin-top: 60px;
 }
 
 button {
-   background: #EEEDEB;
-    border: 2px solid;
-    border-radius: 10px;
-    padding: 5px 10px;
+    position: relative;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    font-family: inherit;
-    font-weight: inherit;
-    font-size: inherit;
-    box-shadow: 0 0 20px 2px #B4B4B8;
 }
 
-/*Part 3*/
-
-.forceBar {
-    position: relative;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    left: 17.5%;
-    align-items: center;
+button:hover {
+    background-color: #45a049;
 }
 
-#numbers {
-    position: relative;
-    margin-right: 20px;
-    width: 150px;
-    height: 625px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#rectangle {
-    position: relative;
-    width: 250px;
-    height: 625px;
-    background-color: #ffffff;
-    border-radius: 50px;
-    border: 5px solid #000000;
-    overflow: hidden;
-}
-
-#button{
-    position: relative;
-    margin-right: 20px;
-    width: 150px;
-}
-
-#horizontal-line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: #0000ff;
-    transition: bottom 0.1s;
-    z-index: 1; /* Ensure it's above the green section */
-}
-
-#green-section {
-    position: relative;
-    left: 0;
-    width: 100%;
-    height: 14.3%;
-    background-color: #179717;
-    border-top: 2.5px solid #000000;
-    z-index: 0; /* Send it to the back */
-}
-
-.yellow-section {
-    position: relative;
-    left: 0;
-    width: 100%;
-    height: 14.3%;
-    background-color: #d9ff00;
-    border-top: 2.5px solid #000000;
-    z-index: 0; /* Send it to the back */
-}
-
-.orange-section {
-    position: relative;
-    left: 0;
-    width: 100%;
-    height: 14.3%;
-    background-color: #d6a207;
-    border-top: 2.5px solid #000000;
-    z-index: 0; /* Send it to the back */
-}
-
-.red-section {
-    position: relative;
-    left: 0;
-    width: 100%;
-    height: 14.3%;
-    background-color: #ff0000;
-    border-top: 2.5px solid #000000;
-    z-index: 0; /* Send it to the back */
-}
-
-.answer-box {
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    margin-top: 100px;
-}
-
-#forceInput{
-   font-family: inherit;
-    font-size: inherit;
-    padding: 5px;
-    border: 2px solid;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.finalAnswerButton{
-    text-align: center;
-    width: 100%;
-    height: 100%;
-}
-
-#alertMessage2 {
-    text-align: center;
+button:active {
+    background-color: #3e8e41;
 }
