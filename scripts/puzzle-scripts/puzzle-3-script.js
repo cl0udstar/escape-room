@@ -122,24 +122,22 @@ function drawGraph() {
     svg.appendChild(topLineElement);
 
     // Draw grid lines and add coordinates along x axis
-    const alphabet = 'ABCDEFGHIJK'; // Define alphabet
-    for (let i = 0; i < alphabet.length; i++) {
+    for (let i = 1; i <= 11; i++) {
         const gridLineX = document.createElementNS("http://www.w3.org/2000/svg", 'line');
         gridLineX.setAttribute('class', 'grid-line');
-        gridLineX.setAttribute('x1', (i + 1) * gridSize); // Adjust grid position for alphabet
+        gridLineX.setAttribute('x1', i * gridSize);
         gridLineX.setAttribute('y1', 0);
-        gridLineX.setAttribute('x2', (i + 1) * gridSize);
+        gridLineX.setAttribute('x2', i * gridSize);
         gridLineX.setAttribute('y2', 400);
         gridLineX.setAttribute('stroke-width', '2');
         svg.appendChild(gridLineX);
-
+    
         // Add numbers along x axis
-        const number = alphabet[i];
         const text = document.createElementNS("http://www.w3.org/2000/svg", 'text');
         text.setAttribute('class', 'text');
-        text.setAttribute('x', (i + 1) * gridSize);
+        text.setAttribute('x', i * gridSize);
         text.setAttribute('y', 415);
-        text.textContent = number;
+        text.textContent = i;
         svg.appendChild(text);
     }
 
