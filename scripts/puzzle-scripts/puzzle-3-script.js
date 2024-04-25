@@ -233,7 +233,7 @@ function regenerateGraph() {
     document.getElementById("coordinateX").value = "";
     document.getElementById("coordinateY").value = "";
     document.getElementById("checkCoordinates").style.display = "block";
-    document.getElementById("alertMessage").value = "";
+    alertMessage.textContent = ('');
     if (correctAnswer == 1){
         document.getElementById("throw1").style.display = "none";
         document.getElementById("throw2").style.display = "block";
