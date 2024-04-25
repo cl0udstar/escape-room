@@ -247,7 +247,7 @@ function regenerateGraph() {
     generatedCoordinates = drawGraph();
 }
 
-const generatedCoordinates = drawGraph(); // Initial draw
+let generatedCoordinates = drawGraph(); // Initial draw
 
 
 function userInput(generatedCoordinates) {
