@@ -476,7 +476,7 @@ const matchedSequence = matchSequence(sequence, shiftAmount);
 
 updateKeypadButtons(matchedSequence);
 // Output the matched sequence to the console
-console.log("Matched Sequence:", matchedSequence);
+// console.log("Matched Sequence:", matchedSequence);
 
 
 // Highlight corresponding letters in alphabet-box1 when hovering over letters in alphabet-box2
