@@ -93,6 +93,7 @@ function resetGame() {
 }
 
 function endGame() {
+    document.getElementById('progress').style.display = 'none';
     document.getElementById('simonSuccessMessage').style.display = 'block';
     updateTable(); // Update the table with flash data
     updateRectangles(); // Update the small rectangles with jumbled words
