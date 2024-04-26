@@ -147,7 +147,7 @@ function submitCoordinates2(){
             document.getElementById('submitCoordinatesButton2').style.display = "none";
             document.getElementById("para2").style.display = "none";
             document.getElementById("para3").style.display = "block";
-            document.getElementById("next-puzzle).style.display = "block";
+            document.getElementById("next-puzzle").style.display = "block";
             setPuzzleCompletionStatus(3, 'complete');
         }
         if (element.classList.contains(className) && options[4] !== spanId){
