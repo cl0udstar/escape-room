@@ -184,6 +184,8 @@ function next() {
     } 
 
     document.getElementById('simonSuccessMessage').style.display = 'none'; // Hide the success message
+    document.getElementById('rule1').style.display = 'none'; // Hide the first rule message
+    document.getElementById('rule2').style.display = 'block'; // Show the second rule message
     document.getElementById('startButton').style.display = 'none'; // Hide the start button
     document.getElementById('verifyButton').style.display = 'block'; // Show the verification button
     document.getElementById('hideHint').style.display = 'none'; // Hide hint button
@@ -320,6 +322,8 @@ function endTable() {
 function tableNext() {
     document.getElementById('tableSuccessMessage').style.display = 'none';
     tableContainer.style.display = 'none'; // Hide the table
+    document.getElementById('rule2').style.display = 'none'; // Hide the second rule message
+    document.getElementById('rule3').style.display = 'block'; // Show the third rule message
     document.getElementById('circle-container').style.display = 'none'; // Hide the progress circles
     document.getElementById('verifyButton').style.display = 'none'; // Hide the verification button
     document.getElementById('rectangle').style.display = 'flex'; // Show rectangle sequence
