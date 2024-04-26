@@ -297,8 +297,9 @@ function next(){
     document.getElementById("throw3").style.display = "none";
     document.getElementById("next3").style.display = "none";
     document.getElementById("alertMessage").style.display = "none";
+    document.getElementById("rule1").style.display = "none";
 
     // Show Part 2
+    document.getElementById("rule2").style.display = "block";
     document.getElementById("arcGraph").style.display = "block";
-
 }
