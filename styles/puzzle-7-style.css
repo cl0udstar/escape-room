@@ -91,20 +91,6 @@ h1 {
     z-index: 9999; /* Ensure it appears above other content */
 }
 
-#nextButton {
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#nextButton:hover {
-    background-color: #383838;
-    color: white;
-}
-
 .circle-container {
     display: flex;
     justify-content: center;
@@ -136,14 +122,6 @@ button {
     font-weight: inherit;
     font-size: inherit;
     box-shadow: 0 0 20px 2px #B4B4B8;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-button:active {
-    background-color: #3e8e41;
 }
 
 table {
