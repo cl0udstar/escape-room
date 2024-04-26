@@ -126,14 +126,16 @@ h1 {
 
 button {
     display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    position: relative;
+    background: #EEEDEB;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
     cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    box-shadow: 0 0 20px 2px #B4B4B8;
 }
 
 button:hover {
