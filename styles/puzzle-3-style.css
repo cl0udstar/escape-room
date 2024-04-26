@@ -141,13 +141,13 @@ canvas, .centerButton {
 }
 
 .correct{
-    background-color: #4CAF50;
-    color: white;
+    background-color: #c8eab2;
+    color: black;
 }
 
 .incorrect{
-    background-color: red;
-    color: white;
+    background-color: #ff7676;
+    color: black;
 }
 
 #toggleButton{
