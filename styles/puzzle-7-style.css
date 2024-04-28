@@ -113,6 +113,7 @@ h1 {
 button {
     display: block;
     position: relative;
+    margin: 20px auto;
     background: #EEEDEB;
     border: 2px solid;
     border-radius: 10px;
